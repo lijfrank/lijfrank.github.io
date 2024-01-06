@@ -3,20 +3,20 @@
 
 Talks
 - *2020.11.09 - 2020.11.11*, The 32nd IEEE International Conference on Tools with Artificial Intelligence (ICTAI 2020, Talk, Virtual).
-- *2020.08.28 - 2020.08.30*, The 13th International Conference on Knowledge Science, Engineering and Management (KSEM 2020, Talk, Virtual), Hangzhou, Zhejiang, China.
+- *2020.08.28 - 2020.08.30*, The 13th International Conference on Knowledge Science, Engineering and Management (KSEM 2020, Talk, Virtual), Hangzhou, China.
 
 Posters
 - *2023.11.17 - 2023.11.19*, 2023 China Automation Congress (CAC 2023, Poster), Chongqing, China.
 - *2023.07.26 - 2023.07.29*, The 44th Annual Meeting of the Cognitive Science Society (CogSci 2023, Poster, Virtual), Sydney, Australia.
 
 Attendances
-- *2023.12.15 - 2023.12.17*, 2023 International Conference on Neuromorphic Computing (ICNC 2023), Wuhan, Hubei, China.
-- *2023.10.02 - 2023.10.04*, The 15th Frontier Forum on Control Science and Engineering, Wuhan, Hubei, China.
-- *2023.04.19 - 2023.04.21*, 2023 Songshan Lake Science Conferences (SLSC 2023), Dongguan, Guangdong, China.
-- *2022.08.05 - 2022.08.07*, 2022 Artificial Intelligence Conference of China’s Optics Valley, Wuhan, Hubei, China.
-- *2022.08.11 - 2022.08.13*, 2021 China Automation Congress (CAC 2021), Kunming, Yunnan, China.
-- *2022.07.15 - 2022.07.17*, The 14th International Conference on Advanced Computational Intelligence (ICACI 2022), Wuhan, Hubei, China.
-- *2021.10.15 - 2021.10.17*, The first International Conference on Neuromorphic Computing (ICNC 2021), Wuhan, Hubei, China.
+- *2023.12.15 - 2023.12.17*, 2023 International Conference on Neuromorphic Computing (ICNC 2023), Wuhan, China.
+- *2023.10.02 - 2023.10.04*, The 15th Frontier Forum on Control Science and Engineering, Wuhan, China.
+- *2023.04.19 - 2023.04.21*, 2023 Songshan Lake Science Conferences (SLSC 2023), Dongguan, China.
+- *2022.08.05 - 2022.08.07*, 2022 Artificial Intelligence Conference of China’s Optics Valley, Wuhan, China.
+- *2022.08.11 - 2022.08.13*, 2021 China Automation Congress (CAC 2021), Kunming, China.
+- *2022.07.15 - 2022.07.17*, The 14th International Conference on Advanced Computational Intelligence (ICACI 2022), Wuhan, China.
+- *2021.10.15 - 2021.10.17*, The first International Conference on Neuromorphic Computing (ICNC 2021), Wuhan, China.
 
 ## Educations
 - *2021.09 - Present*, Doctoral Degree in Intelligence Science and Technology, School of Artificial Intelligence and Automation, Huazhong University of Science and Technology (HUST), Wuhan, China.
