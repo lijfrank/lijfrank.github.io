@@ -31,9 +31,10 @@ I received my bachelor's degree in software engineering in July 2018. After that
 <table class="no-horizontal-lines" style="margin-left: auto; margin-right: auto;">
 	<tr>
 		<td>
-			Address:  
+			Address:
+			Huazhong University of Science and Technology, Wuhan 430074, China <br>
 			South Building 1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>  
-			E-mail:   
+			E-mail:
 			<a href="mailto:lijfrank@hust.edu.cn" class="no-underline">lijfrank@hust.edu.cn</a>
 		</td>
 		<td>
