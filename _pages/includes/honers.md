@@ -2,7 +2,7 @@
 - Goodix Scholarship (3 students in HUST)
 - Zhixing Scholarship
 - Merit Graduate Student
-- Outstanding Activist
+- Active Participants in Extracurricular Activities
 - SCIYON Scholarship (Nominee)
 - Academic Scholarship
 - Outstanding Member of Communist Youth League
