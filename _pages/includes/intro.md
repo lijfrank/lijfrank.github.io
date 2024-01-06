@@ -1,11 +1,43 @@
-I work at [Bytedance AI Lab, Speech & Audio Team](https://ailab.bytedance.com/) <img src='./images/tiktok.png' style='width: 6em;'> as a research scientist now in Singapore, leading a fundamental audio/talkingface research group. 
+<style>
+a.no-underline {
+    text-decoration: none;
+}
 
-I am now working on TTS, music generation, speech translation and audio-driven talking face generation research. If you are seeking any form of **academic cooperation**, please feel free to email me at [ren.yi@bytedance.com](mailto:ren.yi@bytedance.com).
+a.no-underline:hover {
+    text-decoration: underline;
+}
+table.no-horizontal-lines {
+    border-collapse: collapse;
+}
+table.no-horizontal-lines td, 
+table.no-horizontal-lines th {
+    border: none;
+}
+.tight-padding {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+</style>
+Hello, my name is Jiang Li (李江). I'm a doctoral candidate in intelligence science and technology (AI), studying at <a href="http://english.hust.edu.cn" class="no-underline">Huazhong University of Science and Technology</a> (HUST). My current research interests include <a href="https://www.media.mit.edu/groups/affective-computing/overview" class="no-underline">Affective Computing</a> (AC), Multi-Modal Learning (MML), and Graph-based Learning (GL). If you are seeking any form of **academic cooperation**, please feel free to email me at <a href="mailto:lijfrank@hust.edu.cn" class="no-underline">lijfrank@hust.edu.cn</a>.
 
-I graduated from [Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/main.htm), Zhejiang University (浙江大学竺可桢学院) with a bachelor's degree and from the Department of Computer Science and Technology, Zhejiang University (浙江大学计算机科学与技术学院) with a master's degree, advised by [Zhou Zhao (赵洲)](https://person.zju.edu.cn/zhaozhou). I also collaborate with [Xu Tan (谭旭)](https://www.microsoft.com/en-us/research/people/xuta/), [Tao Qin (秦涛)](https://www.microsoft.com/en-us/research/people/taoqin/) and [Tie-yan Liu (刘铁岩)](https://www.microsoft.com/en-us/research/people/tyliu/) from [Microsoft Research Asia](https://www.microsoft.com/en-us/research/group/machine-learning-research-group/) <img src='./images/microsoft_logo.svg' style="width: 4em;"> closely. 
+I received my bachelor's degree in software engineering in July 2018. After that, I pursued my master's degree in computer technology, which I received in June 2021. During the master's degree program, my research focused on Machine Learning, Recommender Systems, and Graph Neural Networks. In the future, I hope to pursue scientific research in the field of artificial intelligence. I have authored and co-authored more than 10 papers <a href="https://scholar.google.com/citations?user=NesqTz8AAAAJ"><img src="https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a> at the academic journals or conferences.
 
-I won the [Baidu Scholarship](https://baike.baidu.com/item/%E7%99%BE%E5%BA%A6%E5%A5%96%E5%AD%A6%E9%87%91/9929412) (10 candidates worldwide each year) and [ByteDance Scholars Program](https://ur.bytedance.com/scholarship) (10 candidates worldwide each year) in 2020 and was selected as one of [the top 100 AI Chinese new stars](https://mp.weixin.qq.com/s?__biz=MzA4NzQ5MTA2NA==&mid=2653639431&idx=1&sn=25b6368c1954419b9090840347d9a27d&chksm=8be75b90bc90d286a5af3ef8e610e822d705dc3cf4382b45e3f14489f3e7ec4fd8c95ed0eceb&mpshare=1&scene=2&srcid=0511LMlj9Qv9DeIZAjMjYAU9&sharer_sharetime=1620731348139&sharer_shareid=631c113940cb81f34895aa25ab14422a#rd) and AI Chinese New Star Outstanding Scholar (10 candidates worldwide each year). 
+- <a href="http://english.aia.hust.edu.cn" class="no-underline">School of Artificial Intelligence and Automation</a> (AIA), HUST.  
+- Institute of Artificial Intelligence, HUST.  
+- <a href="http://biic.aia.hust.edu.cn" class="no-underline">Brain-inspired Intelligence and Intelligent Control Laboratory</a> (BIIC), HUST.  
+- Key Laboratory of Brain-inspired Intelligent Systems, Hubei Province.  
+- Key Laboratory of Image Processing and Intelligent Control, Ministry of Education.
 
-My research interest includes speech synthesis, neural machine translation and automatic music generation. I have published 50+ papers <a href='https://scholar.google.com/citations?user=4FA6C0AAAAAJ'><img src="https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FRayeRen%2Frayeren.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a> at the top international AI conferences such as NeurIPS, ICML, ICLR, KDD. 
-
-To promote the communication among the Chinese ML & NLP community, we (along with other 11 young scholars worldwide) founded the [MLNLP community](https://space.bilibili.com/168887299) in 2021. I am honored to be one of the chairs of the MLNLP committee.
+<table class="no-horizontal-lines" style="margin-left: auto; margin-right: auto;">
+	<tr>
+		<td>
+			Address:  
+			South Building 1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>  
+			E-mail:   
+			<a href="mailto:lijfrank@hust.edu.cn" class="no-underline">lijfrank@hust.edu.cn</a>
+		</td>
+		<td>
+			<iframe width="450" height="220" src="https://www.openstreetmap.org/export/embed.html?bbox=114.40580%2C30.51349%2C114.41048%2C30.51016&amp;layer=mapnik" style="border: 0"></iframe>
+		</td>
+	</tr>
+</table>
