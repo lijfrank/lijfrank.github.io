@@ -14,9 +14,8 @@
 - <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/how-to.html" class="no-underline">Advice on Research and Writing</a>
 - <a href="https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf" class="no-underline">Applying to Ph.D. Programs in Computer Science</a>
 
-<div style="float: left;">
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=600&t=tt&d=23R2z4m_JZVSTgsDmm5jyVtCW6XzV89zcMPy5pwb4KY&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
-</div>
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=23R2z4m_JZVSTgsDmm5jyVtCW6XzV89zcMPy5pwb4KY&cl=080808&t=tt&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080&w=a"></script>
+
 <div style="clear: both; text-align: left;">
 <p>Frank Lee</p>
 </div>

@@ -29,16 +29,16 @@ I received my bachelor's degree in software engineering in July 2018. After that
 - Key Laboratory of Image Processing and Intelligent Control, Ministry of Education.
 
 <table class="no-horizontal-lines" style="margin-left: auto; margin-right: auto;">
-	<tr>
-		<td>
-			Address:
-			Huazhong University of Science and Technology, Wuhan 430074, China <br>
-			South Building 1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>  
-			E-mail:
-			<a href="mailto:lijfrank@hust.edu.cn" class="no-underline">lijfrank@hust.edu.cn</a>
-		</td>
-		<td>
-			<iframe width="450" height="220" src="https://www.openstreetmap.org/export/embed.html?bbox=114.40580%2C30.51349%2C114.41048%2C30.51016&amp;layer=mapnik" style="border: 0"></iframe>
-		</td>
-	</tr>
+    <tr>
+        <td style="width: 40%;">
+            Address:
+            Huazhong University of Science and Technology, Wuhan 430074, China <br>
+            South Building 1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>  
+            E-mail:
+            <a href="mailto:lijfrank@hust.edu.cn" class="no-underline">lijfrank@hust.edu.cn</a>
+        </td>
+        <td>
+            <iframe width="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=114.40580%2C30.51349%2C114.41048%2C30.51016&amp;layer=mapnik"></iframe>
+        </td>
+    </tr>
 </table>
