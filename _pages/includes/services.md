@@ -2,7 +2,7 @@
 
 ## Reviewer
 Journal
-- Engineering Applications of Artificial Intelligence (EAAI)  
+<!-- - Engineering Applications of Artificial Intelligence (EAAI)   -->
 - Knowledge-Based Systems (KBS).
 - Pattern Recognition Letter (PRL).  
 - ACM Transactions on Knowledge Discovery from Data (TKDD).  
