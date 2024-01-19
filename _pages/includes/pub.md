@@ -3,29 +3,17 @@
 
 † : Equal Contribution  
 
-<!-- <div class='paper-box'>
-    <div class='paper-box-image'>
-        <div>
-            <div class="badge">GraphCFC</div>
-            <img src='images/graphcfc.png' alt="sym" width="100%">
-        </div>
-    </div>
-    <div class='paper-box-text' markdown="1">
-    <a href="https://arxiv.org/abs/2207.12261" class="no-underline">GraphCFC: A directed graph based cross-modal feature complementation approach for multimodal conversational emotion recognition</a>  
-    **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng
-    - We propose a directed Graph based Cross-modal Feature Complementation (GraphCFC) module. GraphCFC can not only effectively alleviate the heterogeneity gap issue of multimodal fusion, but also sufficiently extract the diverse information from multimodal dialogue graphs.
-    - A new GNN layer named GAT-MLP is designed, which not only alleviates the over-smoothing problem of GNNs, but also provides a new network framework for multimodal learning.
-    </div>
-</div> -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">GraphCFC</div><img src='images/graphcfc.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class='paper-box'>
 
+<div class='paper-box-image'><div class="badge">GraphCFC</div><img src='images/graphcfc.png' width="100%"></div>
+
+<div class='paper-box-text' markdown="1">
 <a href="https://arxiv.org/abs/2207.12261" class="no-underline">GraphCFC: A directed graph based cross-modal feature complementation approach for multimodal conversational emotion recognition</a>  
 **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng
 - We propose a directed Graph based Cross-modal Feature Complementation (GraphCFC) module. GraphCFC can not only effectively alleviate the heterogeneity gap issue of multimodal fusion, but also sufficiently extract the diverse information from multimodal dialogue graphs.
 - A new GNN layer named GAT-MLP is designed, which not only alleviates the over-smoothing problem of GNNs, but also provides a new network framework for multimodal learning.
-
 </div>
+
 </div>
 
 ## Journal Papers
