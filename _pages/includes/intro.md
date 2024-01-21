@@ -24,7 +24,7 @@ I received my bachelor's degree in software engineering in July 2018. After that
 
 - <a href="http://english.aia.hust.edu.cn" class="no-underline">School of Artificial Intelligence and Automation</a>, HUST.  
 - Institute of Artificial Intelligence, HUST.  
-- <a href="http://biic.aia.hust.edu.cn" class="no-underline">Brain-inspired Intelligence and Intelligent Control Laboratory</a> (BIIC), HUST.  
+- <a href="http://biic.aia.hust.edu.cn" class="no-underline">Brain-inspired Intelligence and Intelligent Control Laboratory</a>, HUST.  
 - Hubei Key Laboratory of Brain-inspired Intelligent Systems, HUST.  
 - Key Laboratory of Image Processing and Intelligent Control (HUST), Ministry of Education.
 
@@ -33,7 +33,7 @@ I received my bachelor's degree in software engineering in July 2018. After that
         <td style="width: 40%;">
             Address:
             Huazhong University of Science and Technology, Wuhan 430074, China <br>
-            South Building 1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>  
+            South Building No.1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>  
             E-mail:
             <a href="mailto:lijfrank@hust.edu.cn" class="no-underline">lijfrank@hust.edu.cn</a>
         </td>

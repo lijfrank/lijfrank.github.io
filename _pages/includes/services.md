@@ -2,7 +2,7 @@
 
 ## Reviewer
 Journal
-<!-- - Engineering Applications of Artificial Intelligence (EAAI)   -->
+- International Journal of Human-Computer Interaction (IJHCI).
 - Knowledge-Based Systems (KBS).
 - Pattern Recognition Letter (PRL).  
 - ACM Transactions on Knowledge Discovery from Data (TKDD).  

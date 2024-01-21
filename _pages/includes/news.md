@@ -1,6 +1,7 @@
 # 🔥 News
 
 2023
+- *2024.01*, one paper has been accepted by KBS.
 - *2023.11*, one paper has been accepted by EAAI.
 - *2023.11*, one paper has been accepted by SCIS. 🎉
 - *2023.11*, one paper has been accepted by CBS.
