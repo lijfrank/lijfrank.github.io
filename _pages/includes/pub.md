@@ -19,6 +19,10 @@
 </div>
 
 ## Journal Papers
+<!-- - Shanglin Lei, Xiaoping Wang, **Jiang Li**, Guanting Dong, Sirui Wang, <a href="" class="no-underline">EmoCog: A GNN-Driven Two-Stage Framework via Multi-Level Cognitive Information Fusion for ERC</a>, In Submission, 2024. [] -->
+
+- Guoqing Lv, Xiaoping Wang, **Jiang Li**, Xin Zhan, Zhigang Zeng, <a href="" class="no-underline">Improving emotional support conversation with a three-stage training method</a>, In Submission, 2024. []
+
 - Fusheng Yu, Xiaoping Wang, **Jiang Li**, Shaojin Wu, Junjie Zhang, Zhigang Zeng, <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Towards complex real-world safety factory inspection: A high-quality dataset for safety clothing and helmet detection</a>, In Submission, 2024. [] [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:W7OEmFMy1HYC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:W7OEmFMy1HYC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/TCRSF?style=social)](https://github.com/lijfrank-open/TCRSF)
 
 - **Jiang Li**, Xiaoping Wang, Yingjian Liu, Zhigang Zeng, <a href="https://arxiv.org/abs/2307.15432" class="no-underline">CFN-ESA: A cross-modal fusion network with emotion-shift awareness for dialogue emotion recognition</a>, In Submission, 2023. [] [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:ufrVoPGSRksC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:ufrVoPGSRksC) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank-open/CFN-ESA?style=social)](https://github.com/lijfrank-open/CFN-ESA) -->

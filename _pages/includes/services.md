@@ -2,6 +2,8 @@
 
 ## Reviewer
 Journal
+- Information Sciences (INS)
+- Engineering Applications of Artificial Intelligence (EAAI)
 - International Journal of Human-Computer Interaction (IJHCI).
 - Knowledge-Based Systems (KBS).
 - Pattern Recognition Letter (PRL).  
@@ -9,6 +11,7 @@ Journal
 - IEEE Transactions on Multimedia (TMM).  
 
 Conference
+- The 43rd Chinese Control Conference (CCC 2023)
 - 2023 International Conference on Neuromorphic Computing (ICNC 2023).  
 - 2023 China Automation Congress (CAC 2023).
 - 2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023).
