@@ -49,11 +49,11 @@
 
 - Guoqing Lv†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng, <a href="https://arxiv.org/abs/2212.06373" class="no-underline">InferEM: Inferring the speaker's intention for empathetic dialogue generation</a>, The 44th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-29 July 2023, Sydney, Australia. [co-first author, CAAI B] [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:M3ejUd6NZC8C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:M3ejUd6NZC8C) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/InferEM?style=social)](https://github.com/lijfrank-open/InferEM)
 
-- H. Wang, **Jiang Li**, Q. Zhou, and L. Ge, <a class="no-underline">A novel text classification approach based on meta-path similarities and graph neural networks</a>, The 33rd International Conference on Software Engineering and Knowledge Engineering (``SEKE 2021``), 1-10 July 2021, Pittsburgh, Pennsylvania, USA. [CCF C]
+<!-- - H. Wang, **Jiang Li**, Q. Zhou, and L. Ge, <a class="no-underline">A novel text classification approach based on meta-path similarities and graph neural networks</a>, The 33rd International Conference on Software Engineering and Knowledge Engineering (``SEKE 2021``), 1-10 July 2021, Pittsburgh, Pennsylvania, USA. [CCF C]
 
 - Q. Zhou, **Jiang Li**, Y. Tang, and H. Wang, <a class="no-underline">Discovering the lonely among the students with weighted graph neural networks</a>, The 32nd IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2020``), 9–11 November 2020, Virtual Conference. [CCF C]
 
 - Q. Zhou, **Jiang Li**, Y. Tang, and L. Ge, <a class="no-underline">Identifying loners from their project collaboration records - a graph-based approach</a>, The 13th International Conference on Knowledge Science, Engineering and Management (``KSEM 2020``), 28–30 August 2020, Hangzhou, China. [CAAI C]
 
 ## Patents
-- **Jiang Li**, Q. Zhou, C. Yin, J. Ou, H. Wang, X. Shi, W. Peng, D. Yang, A method, device, and computer for identifying psychological states of students (ZL202010406747.2), China National Intellectual Property Administration, 2023.
+- **Jiang Li**, Q. Zhou, C. Yin, J. Ou, H. Wang, X. Shi, W. Peng, D. Yang, A method, device, and computer for identifying psychological states of students (ZL202010406747.2), China National Intellectual Property Administration, 2023. -->
