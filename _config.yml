@@ -23,12 +23,12 @@ baidu_site_verification  : # code-ZxFK3f4pfb
 author:
   name             : "Frank Lee"
   avatar           : "images/ry_profile.jpeg"
-  bio              : "A PhD Student at HUST"
+  bio              : "A Doctoral Candidate in Artificial Intelligence"
   location         : "Wuhan, China"
-  employer         :
+  employer         : "HUST"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=NesqTz8AAAAJ"
-  email            : "lijfrank@hust.edu.cn"
+  email            : 
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -44,7 +44,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : 
-  dblp             : "https://dblp.org/pid/41/3068-4.html"
+  dblp             : 
   orcid            : "https://orcid.org/0000-0002-0116-5662"
   pinterest        :
   soundcloud       :
