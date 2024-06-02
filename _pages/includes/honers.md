@@ -1,4 +1,5 @@
 # 🏆 Honors and Awards
+- Wuxi Huishan Taihu Scholarship
 - Goodix Scholarship (3 students in HUST)
 - Zhixing Scholarship
 - Merit Graduate Student
