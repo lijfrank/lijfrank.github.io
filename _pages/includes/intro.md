@@ -26,7 +26,7 @@ I received my bachelor's degree in software engineering in July 2018. After that
 - Institute of Artificial Intelligence, HUST.  
 - <a href="http://biic.aia.hust.edu.cn" class="no-underline">Brain-inspired Intelligence and Intelligent Control Laboratory</a>, HUST.  
 - Hubei Key Laboratory of Brain-inspired Intelligent Systems, HUST.  
-- Key Laboratory of Image Processing and Intelligent Control (HUST), Ministry of Education.
+- <a href="http://ipic.hust.edu.cn" class="no-underline">Key Laboratory of Image Processing and Intelligent Control</a> (HUST), Ministry of Education.
 
 <table class="no-horizontal-lines" style="margin-left: auto; margin-right: auto;">
     <tr>
