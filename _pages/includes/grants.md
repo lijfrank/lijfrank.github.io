@@ -1,7 +1,7 @@
 # 🍚 Grants
 
 ## Principal Investigator
-- *2024.05 - 2025.12*, Research on Humanoid Emotion Recognition for Multimodal Conversation Scenarios (), Innovation Institute of Huazhong University of Science and Technology. [Fundamental Research Funds for the Central Universities]
+- *2024.05 - 2025.12*, Research on Humanoid Emotion Recognition for Multimodal Conversation Scenarios (2024JYCXJJ067), Innovation Institute of Huazhong University of Science and Technology. [Fundamental Research Funds for the Central Universities]
 
 ## Participation
 - *2020.01 - 2024.12*, Memristor-based Humanoid Emotion Generation and Evolution and Its Application to Emotional Robotics (61936004), National Natural Science Foundation of China. [Key Program]

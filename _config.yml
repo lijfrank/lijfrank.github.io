@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Frank Lee"
-description              : "Affective Computing, Multi-Modal Learning, and Graph-based Learning"
+description              : "Affective Computing, Multi-Modal Learning, and Graph-Based Learning"
 repository               : "lijfrank/lijfrank.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -44,7 +44,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : 
-  dblp             : 
+  dblp             : "https://dblp.org/pid/41/3068-4.html"
   orcid            : "https://orcid.org/0000-0002-0116-5662"
   pinterest        :
   soundcloud       :

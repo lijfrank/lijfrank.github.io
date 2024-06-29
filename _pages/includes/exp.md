@@ -22,7 +22,7 @@ Attendances
 - *2021.09 - Present*, Doctoral Degree in Intelligence Science and Technology, School of Artificial Intelligence and Automation, Huazhong University of Science and Technology (HUST), Wuhan, China.
 - *2018.06 - 2021.06*, Master's Degree in Computer Technology, College of Computer Science, Chongqing University (CQU), Chongqing, China.
 - *2014.09 - 2018.06*, Bachelor's Degree in Software Engineering, School of Computer Science, Yangtze University (YU), Jingzhou, China.
-- *2011.09 - 2014.06*, Secondary Education, Lichuan Yizhong, Enshi, China.
+<!-- - *2011.09 - 2014.06*, Secondary Education, Lichuan Yizhong, Enshi, China. -->
 
 <!-- ## Invited Talks
 - *2022.02*, Hosted MLNLP seminar \| [\[Video\]](https://www.bilibili.com/video/BV1wF411x7qh)
