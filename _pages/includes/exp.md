@@ -6,6 +6,7 @@
 - *2020.08.28 - 2020.08.30*, The 13th International Conference on Knowledge Science, Engineering and Management (KSEM 2020, Talk, Virtual), Hangzhou, China. -->
 
 Posters
+- *2024.07.19 - 2024.07.21*, The Fourth Chinese Conference on Affective Computing (CCAC 2024, Poster), Nanchang, China.
 - *2023.11.17 - 2023.11.19*, 2023 China Automation Congress (CAC 2023, Poster), Chongqing, China.
 - *2023.07.26 - 2023.07.29*, The 44th Annual Meeting of the Cognitive Science Society (CogSci 2023, Poster, Virtual), Sydney, Australia.
 

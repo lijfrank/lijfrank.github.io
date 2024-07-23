@@ -22,7 +22,7 @@
 
 ## Journal Papers
 
-- Guoqing Lv, **Jiang Li**, Xiaoping Wang, Xin Zhan, Zhigang Zeng, <a href="" class="no-underline">Elevating empathy: Progressive staged training for emotional support conversation</a>, In Submission, 2024. [JCR Q0, IF=0.0, CAAI-0]
+- Guoqing Lv, **Jiang Li**, Xiaoping Wang, Xin Zhan, Zhigang Zeng, <a href="" class="no-underline">Producing Considerate Responses: Progressive staged training for emotional support conversation</a>, In Submission, 2024. [JCR Q0, IF=0.0, CAAI-0]
 
 - Fusheng Yu, **Jiang Li**, Xiaoping Wang, Shaojin Wu, Junjie Zhang, Zhigang Zeng, <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Towards complex real-world safety factory inspection: A high-quality dataset for safety clothing and helmet detection</a>, In Submission, 2024. [JCR Q0, IF=0.0, CAAI-0] [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:W7OEmFMy1HYC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:W7OEmFMy1HYC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/TCRSF?style=social)](https://github.com/lijfrank-open/TCRSF)
 
