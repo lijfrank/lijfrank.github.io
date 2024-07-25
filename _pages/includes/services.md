@@ -2,6 +2,7 @@
 
 ## Reviewer
 Journal
+- IEEE Transactions on Neural Networks and Learning Systems (TNNLS).  
 - Neurocomputing (NEUCOM).
 - Information Sciences (INS).
 - Engineering Applications of Artificial Intelligence (EAAI).
@@ -12,6 +13,7 @@ Journal
 - IEEE Transactions on Multimedia (TMM).
 
 Conference
+- The 33rd ACM International Conference on Information and Knowledge Management (CIKM 2024).  
 - The 43rd Chinese Control Conference (CCC 2023).
 - 2023 International Conference on Neuromorphic Computing (ICNC 2023).  
 - 2023 China Automation Congress (CAC 2023).
