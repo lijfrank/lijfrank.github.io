@@ -22,7 +22,9 @@
 
 ## Journal Papers
 
-- **Jiang Li**†, Xiaoping Wang, Zhigang Zeng, <a href="" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>, In Submission, 2024. [co-first author, JCR Q0, IF=0.0, CAAI-0]
+- Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng, <a href="" class="no-underline">A Bio-inspired Tactile-Olfactory Fusion Perception System Based on Memristive Spiking Neural Network</a>, In Submission, 2024. [JCR Q0, IF=0.0, CAAI-0]
+
+- **Jiang Li**, Xiaoping Wang, Zhigang Zeng, <a href="https://arxiv.org/abs/2407.21536" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>, In Submission, 2024. [JCR Q0, IF=0.0, CAAI-0]
 
 - Guoqing Lv†, **Jiang Li**†, Xiaoping Wang, Xin Zhan, Zhigang Zeng, <a href="" class="no-underline">Producing considerate responses: Progressive staged training for emotional support conversation</a>, In Submission, 2024. [co-first author, JCR Q0, IF=0.0, CAAI-0]
 
