@@ -1,6 +1,7 @@
 # 🔥 News
 
 2024
+- *2024.08*, my works have reached 100 citations on Google Scholar.🌟🚀
 - *2024.04*, one paper has been accepted by TAFFC. 🎉
 - *2024.01*, one paper has been accepted by KBS. 🎉
 
