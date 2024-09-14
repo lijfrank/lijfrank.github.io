@@ -1,7 +1,7 @@
 
 # 📰 Publications 
 
-† : Equal Contribution  
+† : Equal Contribution
 
 <div class='paper-box'>
 
