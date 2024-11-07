@@ -11,6 +11,8 @@ Posters
 - *2023.07.26 - 2023.07.29*, The 44th Annual Meeting of the Cognitive Science Society (CogSci 2023, Poster, Virtual), Sydney, Australia.
 
 Attendances
+- *2024.11.01 - 2024.11.03*, 2024 China Automation Congress (CAC 2024), Qingdao, China.
+- *2024.10.18 - 2024.10.20*, The 7th Chinese Conference on Pattern Recognition and Computer Vision (PRCV 2024), Urumq, China.
 - *2024.07.11 - 2024.07.14*, The 18th International Symposium on Neural Networks (ISNN 2024), Weihai, China.
 - *2023.12.15 - 2023.12.17*, 2023 International Conference on Neuromorphic Computing (ICNC 2023), Wuhan, China.
 - *2023.10.02 - 2023.10.04*, The 15th Frontier Forum on Control Science and Engineering, Wuhan, China.
