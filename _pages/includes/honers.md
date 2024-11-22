@@ -1,11 +1,12 @@
 # 🏆 Honors and Awards
+- Merit Student
+- Merit Postgraduate
+- Active Participants in Extracurricular Activities
+- Outstanding Member of Communist Youth League
+- National Scholarship
 - Merit Student Scholarship
 - Wuxi Huishan Taihu Scholarship
 - Goodix Scholarship (3 students in HUST)
 - Zhixing Scholarship
 - SCIYON Scholarship (Nominee)
 - Academic Scholarship
-- Merit Student
-- Merit Postgraduate
-- Active Participants in Extracurricular Activities
-- Outstanding Member of Communist Youth League
