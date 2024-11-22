@@ -1,4 +1,4 @@
-# 🏆 Honors and Awards
+# 🏆 Honor and Award
 - Merit Student
 - Merit Postgraduate
 - Active Participants in Extracurricular Activities

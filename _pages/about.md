@@ -15,12 +15,12 @@ redirect_from:
 
 {% include_relative includes/pub.md %}
 
-{% include_relative includes/grants.md %}
+{% include_relative includes/grant.md %}
 
 {% include_relative includes/exp.md %}
 
-{% include_relative includes/honers.md %}
+{% include_relative includes/honer.md %}
 
-{% include_relative includes/services.md %}
+{% include_relative includes/service.md %}
 
 {% include_relative includes/res.md %}

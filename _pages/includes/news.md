@@ -2,7 +2,7 @@
 2024  
 - *2024.11*, I'm awarded the National Scholarship. 🎉
 - *2024.10*, one paper is accepted by TCSS. 🎉
-- *2024.09*, I'm awarded Merit Student Scholarship. 🎉
+- *2024.09*, I'm awarded the Merit Student Scholarship. 🎉
 - *2024.09*, I create a more readable <a href="https://lijfrank.github.io/attaches/CAAI.html" class="no-underline">ranking list</a> recommended by CAAI. 🌟🚀
 - *2024.08*, my works have reached 100 citations on Google Scholar. 🌟🚀
 - *2024.06*, I'm granted a project for technology innovation fund. 🎉

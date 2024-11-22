@@ -1,7 +1,7 @@
 
-# 💻 Selected Research Papers
+# 💻 Selected Research Paper
 
-My full paper list is shown at [my personal homepage](https://lijfrank.github.io).
+My full paper list is shown at the <a href="https://lijfrank.github.io" class="no-underline">personal homepage</a>.
 
 - **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng, <a href="https://doi.org/10.1109/TMM.2023.3260635" class="no-underline">GraphCFC: A directed graph based cross-modal feature complementation approach for multimodal conversational emotion recognition</a>, IEEE Transactions on Multimedia (``TMM``), 2023, DOI: 10.1109/TMM.2023.3260635. [JCR Q1, CAAI-A]
 - **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng, <a href="https://doi.org/10.1109/TAFFC.2023.3261279" class="no-underline">GA2MIF: Graph and attention based two-stage multi-source information fusion for conversational emotion detection</a>, IEEE Transactions on Affective Computing (``TAFFC``), 2023, DOI: 10.1109/TAFFC.2023.3261279. [JCR Q1, CAAI-A]

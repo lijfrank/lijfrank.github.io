@@ -1,6 +1,6 @@
-# 📦 Resources
+# 📦 Resource
 
-## Ranking Lists
+## Ranking List
 - Rankings of <a href="attaches/CAAI.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI
 - Rankings of <a href="https://lijfrank.github.io/attaches/CAAI.html" class="no-underline">Academic Conferences and Journals</a> Recommended by CAAI (Jiang Li)
 - Rankings of <a href="https://jcr.clarivate.com/jcr/home" class="no-underline">Academic Journals</a> Recommended by Clarivate (JCR)
@@ -14,7 +14,7 @@
 <!-- - Rankings of <a href="attaches/CCF-J-Chinese.pdf" class="no-underline">High-Quality Academic Journals in Computing</a> Recommended by CCF. -->
 <!-- - Rankings of <a href="attaches/CAA-J.pdf" class="no-underline">Academic Journals</a> - <a href="attaches/CAA-C.pdf" class="no-underline">Conferences</a> Recommended by CAA. -->
 
-## Materials
+## Material
 - <a href="https://ying-zhang.github.io/misc/2016-we-love-paper/" class="no-underline">How to Seek Out Papers</a> in Computer Science
 - <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/how-to.html" class="no-underline">Advice on Research and Writing</a>
 - <a href="https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf" class="no-underline">Applying to Ph.D. Programs</a> in Computer Science
