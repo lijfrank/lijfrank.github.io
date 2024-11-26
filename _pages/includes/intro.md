@@ -1,23 +1,4 @@
-<style>
-a.no-underline {
-    text-decoration: none;
-}
 
-a.no-underline:hover {
-    text-decoration: underline;
-}
-table.no-horizontal-lines {
-    border-collapse: collapse;
-}
-table.no-horizontal-lines td, 
-table.no-horizontal-lines th {
-    border: none;
-}
-.tight-padding {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-</style>
 Hello, my name is Jiang Li (李江). I'm currently working toward the doctoral degree in intelligence science and technology at <a href="http://english.hust.edu.cn" class="no-underline">Huazhong University of Science and Technology</a> (HUST). My research interests encompass <a href="https://www.media.mit.edu/groups/affective-computing/overview" class="no-underline">affective computing</a> (AC), multi-modal learning (MML), and graph-based learning (GL). If you are seeking any form of **academic cooperation**, please feel free to email me at <a class="no-underline">lijfrank AT hust.edu.cn</a>.
 
 My scholarly journey commenced in July 2018 when I earned my bachelor's degree in software engineering. Thereafter, I advanced my studies by pursuing a master's degree in computer technology, which I completed in June 2021. I harbor great enthusiasm for scientific research in the field of artificial intelligence and have thus far contributed over 10 papers <a href="https://scholar.google.com/citations?user=NesqTz8AAAAJ"><img src="https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a> to academic journals or conferences.

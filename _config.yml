@@ -23,7 +23,7 @@ baidu_site_verification  : # code-ZxFK3f4pfb
 author:
   name             : "Frank Lee"
   avatar           : "images/ry_profile.jpeg"
-  bio              : "A Doctoral Candidate in Intelligence Science and Technology"
+  bio              : "Doctoral Candidate, Huazhong University of Science and Technology"
   location         : "Wuhan, China"
   employer         : 
   pubmed           : 
@@ -45,7 +45,7 @@ author:
   lastfm           :
   linkedin         : 
   dblp             : "https://dblp.org/pid/41/3068-4.html"
-  orcid            : "https://orcid.org/0000-0002-0116-5662"
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username

@@ -325,3 +325,23 @@
 .fa.fa-pull-right {
   margin-left: .3em;
 }
+
+/* underline */
+a.no-underline {
+  text-decoration: none;
+}
+
+a.no-underline:hover {
+  text-decoration: underline;
+}
+table.no-horizontal-lines {
+  border-collapse: collapse;
+}
+table.no-horizontal-lines td, 
+table.no-horizontal-lines th {
+  border: none;
+}
+.tight-padding {
+  padding-right: 10px;
+  padding-left: 10px;
+}
