@@ -330,7 +330,6 @@
 a.no-underline {
   text-decoration: none;
 }
-
 a.no-underline:hover {
   text-decoration: underline;
 }
@@ -344,4 +343,9 @@ table.no-horizontal-lines th {
 .tight-padding {
   padding-right: 10px;
   padding-left: 10px;
+}
+
+.scroll-container {
+  max-height: 200px;
+  overflow-y: auto;
 }
