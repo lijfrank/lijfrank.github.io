@@ -70,15 +70,15 @@
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
+            // min-width: 100px;
+            max-width: 10%;
             order: 1;
         }
         
         .paper-box-text{
             justify-content: left;
             padding-left: 2em;
-            max-width: 60%;
+            max-width: 90%;
             order: 2;
         }
 
@@ -106,4 +106,13 @@ h1:before, .anchor:before {
     color: white;
     background-color: #00369f;
     font-size: .8em;
+}
+
+.scroll-container {
+    max-height: 200px; /* Set the maximum height of the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    // border: 1px solid #ccc; /* Add a border for better visibility */
+    // padding: 10px; /* Add padding for spacing */
+    // font-family: Arial, sans-serif; /* Set a default font */
+    // background-color: #f9f9f9; /* Light grey background */
 }
