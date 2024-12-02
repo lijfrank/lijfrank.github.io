@@ -2,6 +2,7 @@
 <div class="scroll-container">
 2024  
 <ul>
+<li><i>2024.12</i>, I create a <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">list</a> of journals and conferences in affective computing 🌟🚀</li>
 <li><i>2024.11</i>, I'm awarded the National Scholarship 🎉</li>
 <li><i>2024.10</i>, one paper is accepted by TCSS 🎉</li>
 <li><i>2024.09</i>, I'm awarded the Merit Student Scholarship 🎉</li>
