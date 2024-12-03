@@ -26,6 +26,9 @@
 <!-- - Rankings of <a href="attaches/CAA-J.pdf" class="no-underline">Academic Journals</a> - <a href="attaches/CAA-C.pdf" class="no-underline">Conferences</a> Recommended by CAA. -->
 
 ## Material
+
+- <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">Overview of Papers</a> related to various tasks in Affective Computing
+
 - <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">List of Journals and Conferences</a> in Affective Computing
 
 - <a href="https://ying-zhang.github.io/misc/2016-we-love-paper/" class="no-underline">How to Seek Out Papers</a> in Computer Science
