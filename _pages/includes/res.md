@@ -27,7 +27,7 @@
 
 ## Material
 
-- <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">Overview of Papers</a> related to various tasks in Affective Computing
+- <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">Overview of Papers</a> Related to Various Tasks in Affective Computing
 
 - <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">List of Journals and Conferences</a> in Affective Computing
 
