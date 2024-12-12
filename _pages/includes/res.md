@@ -1,5 +1,35 @@
 # 📦 Resource
 
+## List in Affective Computing
+See more [here](https://github.com/lijfrank-open/Affective-Computing-Materials/)  
+
+Tailored Journal and Conference
+- Journal: TAFFC (CAAI-A), a top-tier journal in the field
+- Conference: ACII, a top-tier conference, but with limited recognition
+
+NLP-oriented Affective Computing
+- Journal: TASLP, TACL
+- Conference: ACL, EMNLP, NAACL, SIGKDD, SIGIR, WWW
+
+CV-oriented Affective Computing
+- Journal: TIP, IJCV, TPAMI
+- Conference: ECCV, CVPR, ICCV
+
+Multimodal Affective Computing
+- Journal: TMM, INFFUS
+- Conference: ACM MM
+- For multimodal research, journals and conferences in NLP and CV can also be considered
+
+General Journal and Conference
+- Journal: TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
+- Conference: AAAI, IJCAI, CHI
+
+Physiological Signal-oriented Affective Computing
+- Journal: TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
+- Conference: AAAI, IJCAI, CHI
+- Journal: TMM, INFFUS
+- Conference: ACM MM
+
 ## Ranking List
 - Rankings of <a href="attaches/CAAI.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI
 

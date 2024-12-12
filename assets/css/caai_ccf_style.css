@@ -173,7 +173,7 @@ table {
 }
 
 td, th { padding: 0.1em 0.5em; text-align: left; vertical-align: middle }
-th { background-color: #bbb; }
+th { background-color: #DEB887; } /*#bbb*/
 tr {
   padding: 0.1em;
   border: none;
@@ -182,5 +182,5 @@ tr {
 }
 
 .tx tr:nth-child(even) {
-  background: #ddd; /*9cf*/
+  background: #EEE5DE; /*9cf #ddd*/
 }
