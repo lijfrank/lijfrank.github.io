@@ -534,7 +534,7 @@ function filter(){
 
 function set_style(row){
     var seq = parseInt(row.childNodes[3].textContent);  // 序号列
-    if(seq%2===1) { row.style.backgroundColor="#EEE5DE"; } // 交替行背景色 #ddd
+    if(seq%2===1) { row.style.backgroundColor="#EEE9E9"; } // 交替行背景色 #ddd #EEE5DE
     if(seq  ===1) { row.style.backgroundColor="#F5DEB3"; } // 首行背景色 #7cf
     if(row.className==="a") { row.style.color="#f00"; row.style.fontWeight="bold"; } // 增
     if(row.className==="x") { row.style.backgroundColor="#0ff"; row.style.textDecoration="line-through"; } // 删

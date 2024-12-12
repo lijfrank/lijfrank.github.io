@@ -182,5 +182,5 @@ tr {
 }
 
 .tx tr:nth-child(even) {
-  background: #EEE5DE; /*9cf #ddd*/
+  background: #EEE9E9; /*9cf #ddd*/
 }
