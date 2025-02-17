@@ -8,7 +8,7 @@ Tailored Journal and Conference
 - Conference: ACII, a top-tier conference, but with limited recognition
 
 NLP-oriented Affective Computing
-- Journal: TASLP, TACL
+- Journal: TASLP, TACL, CL
 - Conference: ACL, EMNLP, NAACL, SIGKDD, SIGIR, WWW
 
 CV-oriented Affective Computing
@@ -21,11 +21,11 @@ Multimodal Affective Computing
 - For multimodal research, journals and conferences in NLP and CV can also be considered
 
 General Journal and Conference
-- Journal: TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
+- Journal: AIJ, TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
 - Conference: AAAI, IJCAI, CHI
 
 Physiological Signal-oriented Affective Computing
-- Journal: TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
+- Journal: AIJ, TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
 - Conference: AAAI, IJCAI, CHI
 - Journal: TMM, INFFUS
 - Conference: ACM MM

@@ -74,12 +74,16 @@ Junnan Li†, **Jiang Li**†, Xiaoping Wang, Xin Zhan, Zhigang Zeng [Co-first A
 Cyborg and Bionic Systems (``CBS``), 2023 [JCR Q1]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:BJtnxTr0fRcC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:BJtnxTr0fRcC) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank-open/DGR-ERPS?style=social)](https://github.com/lijfrank-open/DGR-ERPS) -->
 
+- <a href="" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
+**Jiang Li**, Xiaoping Wang  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
 - <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-Jiang Li, Yuan-Ting Li  
+**Jiang Li**, Yuan-Ting Li  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
-Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, Jiang Li  
+Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
