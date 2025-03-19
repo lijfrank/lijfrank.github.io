@@ -13,7 +13,7 @@ Journal
 - Pattern Recognition Letter (PRL)
 
 Conference
-- The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)
+- 2025 ACL Rolling Review (ARR 2025)
 - The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2025)
 - 2025 International Joint Conference on Neural Networks (IJCNN 2025)
 - The 33rd ACM International Conference on Information and Knowledge Management (CIKM 2024)
