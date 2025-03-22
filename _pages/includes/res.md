@@ -30,30 +30,32 @@ Physiological Signal-oriented Affective Computing
 - Journal: TMM, INFFUS
 - Conference: ACM MM
 
-## Ranking List
-- Rankings of <a href="attaches/CAAI.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI
+## Rank List
+- List of <a href="https://lijfrank.github.io/attaches/CAAI.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI (Jiang Li)
 
-- Rankings of <a href="https://lijfrank.github.io/attaches/CAAI.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI (Jiang Li)
+- List of <a href="attaches/CAAI.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI
 
-- Rankings of <a href="https://jcr.clarivate.com/jcr/home" class="no-underline">Academic Journals</a> Recommended by Clarivate (JCR)
+- Extension of <a href="https://github.com/lijfrank-open/CAAI-Rank-Display" class="no-underline">CAAI Rank Display</a> (Jiang Li)
 
-- Rankings of <a href="https://portal.core.edu.au/conf-ranks/?search=&by=all&source=CORE2023&sort=arank&page=1" class="no-underline">Academic Conferences</a> Recommended by ICORE (CORE)
+- List of <a href="https://jcr.clarivate.com/jcr/home" class="no-underline">Academic Journals</a> Recommended by Clarivate (JCR)
 
-- Rankings of <a href="attaches/HUST-AIA.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by HUST-AIA
+- List of <a href="https://portal.core.edu.au/conf-ranks/?search=&by=all&source=CORE2023&sort=arank&page=1" class="no-underline">Academic Conferences</a> Recommended by ICORE (CORE)
 
-- Rankings of <a href="attaches/TH-CPL.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by THU-CS
+- List of <a href="attaches/HUST-AIA.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by HUST-AIA
 
-- Rankings of <a href="attaches/CCF.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF
+- List of <a href="attaches/TH-CPL.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by THU-CS
 
-- Rankings of <a href="https://lijfrank.github.io/attaches/CCF.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF (Jiang Li)
+- List of <a href="attaches/CCF.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF
+
+- List of <a href="https://lijfrank.github.io/attaches/CCF.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF (Jiang Li)
 
 - Deadline of Academic Conferences (<a href="https://ccfddl.github.io/" class="no-underline">Version 1</a> - <a href="https://ccfddl.top/" class="no-underline">2</a>) Recommended by CCF
 
-<!-- - Rankings of <a href="https://ying-zhang.github.io/misc/2022-ccf-list" class="no-underline">Academic Conferences and Journals</a> Recommended by CCF (Ying-Zhang).-->
+<!-- - Ranks of <a href="https://ying-zhang.github.io/misc/2022-ccf-list" class="no-underline">Academic Conferences and Journals</a> Recommended by CCF (Ying-Zhang).-->
 
-<!-- - Rankings of <a href="attaches/CCF-J-Chinese.pdf" class="no-underline">High-Quality Academic Journals in Computing</a> Recommended by CCF. -->
+<!-- - Ranks of <a href="attaches/CCF-J-Chinese.pdf" class="no-underline">High-Quality Academic Journals in Computing</a> Recommended by CCF. -->
 
-<!-- - Rankings of <a href="attaches/CAA-J.pdf" class="no-underline">Academic Journals</a> - <a href="attaches/CAA-C.pdf" class="no-underline">Conferences</a> Recommended by CAA. -->
+<!-- - Ranks of <a href="attaches/CAA-J.pdf" class="no-underline">Academic Journals</a> - <a href="attaches/CAA-C.pdf" class="no-underline">Conferences</a> Recommended by CAA. -->
 
 ## Material
 
