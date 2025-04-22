@@ -99,7 +99,7 @@ The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-2
 
 - <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
 Fusheng Yu†, **Jiang Li**†, Xiaoping Wang, Depeng Li, Xin Zhan, Shaojin Wu, Junjie Zhang [Co-first Author]  
-In Submission, 2024 [CAAI-0]  
+In Submission, 2025 [CAAI-0]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:hHIA4WEVY-EC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:hHIA4WEVY-EC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/SFCHD-SCALE?style=social)](https://github.com/lijfrank-open/SFCHD-SCALE)
 
 - <a href="https://doi.org/10.1109/CAC59555.2023.10451247" class="no-underline">A spatio-temporal scale based affective neural network for emotion detection in conversation</a>  
@@ -108,12 +108,12 @@ In Submission, 2024 [CAAI-0]
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:Kqc1aDSOPooC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:Kqc1aDSOPooC)
 
 - <a href="" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
-Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang, Zhigang Zeng  
-In Submission, 2024 [CAAI-0]
+Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
+In Submission, 2025 [CAAI-0]
 
-- <a href="" class="no-underline">EmoCog: A GNN-driven two-stage framework via multi-level cognitive information fusion for ERC</a>  
-Shanglin Lei, Xiaoping Wang, **Jiang Li**, Guanting Dong, Sirui Wang  
-In Submission, 2024 [CAAI-0]
+- <a href="" class="no-underline">HAFUNet: A Hierarchical Attention Fusion Network for Monocular Depth Estimation Integrating Event and Frame Data</a>  
+Siyuan Zhang, Xiaoping Wang, **Jiang Li**, Weibin Feng, Xin Zhan, Hongzhi Huang 
+In Submission, 2025 [CAAI-0]
 
 - <a href="https://doi.org/10.1109/ICTAI59109.2023.00133" class="no-underline">Watch the speakers: A hybrid continuous attribution network for emotion recognition in conversation with emotion disentanglement</a>  
 Shanglin Lei, Xiaoping Wang, Guanting Dong, **Jiang Li**, Zhigang Zeng  
