@@ -1,4 +1,5 @@
 # 🏆 Honor and Award
+- Outstanding Graduate
 - Merit Student
 - Merit Postgraduate
 - Active Participants in Extracurricular Activities
