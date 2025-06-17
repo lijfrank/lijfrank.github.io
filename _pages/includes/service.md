@@ -4,6 +4,7 @@
 Journal
 - IEEE Transactions on Neural Networks and Learning Systems (TNNLS)
 - IEEE Transactions on Multimedia (TMM)
+- IEEE Transactions on Artificial Intelligence (TAI)
 - ACM Transactions on Knowledge Discovery from Data (TKDD)
 - International Journal of Human-Computer Interaction (IJHCI)
 - Knowledge-Based Systems (KBS)

@@ -39,15 +39,15 @@ IEEE Transactions on Affective Computing (``TAFFC``), 2023 [JCR Q1, CAAI-A]
 IEEE Transactions on Affective Computing (``TAFFC``), 2024 [JCR Q1, CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:idthP5jqfYAC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:idthP5jqfYAC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/CFN-ESA?style=social)](https://github.com/lijfrank-open/CFN-ESA)
 
+- <a href="https://doi.org/10.1109/TPAMI.2025.3581236" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>  
+**Jiang Li**, Xiaoping Wang, Zhigang Zeng  
+IEEE Transactions on Pattern Analysis and Machine Intelligence (``TPAMI``), 2025 [JCR Q1, CAAI-A]  
+[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:WzTVkKNmPSkC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:WzTVkKNmPSkC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/GraphSmile?style=social)](https://github.com/lijfrank-open/GraphSmile)
+
 - <a href="https://doi.org/10.1007/s11432-023-3908-6" class="no-underline">EmotionIC: Emotional inertia and contagion-driven dependency modeling for emotion recognition in conversation</a>  
 Yingjian Liu†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng [Co-first Author]  
 SCIENCE CHINA Information Sciences (``SCIS``), 2023 [JCR Q1, CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:rbGdIwl2e6cC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:rbGdIwl2e6cC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/EmotionIC?style=social)](https://github.com/lijfrank-open/EmotionIC)
-
-- <a href="https://arxiv.org/abs/2407.21536" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>  
-**Jiang Li**, Xiaoping Wang, Zhigang Zeng  
-In Submission, 2024 [JCR Q0, CAAI-0]  
-[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:WzTVkKNmPSkC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:WzTVkKNmPSkC) [![](https://img.shields.io/github/languages/code-size/lijfrank-open/GraphSmile?style=social)](https://github.com/lijfrank-open/GraphSmile)
 
 - <a href="https://doi.org/10.1016/j.neucom.2023.126427" class="no-underline">GraphMFT: A graph network based multimodal fusion technique for emotion recognition in conversation</a>  
 **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng  
@@ -79,11 +79,15 @@ Cyborg and Bionic Systems (``CBS``), 2023 [JCR Q1]
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="https://arxiv.org/abs/2501.17589" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-**Jiang Li**, Yuan-Ting Li  
+**Jiang Li**  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
 Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">ELGA-GMamba: An efficient local-to-global awareness graph mamba for object recognition with event-based cameras</a>  
+Weibin Feng, Xiaoping Wang, **Jiang Li**, Xin Zhan, Hongzhi Huang, Siyuan Zhang  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  

@@ -2,6 +2,7 @@
 <div class="scroll-container">
 2024  
 <ul>
+<li><i>2024.06</i>, one paper is accepted by TPAMI 🎉</li>
 <li><i>2025.04</i>, I'm awarded the Outstanding Graduate 🎉</li>
 <li><i>2025.03</i>, I create an extension of <a href="https://github.com/lijfrank-open/CAAI-Rank-Display" class="no-underline">CAAI rank display</a> 🌟🚀</li>
 <li><i>2024.12</i>, I create an <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">overview</a> of papers related to various tasks in affective computing 🌟🚀</li>

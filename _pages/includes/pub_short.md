@@ -15,10 +15,10 @@ IEEE Transactions on Affective Computing (``TAFFC``), 2023 [JCR Q1, CAAI-A]
 **Jiang Li**, Xiaoping Wang, Yingjian Liu, Zhigang Zeng  
 IEEE Transactions on Affective Computing (``TAFFC``), 2024 [JCR Q1, CAAI-A]
 
+- <a href="https://doi.org/10.1109/TPAMI.2025.3581236" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>  
+**Jiang Li**, Xiaoping Wang, Zhigang Zeng  
+IEEE Transactions on Pattern Analysis and Machine Intelligence (``TPAMI``), 2025 [JCR Q1, CAAI-A]
+
 - <a href="https://doi.org/10.1007/s11432-023-3908-6" class="no-underline">EmotionIC: Emotional inertia and contagion-driven dependency modeling for emotion recognition in conversation</a>  
 Yingjian Liu†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng [Co-first Author]  
 SCIENCE CHINA Information Sciences (``SCIS``), 2023 [JCR Q1, CAAI-A]
-
-- <a href="https://arxiv.org/abs/2407.21536" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>  
-**Jiang Li**, Xiaoping Wang, Zhigang Zeng  
-In Submission, 2024 [JCR Q0, CAAI-0]
