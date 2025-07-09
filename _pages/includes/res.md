@@ -1,7 +1,7 @@
 # 📦 Resource
 
 ## List in Affective Computing
-See more [here](https://github.com/lijfrank-open/Affective-Computing-Materials/)  
+See more [here](https://github.com/lijfrank/Affective-Computing-Materials/)  
 
 Tailored Journal and Conference
 - Journal: TAFFC (CAAI-A), a top-tier journal in the field
@@ -35,7 +35,7 @@ Physiological Signal-oriented Affective Computing
 
 - List of <a href="attaches/CAAI.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI
 
-- Extension of <a href="https://github.com/lijfrank-open/CAAI-Rank-Display" class="no-underline">CAAI Rank Display</a> (Jiang Li)
+- Extension of <a href="https://github.com/lijfrank/CAAI-Rank-Display" class="no-underline">CAAI Rank Display</a> (Jiang Li)
 
 - List of <a href="https://jcr.clarivate.com/jcr/home" class="no-underline">Academic Journals</a> Recommended by Clarivate (JCR)
 
@@ -59,9 +59,9 @@ Physiological Signal-oriented Affective Computing
 
 ## Material
 
-- <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">Overview of Papers</a> Related to Various Tasks in Affective Computing
+- <a href="https://github.com/lijfrank/Affective-Computing-Materials/" class="no-underline">Overview of Papers</a> Related to Various Tasks in Affective Computing
 
-- <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">List of Journals and Conferences</a> in Affective Computing
+- <a href="https://github.com/lijfrank/Affective-Computing-Materials/" class="no-underline">List of Journals and Conferences</a> in Affective Computing
 
 - <a href="https://ying-zhang.github.io/misc/2016-we-love-paper/" class="no-underline">How to Seek Out Papers</a> in Computer Science
 

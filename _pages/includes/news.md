@@ -5,12 +5,12 @@
 <li><i>2025.07</i>, one paper is accepted by MM 2025, congratulations to Siyuan 🎉</li>
 <li><i>2025.06</i>, one paper is accepted by TPAMI 🎉</li>
 <li><i>2025.04</i>, I'm awarded the Outstanding Graduate 🎉</li>
-<li><i>2025.03</i>, I create an extension of <a href="https://github.com/lijfrank-open/CAAI-Rank-Display" class="no-underline">CAAI rank display</a> 🌟🚀</li>
+<li><i>2025.03</i>, I create an extension of <a href="https://github.com/lijfrank/CAAI-Rank-Display" class="no-underline">CAAI rank display</a> 🌟🚀</li>
 </ul>
 2024  
 <ul>
-<li><i>2024.12</i>, I create an <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">overview</a> of papers related to various tasks in affective computing 🌟🚀</li>
-<li><i>2024.12</i>, I create a <a href="https://github.com/lijfrank-open/Affective-Computing-Materials/" class="no-underline">list</a> of journals and conferences in affective computing 🌟🚀</li>
+<li><i>2024.12</i>, I create an <a href="https://github.com/lijfrank/Affective-Computing-Materials/" class="no-underline">overview</a> of papers related to various tasks in affective computing 🌟🚀</li>
+<li><i>2024.12</i>, I create a <a href="https://github.com/lijfrank/Affective-Computing-Materials/" class="no-underline">list</a> of journals and conferences in affective computing 🌟🚀</li>
 <li><i>2024.11</i>, I'm awarded the National Scholarship 🎉</li>
 <li><i>2024.10</i>, one paper is accepted by TCSS 🎉</li>
 <li><i>2024.09</i>, I'm awarded the Merit Student Scholarship 🎉</li>
