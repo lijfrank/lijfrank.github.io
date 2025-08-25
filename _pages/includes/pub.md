@@ -74,26 +74,6 @@ Junnan Li†, **Jiang Li**†, Xiaoping Wang, Xin Zhan, Zhigang Zeng [Co-first A
 Cyborg and Bionic Systems (``CBS``), 2023 [JCR Q1]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:BJtnxTr0fRcC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:BJtnxTr0fRcC) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/DGR-ERPS?style=social)](https://github.com/lijfrank/DGR-ERPS) -->
 
-- <a href="https://arxiv.org/abs/2503.04650" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
-**Jiang Li**, Xiaoping Wang  
-In Submission, 2025 [JCR Q0, CAAI-0]
-
-- <a href="https://arxiv.org/abs/2501.17589" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-**Jiang Li**  
-In Submission, 2025 [JCR Q0, CAAI-0]
-
-- <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
-Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
-In Submission, 2025 [JCR Q0, CAAI-0]
-
-- <a href="" class="no-underline">ELGA-GMamba: An efficient local-to-global awareness graph mamba for object recognition with event-based cameras</a>  
-Weibin Feng, Xiaoping Wang, **Jiang Li**, Xin Zhan, Hongzhi Huang, Siyuan Zhang  
-In Submission, 2025 [JCR Q0, CAAI-0]
-
-- <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
-Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
-In Submission, 2024 [JCR Q0, CAAI-0]
-
 ## Conference Paper
 
 - <a href="https://escholarship.org/uc/item/0dk8x579" class="no-underline">InferEM: Inferring the speaker's intention for empathetic dialogue generation</a>  
@@ -115,15 +95,6 @@ Shanglin Lei, Xiaoping Wang, Guanting Dong, **Jiang Li**, Zhigang Zeng
 The 35th IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2023``), 6-8 November 2023, Atlanta, USA [CAAI-C]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:GYcXSSpN504C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:GYcXSSpN504C) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/HCAN?style=social)](https://github.com/lijfrank/HCAN) -->
 
-- <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
-Fusheng Yu†, **Jiang Li**†, Xiaoping Wang, Depeng Li, Xin Zhan, Shaojin Wu, Junjie Zhang [Co-first Author]  
-In Submission, 2025 [CAAI-0]  
-[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:hHIA4WEVY-EC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:hHIA4WEVY-EC) [![](https://img.shields.io/github/languages/code-size/lijfrank/SFCHD-SCALE?style=social)](https://github.com/lijfrank/SFCHD-SCALE)
-
-- <a href="" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
-Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
-In Submission, 2025 [CAAI-0]
-
 <!-- - <a class="no-underline">A novel text classification approach based on meta-path similarities and graph neural networks</a>  
 H. Wang, **Jiang Li**, Q. Zhou, L. Ge  
 The 33rd International Conference on Software Engineering and Knowledge Engineering (``SEKE 2021``), 1-10 July 2021, Pittsburgh, Pennsylvania, USA [CAAI C]
@@ -134,9 +105,43 @@ The 32nd IEEE International Conference on Tools with Artificial Intelligence (``
 
 - <a class="no-underline">Identifying loners from their project collaboration records - a graph-based approach</a>  
 Q. Zhou, **Jiang Li**, Y. Tang, L. Ge  
-The 13th International Conference on Knowledge Science, Engineering and Management (``KSEM 2020``), 28–30 August 2020, Hangzhou, China [CAAI C]
+The 13th International Conference on Knowledge Science, Engineering and Management (``KSEM 2020``), 28–30 August 2020, Hangzhou, China [CAAI C] -->
 
-## Invention Patent
+## Other Paper
+- <a href="" class="no-underline">Hypergraph missing modality learning for conversational affect detection</a>  
+**Jiang Li**  
+In Preparation, 2025 [CAAI-0]
+
+- <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
+Fusheng Yu†, **Jiang Li**†, Xiaoping Wang, Depeng Li, Xin Zhan, Shaojin Wu, Junjie Zhang [Co-first Author]  
+In Submission, 2025 [CAAI-0]  
+[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:hHIA4WEVY-EC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:hHIA4WEVY-EC) [![](https://img.shields.io/github/languages/code-size/lijfrank/SFCHD-SCALE?style=social)](https://github.com/lijfrank/SFCHD-SCALE)
+
+- <a href="" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
+Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
+In Submission, 2025 [CAAI-0]
+
+- <a href="" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
+**Jiang Li** 
+In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
+**Jiang Li**  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
+Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">ELGA-GMamba: An efficient local-to-global awareness graph mamba for object recognition with event-based cameras</a>  
+Weibin Feng, Xiaoping Wang, **Jiang Li**, Xin Zhan, Hongzhi Huang, Siyuan Zhang  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
+Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
+In Submission, 2024 [JCR Q0, CAAI-0]
+
+<!-- ## Invention Patent
 - A method, device, and computer for identifying psychological states of students (ZL202010406747.2)  
 **Jiang Li**, Q. Zhou, C. Yin, J. Ou, H. Wang, X. Shi, W. Peng, D. Yang   
 China National Intellectual Property Administration, 2023 -->

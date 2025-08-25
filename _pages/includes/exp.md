@@ -23,9 +23,9 @@ Attendance
 - *2021.10.15 - 2021.10.17*, The first International Conference on Neuromorphic Computing (ICNC 2021), Wuhan, China
 
 ## Education
-- *2021.09 - Present*, Doctoral Degree in Intelligence Science and Technology, School of Artificial Intelligence and Automation, Huazhong University of Science and Technology (HUST), Wuhan, China
+<!-- - *2021.09 - Present*, Doctoral Degree in Intelligence Science and Technology, School of Artificial Intelligence and Automation, Huazhong University of Science and Technology (HUST), Wuhan, China
 - *2018.06 - 2021.06*, Master's Degree in Computer Technology, College of Computer Science, Chongqing University (CQU), Chongqing, China
-- *2014.09 - 2018.06*, Bachelor's Degree in Software Engineering, School of Computer Science, Yangtze University (YU), Jingzhou, China
+- *2014.09 - 2018.06*, Bachelor's Degree in Software Engineering, School of Computer Science, Yangtze University (YU), Jingzhou, China -->
 <!-- - *2011.09 - 2014.06*, Secondary Education, Lichuan Yizhong, Enshi, China -->
 
 <!-- ## Invited Talk

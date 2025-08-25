@@ -4,6 +4,7 @@
 Journal
 - IEEE Transactions on Neural Networks and Learning Systems (TNNLS)
 - IEEE Transactions on Multimedia (TMM)
+- Pattern Recognition (PR)
 - IEEE Transactions on Artificial Intelligence (TAI)
 - ACM Transactions on Knowledge Discovery from Data (TKDD)
 - International Journal of Human-Computer Interaction (IJHCI)
@@ -14,11 +15,13 @@ Journal
 - Pattern Recognition Letter (PRL)
 
 Conference
+- The 40th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)
 - 2025 ACL Rolling Review (ARR 2025)
 - The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2025)
 - 2025 International Joint Conference on Neural Networks (IJCNN 2025)
+- 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)
 - The 33rd ACM International Conference on Information and Knowledge Management (CIKM 2024)
-- 2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023/2025)
+- 2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023)
 
 <!-- - 2023 China Automation Congress (CAC 2023)
 - The 43rd Chinese Control Conference (CCC 2023)
