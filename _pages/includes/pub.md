@@ -112,6 +112,14 @@ The 13th International Conference on Knowledge Science, Engineering and Manageme
 **Jiang Li**  
 In Preparation, 2025 [CAAI-0]
 
+- <a href="" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
+**Jiang Li**  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
+**Jiang Li**  
+In Submission, 2025 [JCR Q0, CAAI-0]
+
 - <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
 Fusheng Yu†, **Jiang Li**†, Xiaoping Wang, Depeng Li, Xin Zhan, Shaojin Wu, Junjie Zhang [Co-first Author]  
 In Submission, 2025 [CAAI-0]  
@@ -120,14 +128,6 @@ In Submission, 2025 [CAAI-0]
 - <a href="" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
 Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
 In Submission, 2025 [CAAI-0]
-
-- <a href="" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
-**Jiang Li** 
-In Submission, 2025 [JCR Q0, CAAI-0]
-
-- <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-**Jiang Li**  
-In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
 Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
