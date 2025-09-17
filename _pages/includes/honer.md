@@ -7,7 +7,7 @@
 - National Scholarship
 - Merit Student Scholarship
 - Wuxi Huishan Taihu Scholarship
-- Goodix Scholarship (3 students in HUST)
+- Goodix Scholarship
 - Zhixing Scholarship
 - SCIYON Scholarship (Nominee)
 - Academic Scholarship
