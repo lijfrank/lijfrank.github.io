@@ -15,7 +15,7 @@ Journal
 - Pattern Recognition Letter (PRL)
 
 Conference
-- The 40th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)
+- The 40th Annual AAAI Conference on Artificial Intelligence (AAAI 2026)
 - 2025 ACL Rolling Review (ARR 2025)
 - The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2025)
 - 2025 International Joint Conference on Neural Networks (IJCNN 2025)

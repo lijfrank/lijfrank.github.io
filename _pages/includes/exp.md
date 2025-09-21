@@ -22,7 +22,7 @@ Attendance
 - *2022.07.15 - 2022.07.17*, The 14th International Conference on Advanced Computational Intelligence (ICACI 2022), Wuhan, China
 - *2021.10.15 - 2021.10.17*, The first International Conference on Neuromorphic Computing (ICNC 2021), Wuhan, China
 
-## Education
+<!-- ## Education -->
 <!-- - *2021.09 - Present*, Doctoral Degree in Intelligence Science and Technology, School of Artificial Intelligence and Automation, Huazhong University of Science and Technology (HUST), Wuhan, China
 - *2018.06 - 2021.06*, Master's Degree in Computer Technology, College of Computer Science, Chongqing University (CQU), Chongqing, China
 - *2014.09 - 2018.06*, Bachelor's Degree in Software Engineering, School of Computer Science, Yangtze University (YU), Jingzhou, China -->
