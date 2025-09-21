@@ -3,7 +3,7 @@ My name is Jiang Li (李江), and I received the doctoral degree in Intelligence
 
 I earned the bachelor's degree in software engineering in July 2018 and the master's degree in computer technology in June 2021. Thereafter, I advanced my studies by pursuing a doctoral degree in intelligent science and technology, which I successfully completed in September 2025. I harbor great enthusiasm for scientific research in the field of artificial intelligence and have thus far contributed over 10 papers <a href="https://scholar.google.com/citations?user=NesqTz8AAAAJ"><img src="https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a> to academic journals or conferences.
 
-<a style="color: red;">I am actively seeking post-doctoral opportunities. If my profile aligns with your interests, please do not hesitate to contact me.</a>
+<a style="color: red;" class="no-underline">I am actively seeking post-doctoral opportunities. If my profile aligns with your interests, please do not hesitate to contact me.</a>
 
 - <a href="http://english.aia.hust.edu.cn" class="no-underline">School of Artificial Intelligence and Automation</a>, HUST
 - Institute of Artificial Intelligence, HUST
