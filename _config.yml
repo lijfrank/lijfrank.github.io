@@ -57,7 +57,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-  blog             : "https://lijfrank.blog.csdn.net"
+  blog             : # "https://lijfrank.blog.csdn.net"
 
 # Reading Files
 include:

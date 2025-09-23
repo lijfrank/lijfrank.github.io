@@ -1,6 +1,6 @@
 # 🔥 News
 <div class="scroll-container">
-2024  
+2025  
 <ul>
 <li><i>2025.07</i>, one paper is accepted by MM 2025, congratulations to Siyuan 🎉</li>
 <li><i>2025.06</i>, one paper is accepted by TPAMI 🎉</li>
