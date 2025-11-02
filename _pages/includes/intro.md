@@ -21,7 +21,7 @@ I earned the bachelor's degree in software engineering in July 2018 and the mast
             <a class="no-underline">lijfrank [AT] outlook.com</a>
         </td>
         <td>
-            <iframe width="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=24.525460%2C54.433152%24.521908%2C54.438152&amp;layer=mapnik"></iframe>
+            <iframe width="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=54.432900%2C24.523191%2C54.436097%2C24.524851&amp;layer=mapnik"></iframe>
         </td>
     </tr>
 </table>
