@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Frank Lee"
+title                    : "Jiang Li's Homepage"
 description              : "Affective Computing, Multimodal Learning, Graph Machine Learning, and Computational Biology"
 repository               : "lijfrank/lijfrank.github.io"
 google_scholar_stats_use_cdn : true
@@ -21,7 +21,8 @@ baidu_site_verification  : # code-ZxFK3f4pfb
 
 # Site Author
 author:
-  name             : "Frank Lee"
+  name             : "Jiang Li"
+  name_other       : "Frank Lee"
   avatar           : "images/ry_profile.jpeg"
   bio              : "Doctor of Philosophy, Huazhong University of Science and Technology"
   location         : "Abu Dhabi"

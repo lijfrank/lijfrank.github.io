@@ -113,11 +113,11 @@ The 13th International Conference on Knowledge Science, Engineering and Manageme
 In Preparation, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
-**Jiang Li**  
+**Jiang Li**，Siyuan Zhang, Weibin Feng, Xiaoping Wang  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-**Jiang Li**  
+**Jiang Li**，Siyuan Zhang, Weibin Feng, Xiaoping Wang  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
@@ -131,11 +131,19 @@ In Submission, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
 Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
-In Submission, 2025 [JCR Q0, CAAI-0]
+In Submission, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">ELGA-GMamba: An efficient local-to-global awareness graph mamba for object recognition with event-based cameras</a>  
-Weibin Feng, Xiaoping Wang, **Jiang Li**, Xin Zhan, Hongzhi Huang, Siyuan Zhang  
+Weibin Feng, Xiaoping Wang, Xin Zhan, Hongzhi Huang, Siyuan Zhang, **Jiang Li**  
 In Submission, 2025 [JCR Q0, CAAI-0]
+
+- <a href="" class="no-underline">SDAUT: Sparse-adaptive deformable attention U-Net Transformer for event-frame depth estimation</a>  
+Siyuan Zhang, Xiaoping Wang, Weibin Feng, Honggang Yang, Hongzhi Huang, **Jiang Li**  
+In Submission, 2025 [CAAI-0]
+
+- <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
+Weibin_Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
+In Submission, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
 Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
