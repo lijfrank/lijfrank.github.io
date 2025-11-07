@@ -2,6 +2,8 @@
 <div class="scroll-container">
 2025  
 <ul>
+<li><i>2025.10</i>, I will soon be a post-doctoral associate at NYU</a> 🌟🚀</li>
+<li><i>2025.09</i>, I received my Ph.D. from HUST 🎉</li>
 <li><i>2025.07</i>, one paper is accepted by MM 2025, congratulations to Siyuan 🎉</li>
 <li><i>2025.06</i>, one paper is accepted by TPAMI 🎉</li>
 <li><i>2025.04</i>, I'm awarded the Outstanding Graduate 🎉</li>

@@ -142,7 +142,7 @@ Siyuan Zhang, Xiaoping Wang, Weibin Feng, Honggang Yang, Hongzhi Huang, **Jiang 
 In Submission, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
-Weibin_Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
+Weibin Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
 In Submission, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
