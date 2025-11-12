@@ -113,11 +113,11 @@ The 13th International Conference on Knowledge Science, Engineering and Manageme
 In Preparation, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">Joint masked reconstruction and contrastive learning for mining interactions between proteins</a>  
-**Jiang Li**，Siyuan Zhang, Weibin Feng, Xiaoping Wang  
+**Jiang Li**, Siyuan Zhang, Weibin Feng, Xiaoping Wang  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-**Jiang Li**，Siyuan Zhang, Weibin Feng, Xiaoping Wang  
+**Jiang Li**, Siyuan Zhang, Weibin Feng, Xiaoping Wang  
 In Submission, 2025 [JCR Q0, CAAI-0]
 
 - <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
@@ -126,7 +126,7 @@ In Submission, 2025 [CAAI-0]
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:hHIA4WEVY-EC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:hHIA4WEVY-EC) [![](https://img.shields.io/github/languages/code-size/lijfrank/SFCHD-SCALE?style=social)](https://github.com/lijfrank/SFCHD-SCALE)
 
 - <a href="" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
-Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
+Xin Zhan, Xiaoping Wang, Weibin Feng, Depeng Li, Hongzhi Huang, **Jiang Li**  
 In Submission, 2025 [CAAI-0]
 
 - <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
