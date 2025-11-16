@@ -1,6 +1,6 @@
 # 🍚 Grant
 
-## Principal Investigator
+## Director
 - *2024.08 - 2025.12*, Research on Humanoid Emotion Recognition for Multimodal Conversation Scenarios (2024JYCXJJ067), Innovation Institute of HUST. [Fundamental Research Funds for the Central Universities]
 
 ## Collaborator
