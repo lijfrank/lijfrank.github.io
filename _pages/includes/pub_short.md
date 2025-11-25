@@ -20,5 +20,5 @@ IEEE Transactions on Affective Computing (``TAFFC``), 2024
 IEEE Transactions on Pattern Analysis and Machine Intelligence (``TPAMI``), 2025
 
 - <a href="https://doi.org/10.1007/s11432-023-3908-6" class="no-underline">EmotionIC: Emotional inertia and contagion-driven dependency modeling for emotion recognition in conversation</a>  
-Yingjian Liu†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng [Co-first Author]  
+Yingjian Liu†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng  
 SCIENCE CHINA Information Sciences (``SCIS``), 2023
