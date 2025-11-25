@@ -74,6 +74,10 @@ Junnan Li†, **Jiang Li**†, Xiaoping Wang, Xin Zhan, Zhigang Zeng [Co-first A
 Cyborg and Bionic Systems (``CBS``), 2023  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:BJtnxTr0fRcC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:BJtnxTr0fRcC) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/DGR-ERPS?style=social)](https://github.com/lijfrank/DGR-ERPS) -->
 
+- <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
+Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
+SCIENCE CHINA Information Sciences (``SCIS``), 2025
+
 ## Conference Paper
 
 - <a href="https://escholarship.org/uc/item/0dk8x579" class="no-underline">InferEM: Inferring the speaker's intention for empathetic dialogue generation</a>  
@@ -144,10 +148,6 @@ In Submission, 2025
 - <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
 Weibin Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
 In Submission, 2025
-
-- <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
-Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
-In Submission, 2024
 
 <!-- ## Invention Patent
 - A method, device, and computer for identifying psychological states of students (ZL202010406747.2)  
