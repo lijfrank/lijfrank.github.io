@@ -2,6 +2,7 @@
 <div class="scroll-container">
 2025  
 <ul>
+<li><i>2025.11</i>, one paper is accepted by SCIS, congratulations to Chao 🎉</li>
 <li><i>2025.10</i>, I'm a research assistant at NYU, in a transitional position to the postdoc 🌟🚀</li>
 <li><i>2025.10</i>, I will soon be a post-doctoral associate at NYU 🌟🚀</li>
 <li><i>2025.09</i>, I received my Ph.D. from HUST 🎉</li>
