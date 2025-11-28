@@ -26,47 +26,47 @@ IEEE Transactions on Multimedia (``TMM``), 2023
 
 - <a href="https://doi.org/10.1109/TMM.2023.3260635" class="no-underline">GraphCFC: A directed graph based cross-modal feature complementation approach for multimodal conversational emotion recognition</a>  
 **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng  
-IEEE Transactions on Multimedia (``TMM``), 2023  
+IEEE Transactions on Multimedia (``TMM``), 2023 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:as0KMg8qHbkC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:as0KMg8qHbkC) [![](https://img.shields.io/github/languages/code-size/lijfrank/GraphCFC?style=social)](https://github.com/lijfrank/GraphCFC)
 
 - <a href="https://doi.org/10.1109/TAFFC.2023.3261279" class="no-underline">GA2MIF: Graph and attention based two-stage multi-source information fusion for conversational emotion detection</a>  
 **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng  
-IEEE Transactions on Affective Computing (``TAFFC``), 2023  
+IEEE Transactions on Affective Computing (``TAFFC``), 2023 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:M_lZXyI38BkC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:M_lZXyI38BkC) [![](https://img.shields.io/github/languages/code-size/lijfrank/GA2MIF?style=social)](https://github.com/lijfrank/GA2MIF)
 
 - <a href="https://doi.org/10.1109/TAFFC.2024.3389453" class="no-underline">CFN-ESA: A cross-modal fusion network with emotion-shift awareness for dialogue emotion recognition</a>  
 **Jiang Li**, Xiaoping Wang, Yingjian Liu, Zhigang Zeng  
-IEEE Transactions on Affective Computing (``TAFFC``), 2024  
+IEEE Transactions on Affective Computing (``TAFFC``), 2024 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:idthP5jqfYAC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:idthP5jqfYAC) [![](https://img.shields.io/github/languages/code-size/lijfrank/CFN-ESA?style=social)](https://github.com/lijfrank/CFN-ESA)
 
 - <a href="https://doi.org/10.1109/TPAMI.2025.3581236" class="no-underline">Tracing intricate cues in dialogue: Joint graph structure and sentiment dynamics for multimodal emotion recognition</a>  
 **Jiang Li**, Xiaoping Wang, Zhigang Zeng  
-IEEE Transactions on Pattern Analysis and Machine Intelligence (``TPAMI``), 2025  
+IEEE Transactions on Pattern Analysis and Machine Intelligence (``TPAMI``), 2025 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:WzTVkKNmPSkC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:WzTVkKNmPSkC) [![](https://img.shields.io/github/languages/code-size/lijfrank/GraphSmile?style=social)](https://github.com/lijfrank/GraphSmile)
 
 - <a href="https://doi.org/10.1007/s11432-023-3908-6" class="no-underline">EmotionIC: Emotional inertia and contagion-driven dependency modeling for emotion recognition in conversation</a>  
 Yingjian Liu†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng  
-SCIENCE CHINA Information Sciences (``SCIS``), 2023  
+SCIENCE CHINA Information Sciences (``SCIS``), 2023 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:rbGdIwl2e6cC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:rbGdIwl2e6cC) [![](https://img.shields.io/github/languages/code-size/lijfrank/EmotionIC?style=social)](https://github.com/lijfrank/EmotionIC)
 
 - <a href="https://doi.org/10.1016/j.neucom.2023.126427" class="no-underline">GraphMFT: A graph network based multimodal fusion technique for emotion recognition in conversation</a>  
 **Jiang Li**, Xiaoping Wang, Guoqing Lv, Zhigang Zeng  
-Neurocomputing (``NEUCOM``), 2023  
+Neurocomputing (``NEUCOM``), 2023 [CAAI-B]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:q0uBw5dMOAkC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:q0uBw5dMOAkC) [![](https://img.shields.io/github/languages/code-size/lijfrank/GraphMFT?style=social)](https://github.com/lijfrank/GraphMFT)
 
 - <a href="https://doi.org/10.1016/j.knosys.2024.111434" class="no-underline">ERNetCL: A novel emotion recognition network in textual conversation based on curriculum learning strategy</a>  
 **Jiang Li**, Xiaoping Wang, Yingjian Liu, Zhigang Zeng  
-Knowledge-Based Systems (``KBS``), 2024  
+Knowledge-Based Systems (``KBS``), 2024 [CAAI-B]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:g_UdREhPGEoC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:g_UdREhPGEoC) [![](https://img.shields.io/github/languages/code-size/lijfrank/ERNetCL?style=social)](https://github.com/lijfrank/ERNetCL)
 
 - <a href="https://doi.org/10.1016/j.engappai.2023.107530" class="no-underline">A dual-stream recurrence-attention network with global–local awareness for emotion recognition in textual dialog</a>  
 **Jiang Li**, Xiaoping Wang, Zhigang Zeng  
-Engineering Applications of Artificial Intelligence (``EAAI``), 2023  
+Engineering Applications of Artificial Intelligence (``EAAI``), 2023 [CAAI-C]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:txeM2kYbVNMC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:txeM2kYbVNMC) [![](https://img.shields.io/github/languages/code-size/lijfrank/DualRAN?style=social)](https://github.com/lijfrank/DualRAN)
 
 - <a href="https://doi.org/10.1109/TCSS.2024.3477531" class="no-underline">Producing considerate responses: Progressive staged training for emotional support conversation</a>  
 Guoqing Lv†, **Jiang Li**†, Xiaoping Wang, Xin Zhan, Zhigang Zeng  
-IEEE Transactions on Computational Social Systems (``TCSS``), 2024  
+IEEE Transactions on Computational Social Systems (``TCSS``), 2024 [CAAI-C]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:X4-KO54GjGYC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:X4-KO54GjGYC) [![](https://img.shields.io/github/languages/code-size/lijfrank/BlenderBot-ThTra?style=social)](https://github.com/lijfrank/BlenderBot-ThTra)
 
 - <a href="https://doi.org/10.34133/cbsystems.0074" class="no-underline">A domain generalization and residual network-based emotion recognition from physiological signals</a>  
@@ -76,13 +76,13 @@ Cyborg and Bionic Systems (``CBS``), 2023
 
 - <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
 Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
-SCIENCE CHINA Information Sciences (``SCIS``), 2025
+SCIENCE CHINA Information Sciences (``SCIS``), 2025 [CAAI-A]
 
 ## Conference Paper
 
 - <a href="https://escholarship.org/uc/item/0dk8x579" class="no-underline">InferEM: Inferring the speaker's intention for empathetic dialogue generation</a>  
 Guoqing Lv†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng  
-The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-29 July 2023, Sydney, Australia  
+The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-29 July 2023, Sydney, Australia [CAAI-B]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:NtCmTCuxid4C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:NtCmTCuxid4C) [![](https://img.shields.io/github/languages/code-size/lijfrank/InferEM?style=social)](https://github.com/lijfrank/InferEM)
 
 - <a href="https://doi.org/10.1109/CAC59555.2023.10451247" class="no-underline">A spatio-temporal scale based affective neural network for emotion detection in conversation</a>  
@@ -92,11 +92,11 @@ The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-2
 
 - <a href="" class="no-underline">HAFUNet: A hierarchical attention fusion network for monocular depth estimation integrating event and frame data</a>  
 Siyuan Zhang, Xiaoping Wang, **Jiang Li**, Weibin Feng, Xin Zhan, Hongzhi Huang  
-The 33rd ACM International Conference on Multimedia (``MM 2025``), 27-31 October 2025, Dublin, Ireland
+The 33rd ACM International Conference on Multimedia (``MM 2025``), 27-31 October 2025, Dublin, Ireland [CAAI-A]
 
 - <a href="https://doi.org/10.1109/ICTAI59109.2023.00133" class="no-underline">Watch the speakers: A hybrid continuous attribution network for emotion recognition in conversation with emotion disentanglement</a>  
 Shanglin Lei, Xiaoping Wang, Guanting Dong, **Jiang Li**, Zhigang Zeng  
-The 35th IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2023``), 6-8 November 2023, Atlanta, USA  
+The 35th IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2023``), 6-8 November 2023, Atlanta, USA [CAAI-C]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:GYcXSSpN504C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:GYcXSSpN504C) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/HCAN?style=social)](https://github.com/lijfrank/HCAN) -->
 
 <!-- - <a class="no-underline">A novel text classification approach based on meta-path similarities and graph neural networks</a>  

@@ -3,32 +3,32 @@
 ## List in Affective Computing
 See more [here](https://github.com/lijfrank/Affective-Computing-Materials/)  
 
-Tailored Journal and Conference
-- Journal: TAFFC (CAAI-A), a top-tier journal in the field
-- Conference: ACII, a top-tier conference, but with limited recognition
+- Tailored Journal and Conference  
+Journal: TAFFC, a top-tier journal in the field;  
+Conference: ACII, a top-tier conference, but with limited recognition
 
-NLP-oriented Affective Computing
-- Journal: TASLP, TACL, CL
-- Conference: ACL, EMNLP, NAACL, SIGKDD, SIGIR, WWW
+- NLP-oriented Affective Computing  
+Journal: TASLP, TACL, CL  
+Conference: ACL, EMNLP, NAACL, SIGKDD, SIGIR, WWW
 
-CV-oriented Affective Computing
-- Journal: TIP, IJCV, TPAMI
-- Conference: ECCV, CVPR, ICCV
+- CV-oriented Affective Computing  
+Journal: TIP, IJCV, TPAMI  
+Conference: ECCV, CVPR, ICCV
 
-Multimodal Affective Computing
-- Journal: TMM, INFFUS
-- Conference: ACM MM
-- For multimodal research, journals and conferences in NLP and CV can also be considered
+- Multimodal Affective Computing  
+Journal: TMM, INFFUS  
+Conference: MM  
+For multimodal research, journals and conferences in NLP and CV can also be considered
 
-General Journal and Conference
-- Journal: AIJ, TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
-- Conference: AAAI, IJCAI, CHI
+- General Journal and Conference  
+Journal: AIJ, TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS  
+Conference: AAAI, IJCAI, CHI
 
-Physiological Signal-oriented Affective Computing
-- Journal: AIJ, TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS
-- Conference: AAAI, IJCAI, CHI
-- Journal: TMM, INFFUS
-- Conference: ACM MM
+- Physiological Signal-oriented Affective Computing  
+Journal: AIJ, TNNLS, TCYB, TOIS, SCIS, TOCHI, IJHCS  
+Conference: AAAI, IJCAI, CHI  
+Journal: TMM, INFFUS  
+Conference: MM
 
 ## Rank List
 - List of <a href="https://lijfrank.github.io/attaches/CAAI.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI (Jiang Li)
