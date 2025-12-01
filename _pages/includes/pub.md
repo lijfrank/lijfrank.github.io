@@ -121,7 +121,7 @@ In Preparation, 2025
 In Submission, 2025
 
 - <a href="" class="no-underline">Extracting inter-protein interactions via multitasking graph structure learning</a>  
-**Jiang Li**, Siyuan Zhang, Weibin Feng, Xiaoping Wang  
+**Jiang Li**, Weibin Feng, Siyuan Zhang, Xiaoping Wang  
 In Submission, 2025
 
 - <a href="https://arxiv.org/abs/2306.02098" class="no-underline">Large, complex, and realistic safety clothing and helmet detection: Dataset and method</a>  
