@@ -74,9 +74,10 @@ Junnan Li†, **Jiang Li**†, Xiaoping Wang, Xin Zhan, Zhigang Zeng
 Cyborg and Bionic Systems (``CBS``), 2023  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:BJtnxTr0fRcC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:BJtnxTr0fRcC) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/DGR-ERPS?style=social)](https://github.com/lijfrank/DGR-ERPS) -->
 
-- <a href="" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
+- <a href="https://doi.org/10.1007/s11432-024-4693-3" class="no-underline">A bio-inspired tactile-olfactory fusion perception system based on memristive spiking neural network</a>  
 Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zhigang Zeng  
-SCIENCE CHINA Information Sciences (``SCIS``), 2025 [CAAI-A]
+SCIENCE CHINA Information Sciences (``SCIS``), 2025 [CAAI-A]  
+[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:qsWQJNntlusC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:qsWQJNntlusC)
 
 ## Conference Paper
 
@@ -141,9 +142,9 @@ In Submission, 2025
 Weibin Feng, Xiaoping Wang, Xin Zhan, Hongzhi Huang, Siyuan Zhang, **Jiang Li**  
 In Submission, 2025
 
-- <a href="" class="no-underline">SDAUT: Sparse-adaptive deformable attention U-Net Transformer for event-frame depth estimation</a>  
+- <a href="" class="no-underline">SAMDepth: Sparse-adaptive monocular depth estimation combining events and frames</a>  
 Siyuan Zhang, Xiaoping Wang, Weibin Feng, Honggang Yang, Hongzhi Huang, **Jiang Li**  
-In Submission, 2025
+In Submission, 2026
 
 - <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
 Weibin Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
