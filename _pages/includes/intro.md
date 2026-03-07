@@ -17,7 +17,6 @@ I earned a bachelor's degree in software engineering in July 2018 and a master's
         <td style="width: 40%;">
             Address:
             New York University, Abu Dhabi 129188, United Arab Emirates <br>
-            <!-- South Building No.1, HUST, Luoyu Road 1037, Wuhan 430074, China <br>   -->
             E-mail:
             <a class="no-underline">lijfrank [AT] outlook.com</a>
         </td>
