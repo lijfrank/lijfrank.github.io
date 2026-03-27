@@ -93,7 +93,8 @@ The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-2
 
 - <a href="" class="no-underline">HAFUNet: A hierarchical attention fusion network for monocular depth estimation integrating event and frame data</a>  
 Siyuan Zhang, Xiaoping Wang, **Jiang Li**, Weibin Feng, Xin Zhan, Hongzhi Huang  
-The 33rd ACM International Conference on Multimedia (``MM 2025``), 27-31 October 2025, Dublin, Ireland [CAAI-A]
+The 33rd ACM International Conference on Multimedia (``MM 2025``), 27-31 October 2025, Dublin, Ireland [CAAI-A]  
+[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:RfUwGJFMQ-0C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:RfUwGJFMQ-0C)
 
 - <a href="https://doi.org/10.1109/ICTAI59109.2023.00133" class="no-underline">Watch the speakers: A hybrid continuous attribution network for emotion recognition in conversation with emotion disentanglement</a>  
 Shanglin Lei, Xiaoping Wang, Guanting Dong, **Jiang Li**, Zhigang Zeng  
@@ -149,6 +150,10 @@ In Submission, 2026
 - <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
 Weibin Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
 In Submission, 2025
+
+- <a href="" class="no-underline">AtelierEval: Agentic evaluation of humans & LLMs as text-to-image prompters</a>  
+Hanjun Luo, Zhimu Huang, Sylvia Chung, Yiran Wang, Yingbin Jin, Jialin Li, **Jiang Li**, Xinfeng Li, Hanan Salam  
+In Submission, 2026
 
 <!-- ## Invention Patent
 - A method, device, and computer for identifying psychological states of students (ZL202010406747.2)  
