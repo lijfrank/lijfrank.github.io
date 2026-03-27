@@ -1,11 +1,11 @@
 # 🌏 Experience
 
 ## Work
-- Post-doctoral Associate, 2026.01 – Present  
-Division of Science, <a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU)
+- Post-doctoral Associate, 2026.02 – Present  
+Division of Science, <a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU) <a href="https://nyuad.nyu.edu/" class="no-underline">Abu Dhabi</a>
 
-- Research Assistant, 2025.10 - 2025.12  
-Division of Science, <a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU)
+- Research Assistant, 2025.10 - 2026.01  
+Division of Science, <a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU) <a href="https://nyuad.nyu.edu/" class="no-underline">Abu Dhabi</a>
 
 <!-- ## Education -->
 <!-- - Doctoral Degree in Intelligence Science and Technology, 2021.09 - 2025.09  
