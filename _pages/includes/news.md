@@ -2,13 +2,13 @@
 <div class="scroll-container">
 2026  
 <ul>
-<li><i>2026.02</i>, I'm a post-doctoral associate at NYU 🌟🚀</li>
+<li><i>2026.02</i>, I'm a postdoctoral associate at NYU 🌟🚀</li>
 </ul>
 2025  
 <ul>
 <li><i>2025.11</i>, one paper is accepted by SCIS, congratulations to Chao 🎉</li>
 <li><i>2025.10</i>, I'm a research assistant at NYU, in a transitional position to the postdoc 🌟🚀</li>
-<li><i>2025.10</i>, I will soon be a post-doctoral associate at NYU 🌟🚀</li>
+<li><i>2025.10</i>, I will soon be a postdoctoral associate at NYU 🌟🚀</li>
 <li><i>2025.09</i>, I received my Ph.D. from HUST 🎉</li>
 <li><i>2025.07</i>, one paper is accepted by MM 2025, congratulations to Siyuan 🎉</li>
 <li><i>2025.06</i>, one paper is accepted by TPAMI 🎉</li>
