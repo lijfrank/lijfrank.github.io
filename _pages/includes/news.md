@@ -2,6 +2,7 @@
 <div class="scroll-container">
 2026  
 <ul>
+<li><i>2026.05</i>, one paper is accepted by ICML 2026, congratulations to Hanjun 🎉</li>
 <li><i>2026.02</i>, I'm a postdoctoral associate at NYU 🌟🚀</li>
 </ul>
 2025  
