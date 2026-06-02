@@ -160,6 +160,10 @@ In Submission, 2025
 Denggao Qin, Xiaoping Wang, Zheyi Zhang, **Jiang Li**, Zhigang Zeng  
 In Submission, 2026
 
+- <a href="" class="no-underline">Babel-Eval: Evaluating LLM robustness to code-mixing & expression barriers for migrant-worker service access</a>  
+Hanjun Luo, Jiaheng Wen, Huaye Zeng, Feiyang Wu, Chengxi Zhang, Junting Mao, Haobo Zhang, Zhimu Huang, Yingbin Jin, Yu Yao, Hanrong Zhang, Lixing Lin, Yuhan Lu, Jialin Li, **Jiang Li**, Hanan Salam  
+In Submission, 2026
+
 <!-- ## Invention Patent
 - A method, device, and computer for identifying psychological states of students (ZL202010406747.2)  
 **Jiang Li**, Q. Zhou, C. Yin, J. Ou, H. Wang, X. Shi, W. Peng, D. Yang   
