@@ -73,6 +73,6 @@ Conference: MM
 
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=23R2z4m_JZVSTgsDmm5jyVtCW6XzV89zcMPy5pwb4KY&cl=080808&t=tt&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080&w=a"></script>
 
-<div style="clear: both; text-align: left;">
+<!-- <div style="clear: both; text-align: left;">
 <p>Frank Lee</p>
-</div>
+</div> -->
