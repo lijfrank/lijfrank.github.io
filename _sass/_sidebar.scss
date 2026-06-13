@@ -124,13 +124,30 @@
 
   @include breakpoint($large) {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.author__another-name {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 
 .sidebar .author__name {
   @include breakpoint($medium) {
     font-size: $type-size-3;
+  }
+  font-family: $sans-serif;
+  font-size: $type-size-4;
+}
+
+.sidebar .author__another-name {
+  @include breakpoint($medium) {
+    font-size: $type-size-4;
   }
   font-family: $sans-serif;
   font-size: $type-size-4;

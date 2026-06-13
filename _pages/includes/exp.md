@@ -5,7 +5,9 @@
 <div class='exp-box-image'><img src='images/NYU-.png' width="100%"></div>
 <div class='exp-box-text' markdown="1">
 Postdoctoral Associate, 2026.02 – Present  
-Center of Interdisciplinary Data Science and Artificial Intelligence, <a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU) <a href="https://nyuad.nyu.edu/" class="no-underline">Abu Dhabi</a>
+Computer Science, Division of Science  
+Center of Interdisciplinary Data Science and Artificial Intelligence  
+<a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU) <a href="https://nyuad.nyu.edu/" class="no-underline">Abu Dhabi</a>
 </div>
 </div>
 
@@ -13,7 +15,9 @@ Center of Interdisciplinary Data Science and Artificial Intelligence, <a href="h
 <div class='exp-box-image'><img src='images/NYU-.png' width="100%"></div>
 <div class='exp-box-text' markdown="1">
 Research Assistant, 2025.10 - 2026.01  
-Center of Interdisciplinary Data Science and Artificial Intelligence, <a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU) <a href="https://nyuad.nyu.edu/" class="no-underline">Abu Dhabi</a>
+Computer Science, Division of Science  
+Center of Interdisciplinary Data Science and Artificial Intelligence  
+<a href="https://www.nyu.edu" class="no-underline">New York University</a> (NYU) <a href="https://nyuad.nyu.edu/" class="no-underline">Abu Dhabi</a>
 </div>
 </div>
 
@@ -28,21 +32,25 @@ Division of Science, <a href="https://www.nyu.edu" class="no-underline">New York
 <div class='exp-box-image'><img src='images/HUST-.png' width="100%"></div>
 <div class='exp-box-text' markdown="1">
 Doctoral Degree in Intelligence Science and Technology, 2021.09 - 2025.09  
-School of Artificial Intelligence and Automation, <a href="https://english.hust.edu.cn" class="no-underline">Huazhong University of Science and Technology</a> (HUST)
+Institute of Artificial Intelligence  
+School of Artificial Intelligence and Automation  
+<a href="https://english.hust.edu.cn" class="no-underline">Huazhong University of Science and Technology</a> (HUST)
 </div>
 </div>
 <div class='exp-box'>
 <div class='exp-box-image'><img src='images/CQU-.png' width="100%"></div>
 <div class='exp-box-text' markdown="1">
-Master’s Degree in Computer Technology, 2018.06 - 2021.06  
-College of Computer Science, <a href="https://english.cqu.edu.cn" class="no-underline">Chongqing University</a> (CQU)
+Master’s Degree in Computer Technology, 2018.09 - 2021.06  
+College of Computer Science  
+<a href="https://english.cqu.edu.cn" class="no-underline">Chongqing University</a> (CQU)
 </div>
 </div>
 <div class='exp-box'>
 <div class='exp-box-image'><img src='images/YU-.png' width="100%"></div>
 <div class='exp-box-text' markdown="1">
 Bachelor’s Degree in Software Engineering, 2014.09 - 2018.06  
-School of Computer Science, <a href="https://english.yangtzeu.edu.cn" class="no-underline">Yangtze University</a> (YU)
+School of Computer Science  
+<a href="https://english.yangtzeu.edu.cn" class="no-underline">Yangtze University</a> (YU)
 </div>
 </div>
 
