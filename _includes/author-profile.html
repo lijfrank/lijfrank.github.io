@@ -9,9 +9,10 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    <!-- {% if author.another-name %}<p class="author__another-name">{{ author.another-name }}</p>{% endif %} -->
-    <h5 class="author__another-name">{{ author.another-name }}</h5>
+    {% if author.name %}<p class="author__name">{{ author.name }}</p>{% endif %}
+    <!-- <h3 class="author__name">{{ author.name }}</h3> -->
+    {% if author.another-name %}<p class="author__another-name">{{ author.another-name }}</p>{% endif %}
+    <!-- <h4 class="author__another-name">{{ author.another-name }}</h4> -->
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
