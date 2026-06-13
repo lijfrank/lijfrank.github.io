@@ -40,6 +40,11 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .paper-box {
     display: flex;
     justify-content: left;
