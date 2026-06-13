@@ -41,13 +41,13 @@ Conference: MM
 
 - List of <a href="https://portal.core.edu.au/conf-ranks/?search=&by=all&source=CORE2023&sort=arank&page=1" class="no-underline">Academic Conferences</a> Recommended by ICORE (CORE)
 
-- List of <a href="attaches/HUST-AIA.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by HUST-AIA
+<!-- - List of <a href="attaches/HUST-AIA.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by HUST-AIA -->
 
 - List of <a href="attaches/TH-CPL.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by THU-CS
 
-- List of <a href="attaches/CCF.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF
-
 - List of <a href="https://lijfrank.github.io/attaches/CCF.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF (Jiang Li)
+
+- List of <a href="attaches/CCF.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF
 
 - Deadline of Academic Conferences (<a href="https://ccfddl.github.io/" class="no-underline">Version 1</a> - <a href="https://ccfddl.top/" class="no-underline">2</a>) Recommended by CCF
 
