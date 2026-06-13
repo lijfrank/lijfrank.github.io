@@ -17,7 +17,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1400px;
+            /* max-width: 1400px; */
             margin: 0 auto;
             background: white;
             border-radius: 16px;
@@ -105,7 +105,7 @@
             border-bottom: 2px solid #f0f0f0; /* 让 th 的底部基准线连贯 */
             text-align: center;
             color: #1e3c72;
-            font-weight: bold;
+            /* font-weight: bold; */
             width: 40px;
             padding: 12px 0;
         }
@@ -118,7 +118,7 @@
             cursor: pointer;
             color: #666;
             transition: all 0.2s ease;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .filter-table td.active {
@@ -196,26 +196,29 @@
         .data-table a:hover {
             text-decoration: underline;
         }
+        .col-direction {
+            width: 40px;
+        }
         .level-A {
             background: #d4edda;
             color: #155724;
             padding: 2px 8px;
             border-radius: 4px;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
         .level-B {
             background: #fff3cd;
             color: #856404;
             padding: 2px 8px;
             border-radius: 4px;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
         .level-C {
             background: #f8d7da;
             color: #721c24;
             padding: 2px 8px;
             border-radius: 4px;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
         .footer {
             text-align: center;
@@ -323,7 +326,7 @@
             <table class="data-table">
                 <thead>
                     <tr>
-                        <th>方向</th>
+                        <th class="col-direction">方向</th>
                         <th>级别</th>
                         <th>类型</th>
                         <th>序号</th>
@@ -1147,7 +1150,7 @@ const allData = [
             <td><span class="level-${item.level}">${item.level}</span></td>
             <td>${item.type}</td>
             <td>${item.no}</td>
-            <td><strong>${item.abbr}</strong></td>
+            <td>${item.abbr}</td>
             <td>${item.full}</td>
             <td>${item.publisher}</td>
             <td><a href="${item.url}" target="_blank">Link</a></td>
