@@ -121,19 +121,11 @@
 
 .author__name {
   margin: 0;
+  font-weight: bold;
 
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 0px;
-  }
-}
-
-.author__another-name {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 0;
-    margin-bottom: 20px;
   }
 }
 
@@ -143,6 +135,16 @@
   }
   font-family: $sans-serif;
   font-size: $type-size-4;
+  font-weight: bold;
+}
+
+.author__another-name {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .sidebar .author__another-name {
