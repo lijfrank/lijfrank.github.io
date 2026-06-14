@@ -9,11 +9,12 @@
   </div>
 
   <div class="author__content">
-    {% if author.name %}<p class="author__name">{{ author.name }}</p>{% endif %}
-    <!-- <h3 class="author__name">{{ author.name }}</h3> -->
+    <!-- {% if author.name %}<p class="author__name">{{ author.name }}</p>{% endif %}
     {% if author.another-name %}<p class="author__another-name">{{ author.another-name }}</p>{% endif %}
-    <!-- <h4 class="author__another-name">{{ author.another-name }}</h4> -->
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %} -->
+    {% if author.name %}<div class="author__name style="white-space: normal; margin-bottom: 1em;">{{ author.name }}</div>{% endif %}
+    {% if author.another-name %}<div class="author__another-name style="white-space: normal; margin-bottom: 1em;">{{ author.another-name }}</div>{% endif %}
+    {% if author.bio %}<div class="author__bio style="white-space: normal; margin-bottom: 2em;">{{ author.bio }}</div>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">

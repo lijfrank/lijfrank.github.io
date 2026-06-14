@@ -121,11 +121,12 @@
 
 .author__name {
   margin: 0;
+  // line-height: 1.6;
   font-weight: bold;
 
   @include breakpoint($large) {
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
   }
 }
 
@@ -140,10 +141,11 @@
 
 .author__another-name {
   margin: 0;
+  line-height: 1.6;
 
   @include breakpoint($large) {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -157,10 +159,11 @@
 
 .author__bio {
   margin: 0;
+  line-height: 1.6;
 
   @include breakpoint($large) {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
