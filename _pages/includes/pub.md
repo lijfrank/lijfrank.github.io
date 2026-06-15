@@ -91,20 +91,28 @@ The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-2
 2023 China Automation Congress (``CAC 2023``), 17-19 November 2023, Chongqing, China  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:Kqc1aDSOPooC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:Kqc1aDSOPooC)
 
-- <a href="" class="no-underline">HAFUNet: A hierarchical attention fusion network for monocular depth estimation integrating event and frame data</a>  
+- <a href="https://doi.org/10.1145/3746027.3755163" class="no-underline">HAFUNet: A hierarchical attention fusion network for monocular depth estimation integrating event and frame data</a>  
 Siyuan Zhang, Xiaoping Wang, **Jiang Li**, Weibin Feng, Xin Zhan, Hongzhi Huang  
 The 33rd ACM International Conference on Multimedia (``ACMMM 2025``), 27-31 October 2025, Dublin, Ireland [CAAI-A]  
-[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:RfUwGJFMQ-0C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:RfUwGJFMQ-0C)
+[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:RfUwGJFMQ-0C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:RfUwGJFMQ-0C) [![](https://img.shields.io/github/languages/code-size/SiYZhangwh/HAFUNet?style=social)](https://github.com/SiYZhangwh/HAFUNet)
 
 - <a href="https://doi.org/10.1109/ICTAI59109.2023.00133" class="no-underline">Watch the speakers: A hybrid continuous attribution network for emotion recognition in conversation with emotion disentanglement</a>  
 Shanglin Lei, Xiaoping Wang, Guanting Dong, **Jiang Li**, Zhigang Zeng  
 The 35th IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2023``), 6-8 November 2023, Atlanta, USA [CAAI-C]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:GYcXSSpN504C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:GYcXSSpN504C) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/HCAN?style=social)](https://github.com/lijfrank/HCAN) -->
 
-
 - <a href="" class="no-underline">AtelierEval: Agentic evaluation of humans & LLMs as text-to-image prompters</a>  
 Hanjun Luo, Zhimu Huang, Sylvia Chung, Yiran Wang, Yingbin Jin, Jialin Li, **Jiang Li**, Xinfeng Li, Hanan Salam  
 Forty-Third International Conference on Machine Learning (``ICML 2026``), 6-11 July 2026, Seoul, South Korea [CAAI-A]  
+[![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:4n0clTBhZ78C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:4n0clTBhZ78C) [![](https://img.shields.io/github/languages/code-size/Astarojth/AtelierEval?style=social)](https://github.com/Astarojth/AtelierEval)
+
+- <a href="https://doi.org/10.1007/978-981-92-1599-7_21" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
+Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
+The 4th International Conference on Neuromorphic Computing (``ICNC 2025``), 12-14 December, 2025, Chengdu, China
+
+- <a href="https://doi.org/10.1007/978-981-92-1599-7_34" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
+Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
+The 4th International Conference on Neuromorphic Computing (``ICNC 2025``), 12-14 December, 2025, Chengdu, China
 
 <!-- - <a class="no-underline">A novel text classification approach based on meta-path similarities and graph neural networks</a>  
 H. Wang, **Jiang Li**, Q. Zhou, L. Ge  
@@ -135,14 +143,6 @@ In Submission, 2025
 Fusheng Yu†, **Jiang Li**†, Xiaoping Wang, Depeng Li, Xin Zhan, Shaojin Wu, Junjie Zhang  
 In Submission, 2025  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:hHIA4WEVY-EC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:hHIA4WEVY-EC) [![](https://img.shields.io/github/languages/code-size/lijfrank/SFCHD-SCALE?style=social)](https://github.com/lijfrank/SFCHD-SCALE)
-
-- <a href="" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
-Xin Zhan, Xiaoping Wang, Weibin Feng, Depeng Li, Hongzhi Huang, **Jiang Li**  
-In Submission, 2025
-
-- <a href="" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
-Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
-In Submission, 2025
 
 - <a href="" class="no-underline">ELGA-GMamba: An efficient local-to-global awareness graph mamba for object recognition with event-based cameras</a>  
 Weibin Feng, Xiaoping Wang, Xin Zhan, Hongzhi Huang, Siyuan Zhang, **Jiang Li**  
