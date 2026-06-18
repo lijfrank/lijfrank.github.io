@@ -33,6 +33,8 @@ Conference: MM
 ## Rank List
 - List of <a href="https://lijfrank.github.io/attaches/CAAI.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI (Jiang Li)
 
+- List2 of <a href="https://lijfrank.github.io/attaches/CAAI2.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI (Jiang Li)
+
 - List of <a href="attaches/CAAI.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CAAI
 
 - Extension of <a href="https://github.com/lijfrank/CAAI-Rank-Display" class="no-underline">CAAI Rank Display</a> (Jiang Li)
@@ -46,6 +48,8 @@ Conference: MM
 - List of <a href="attaches/TH-CPL.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by THU-CS
 
 - List of <a href="https://lijfrank.github.io/attaches/CCF.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF (Jiang Li)
+
+- List2 of <a href="https://lijfrank.github.io/attaches/CCF2.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF (Jiang Li)
 
 - List of <a href="attaches/CCF.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF
 
@@ -73,6 +77,6 @@ Conference: MM
 
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=23R2z4m_JZVSTgsDmm5jyVtCW6XzV89zcMPy5pwb4KY&cl=080808&t=tt&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080&w=a"></script>
 
-<!-- <div style="clear: both; text-align: left;">
+<div style="clear: both; text-align: left;">
 <p>Frank Lee</p>
-</div> -->
+</div>

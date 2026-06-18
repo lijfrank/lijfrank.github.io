@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCF Rank (Jiang Li)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sidebar-bg:#0a1324;--sidebar-hover:#111f3a;--sidebar-active:#172c52;
+  --content-bg:#f6f4ef;--surface:#fff;--accent:#b8860b;--accent-hover:#9a7209;
+  --text-primary:#1c1c1c;--text-secondary:#555;--text-muted:#999;--border:#e2dfd8;
+  --a-bg:#fdf3e0;--a-color:#b8860b;--b-bg:#e3eef7;--b-color:#2a6496;--c-bg:#f0f0f0;--c-color:#6e6e6e;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Serif SC',Georgia,serif;background:var(--content-bg);color:var(--text-primary);display:flex;min-height:100vh}
+.sidebar{width:235px;background:var(--sidebar-bg);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;display:flex;flex-direction:column}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px}
+.sidebar-header{padding:28px 24px 20px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h1{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:.02em;line-height:1.35}
+.sidebar-header .sub{font-size:11px;color:#5a6a80;margin-top:5px;font-family:'DM Mono',monospace;letter-spacing:.04em}
+.nav-wrap{padding:12px 10px;flex:1}
+.nav-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#4a5a70;padding:10px 14px 6px;font-family:'DM Mono',monospace}
+.nav-btn{display:flex;align-items:center;width:100%;padding:9px 14px;border:none;background:0 0;color:#8a96a8;font-size:13px;font-family:'Noto Serif SC',serif;cursor:pointer;border-radius:8px;transition:all .18s;text-align:left;gap:10px;margin:1px 0}
+.nav-btn:hover{background:var(--sidebar-hover);color:#c0c8d4}
+.nav-btn.active{background:var(--sidebar-active);color:var(--accent)}
+.nav-icon{width:30px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;background:rgba(255,255,255,.05);transition:all .18s;text-align:center}
+.nav-btn.active .nav-icon{background:rgba(184,134,11,.18);color:var(--accent)}
+.nav-count{margin-left:auto;font-size:10px;font-family:'DM Mono',monospace;color:#4a5a70;background:rgba(255,255,255,.04);padding:2px 6px;border-radius:4px}
+.main{margin-left:272px;flex:1;padding:36px 44px 60px;min-width:0}
+.page-header{margin-bottom:28px}
+.page-header h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--text-primary);line-height:1.25}
+.page-header p{color:var(--text-secondary);font-size:13px;margin-top:4px}
+.filter-bar{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+.fg{display:flex;gap:3px;background:var(--surface);border-radius:10px;padding:3px;border:1px solid var(--border)}
+.fb{padding:5px 13px;border:none;background:0 0;color:var(--text-secondary);font-size:12px;font-family:'Noto Serif SC',serif;cursor:pointer;border-radius:7px;transition:all .18s;white-space:nowrap}
+.fb:hover{color:var(--text-primary);background:rgba(0,0,0,.03)}
+.fb.on{background:var(--sidebar-bg);color:#fff}
+.search-box{flex:1;min-width:180px;position:relative}
+.search-box input{width:100%;padding:7px 14px 7px 34px;border:1px solid var(--border);border-radius:10px;font-size:13px;font-family:'Noto Serif SC',serif;background:var(--surface);color:var(--text-primary);outline:0;transition:border-color .2s}
+.search-box input:focus{border-color:var(--accent)}
+.search-box .ico{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:15px;pointer-events:none}
+.stats{font-size:11px;color:var(--text-muted);font-family:'DM Mono',monospace;margin-bottom:12px;letter-spacing:.03em}
+.tbl-wrap{background:var(--surface);border-radius:14px;border:1px solid var(--border);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.035)}
+table{width:100%;border-collapse:collapse}
+thead th{background:#f2f0ea;padding:11px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.07em;border-bottom:2px solid var(--border);font-family:'DM Mono',monospace;position:sticky;top:0;z-index:5;white-space:nowrap}
+tbody tr{transition:background .12s}
+tbody tr:hover{background:#faf8f3}
+tbody td{padding:9px 14px;font-size:12.5px;border-bottom:1px solid #f0ede6;vertical-align:top;line-height:1.5}
+td.c-dir{white-space:nowrap;font-weight:600;color:var(--text-secondary);font-size:12px}
+.tag{display:inline-block;padding:1px 9px;border-radius:10px;font-size:10.5px;font-weight:700;font-family:'DM Mono',monospace;letter-spacing:.03em}
+.tag-a{background:var(--a-bg);color:var(--a-color)}
+.tag-b{background:var(--b-bg);color:var(--b-color)}
+.tag-c{background:var(--c-bg);color:var(--c-color)}
+.tag-t{display:inline-block;padding:0px 1px;border-radius:4px;font-size:10.5px;background:#f0ede6;color:var(--text-secondary);white-space:nowrap}
+td.c-no{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--text-muted);text-align:center}
+td.c-abbr{font-family:'DM Mono',monospace;font-weight:500;color:var(--accent);font-size:11.5px;max-width:90px}
+td.c-full{font-size:11.5px;line-height:1.45;max-width:220px}
+td.c-pub{font-size:11.5px;color:var(--text-secondary);max-width:110px}
+td.c-url a{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--accent);text-decoration:none;word-break:break-all;transition:color .15s;white-space:nowrap}
+td.c-url a:hover{color:var(--accent-hover);text-decoration:underline}
+.empty-msg{text-align:center;padding:52px 20px;color:var(--text-muted);font-style:italic;font-size:14px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+tbody tr{animation:fadeUp .25s ease forwards;opacity:0}
+tbody tr:nth-child(1){animation-delay:.02s}
+tbody tr:nth-child(2){animation-delay:.04s}
+tbody tr:nth-child(3){animation-delay:.06s}
+tbody tr:nth-child(4){animation-delay:.08s}
+tbody tr:nth-child(5){animation-delay:.1s}
+tbody tr:nth-child(n+6){animation-delay:.12s}
+@media(max-width:900px){
+  .sidebar{width:56px;padding:0}
+  .sidebar-header{padding:16px 0;text-align:center}
+  .sidebar-header h1,.sidebar-header .sub,.nav-label,.nav-btn span:not(.nav-icon),.nav-count{display:none}
+  .nav-btn{justify-content:center;padding:10px 0}
+  .nav-wrap{padding:8px 6px}
+  .main{margin-left:56px;padding:20px 14px 40px}
+  .filter-bar{gap:6px}
+}
+@media(max-width:600px){
+  .sidebar{display:none}
+  .main{margin-left:0;padding:14px 8px 30px}
+}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1>中国计算机学会(CCF)推荐国际学术期刊和会议目录(Jiang Li)</h1>
+    <div class="sub">第七版 | 更新时间: 2026-06-18</div>
+  </div>
+  <div class="nav-wrap">
+    <!-- <div class="nav-label">研究方向</div>
+    <button class="nav-btn active" data-dir="all"><span class="nav-icon">全部</span><span>全部方向</span><span class="nav-count" id="cnt-all"></span></button>
+    <button class="nav-btn" data-dir="系统"><span class="nav-icon">系统</span><span>计算机体系结构/并行与分布计算/存储系统</span></button>
+    <button class="nav-btn" data-dir="网络"><span class="nav-icon">网络</span><span>计算机网络</span></button>
+    <button class="nav-btn" data-dir="安全"><span class="nav-icon">安全</span><span>网络与信息安全</span></button>
+    <button class="nav-btn" data-dir="软件"><span class="nav-icon">软件</span><span>软件工程/系统软件/程序设计语言</span></button>
+    <button class="nav-btn" data-dir="数据"><span class="nav-icon">数据</span><span>数据库/数据检索/内容检索</span></button>
+    <button class="nav-btn" data-dir="理论"><span class="nav-icon">理论</span><span>计算机科学理论</span></button>
+    <button class="nav-btn" data-dir="媒体"><span class="nav-icon">媒体</span><span>计算机图形学与多媒体</span></button>
+    <button class="nav-btn" data-dir="智能"><span class="nav-icon">智能</span><span>人工智能</span></button>
+    <button class="nav-btn" data-dir="人机"><span class="nav-icon">人机</span><span>人机交互与普适计算</span></button>
+    <button class="nav-btn" data-dir="交叉"><span class="nav-icon">交叉</span><span>交叉/综合/新兴</span></button> -->
+    <div class="nav-label">研究方向</div>
+    <button class="nav-btn active" data-dir="all"><span class="nav-icon">全部</span><span>全部方向</span><span class="nav-count" id="cnt-all"></span></button>
+    <button class="nav-btn" data-dir="系统"><span class="nav-icon">系统</span><span>计算机体系结构</span></button>
+    <button class="nav-btn" data-dir="网络"><span class="nav-icon">网络</span><span>计算机网络</span></button>
+    <button class="nav-btn" data-dir="安全"><span class="nav-icon">安全</span><span>网络与信息安全</span></button>
+    <button class="nav-btn" data-dir="软件"><span class="nav-icon">软件</span><span>软件工程/程序设计语言</span></button>
+    <button class="nav-btn" data-dir="数据"><span class="nav-icon">数据</span><span>数据库/内容检索</span></button>
+    <button class="nav-btn" data-dir="理论"><span class="nav-icon">理论</span><span>计算机科学理论</span></button>
+    <button class="nav-btn" data-dir="媒体"><span class="nav-icon">媒体</span><span>计算机图形学与多媒体</span></button>
+    <button class="nav-btn" data-dir="智能"><span class="nav-icon">智能</span><span>人工智能</span></button>
+    <button class="nav-btn" data-dir="人机"><span class="nav-icon">人机</span><span>人机交互与普适计算</span></button>
+    <button class="nav-btn" data-dir="交叉"><span class="nav-icon">交叉</span><span>交叉/综合/新兴</span></button>
+  </div>
+</aside>
+<main class="main">
+  <div class="page-header">
+    <h2 id="title">全部方向</h2>
+    <p id="desc"><a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/" target="_blank" style="text-decoration: none;">CCF官方推荐目录</a>, <a href="https://lijfrank.github.io/attaches/CCF.pdf" target="_blank" style="text-decoration: none;">PDF文件</a>, <a href="https://www.ccf.org.cn/ccftjgjxskwml/" target="_blank" style="text-decoration: none;">中文科技期刊目录</a>, <a href="https://lijfrank.github.io/attaches/CAAI2.html" target="_blank" style="text-decoration: none;">CAAI推荐目录</a></p>
+  </div>
+  <div class="filter-bar">
+    <div class="fg" id="lf">
+      <button class="fb on" data-v="all">全部级别</button>
+      <button class="fb" data-v="A">A 类</button>
+      <button class="fb" data-v="B">B 类</button>
+      <button class="fb" data-v="C">C 类</button>
+    </div>
+    <div class="fg" id="tf">
+      <button class="fb on" data-v="all">全部类型</button>
+      <button class="fb" data-v="期刊">期刊</button>
+      <button class="fb" data-v="会议">会议</button>
+    </div>
+    <div class="search-box">
+      <span class="ico">⌕</span>
+      <input id="si" type="text" placeholder="搜索缩写、全称或出版社…">
+    </div>
+  </div>
+  <div class="stats" id="st"></div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>方向</th><th>级别</th><th>类型</th><th>序号</th><th>缩写</th><th>全称</th><th>出版社</th><th>网址</th></tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+</main>
+<script>
+const D=[
+// ═══════════════════════════════════════════════════════
+// 系统 — 计算机体系结构/并行与分布计算/存储系统
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"系统",l:"A",t:"期刊",n:1,ab:"TOCS",f:"ACM Transactions on Computer Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tocs/"},
+{d:"系统",l:"A",t:"期刊",n:2,ab:"TOS",f:"ACM Transactions on Storage",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tos/"},
+{d:"系统",l:"A",t:"期刊",n:3,ab:"TCAD",f:"IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tcad/"},
+{d:"系统",l:"A",t:"期刊",n:4,ab:"TC",f:"IEEE Transactions on Computers",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tc/index.html"},
+{d:"系统",l:"A",t:"期刊",n:5,ab:"TPDS",f:"IEEE Transactions on Parallel and Distributed Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tpds/"},
+{d:"系统",l:"A",t:"期刊",n:6,ab:"TACO",f:"ACM Transactions on Architecture and Code Optimization",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/taco/"},
+// 期刊 B类
+{d:"系统",l:"B",t:"期刊",n:1,ab:"TAAS",f:"ACM Transactions on Autonomous and Adaptive Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/taas/"},
+{d:"系统",l:"B",t:"期刊",n:2,ab:"TODAES",f:"ACM Transactions on Design Automation of Electronic Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/todaes/"},
+{d:"系统",l:"B",t:"期刊",n:3,ab:"TECS",f:"ACM Transactions on Embedded Computing Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tecs/"},
+{d:"系统",l:"B",t:"期刊",n:4,ab:"TRETS",f:"ACM Transactions on Reconfigurable Technology and Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/trets/"},
+{d:"系统",l:"B",t:"期刊",n:5,ab:"TVLSI",f:"IEEE Transactions on Very Large Scale Integration (VLSI) Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tvlsi/"},
+{d:"系统",l:"B",t:"期刊",n:6,ab:"JPDC",f:"Journal of Parallel and Distributed Computing",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jpdc/"},
+{d:"系统",l:"B",t:"期刊",n:7,ab:"JSA",f:"Journal of Systems Architecture: Embedded Software Design",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jsa/"},
+{d:"系统",l:"B",t:"期刊",n:8,ab:"",f:"Parallel Computing",p:"Elsevier",u:"https://dblp.org/db/journals/pc/index.html"},
+{d:"系统",l:"B",t:"期刊",n:9,ab:"",f:"Performance Evaluation: An International Journal",p:"Elsevier",u:"https://dblp.org/db/journals/pe/index.html"},
+{d:"系统",l:"B",t:"期刊",n:10,ab:"TCC",f:"IEEE Transactions on Cloud Computing",p:"IEEE",u:"https://dblp.uni-trier.de/db/journals/tcc/"},
+// 期刊 C类
+{d:"系统",l:"C",t:"期刊",n:1,ab:"JETC",f:"ACM Journal on Emerging Technologies in Computing Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/jetc/"},
+{d:"系统",l:"C",t:"期刊",n:2,ab:"",f:"Concurrency and Computation: Practice and Experience",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/concurrency/"},
+{d:"系统",l:"C",t:"期刊",n:3,ab:"DC",f:"Distributed Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/dc/"},
+{d:"系统",l:"C",t:"期刊",n:4,ab:"FGCS",f:"Future Generation Computer Systems",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/fgcs"},
+{d:"系统",l:"C",t:"期刊",n:5,ab:"Integration",f:"Integration, the VLSI Journal",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/integration"},
+{d:"系统",l:"C",t:"期刊",n:6,ab:"JETTA",f:"Journal of Electronic Testing - Theory and Applications",p:"Springer",u:"https://dblp.org/db/journals/et/index.html"},
+{d:"系统",l:"C",t:"期刊",n:7,ab:"JGC",f:"Journal of Grid Computing",p:"Springer",u:"https://dblp.uni-trier.de/db/journals/grid/"},
+{d:"系统",l:"C",t:"期刊",n:8,ab:"RTS",f:"Real-Time Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/rts/"},
+{d:"系统",l:"C",t:"期刊",n:9,ab:"TJSC",f:"The Journal of Supercomputing",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/tjs/"},
+{d:"系统",l:"C",t:"期刊",n:10,ab:"TCASI",f:"IEEE Transactions on Circuits and Systems I: Regular Papers",p:"IEEE",u:"https://dblp.org/db/journals/tcasi/index.html"},
+{d:"系统",l:"C",t:"期刊",n:11,ab:"CCF-THPC",f:"CCF Transactions on High Performance Computing",p:"CCF",u:"https://dblp.org/db/journals/ccfthpc/index.html"},
+{d:"系统",l:"C",t:"期刊",n:12,ab:"TSUSC",f:"IEEE Transactions on Sustainable Computing",p:"IEEE",u:"https://dblp.org/db/journals/tsusc/index.html"},
+// 会议 A类
+{d:"系统",l:"A",t:"会议",n:1,ab:"PPoPP",f:"ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ppopp/"},
+{d:"系统",l:"A",t:"会议",n:2,ab:"FAST",f:"USENIX Conference on File and Storage Technologies",p:"USENIX",u:"http://dblp.uni-trier.de/db/conf/fast/"},
+{d:"系统",l:"A",t:"会议",n:3,ab:"DAC",f:"Design Automation Conference",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/dac/"},
+{d:"系统",l:"A",t:"会议",n:4,ab:"HPCA",f:"IEEE International Symposium on High Performance Computer Architecture",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/hpca/"},
+{d:"系统",l:"A",t:"会议",n:5,ab:"MICRO",f:"IEEE/ACM International Symposium on Microarchitecture",p:"IEEE/ACM",u:"https://dblp.uni-trier.de/db/conf/micro/index.html"},
+{d:"系统",l:"A",t:"会议",n:6,ab:"SC",f:"International Conference for High Performance Computing, Networking, Storage, and Analysis",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/sc/"},
+{d:"系统",l:"A",t:"会议",n:7,ab:"ASPLOS",f:"International Conference on Architectural Support for Programming Languages and Operating Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/asplos/"},
+{d:"系统",l:"A",t:"会议",n:8,ab:"ISCA",f:"International Symposium on Computer Architecture",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/isca/"},
+{d:"系统",l:"A",t:"会议",n:9,ab:"ACM SIGOPS ATC",f:"ACM SIGOPS Annual Technical Conference",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/usenix/index.html"},
+{d:"系统",l:"A",t:"会议",n:10,ab:"EuroSys",f:"European Conference on Computer Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/eurosys/"},
+{d:"系统",l:"A",t:"会议",n:11,ab:"HPDC",f:"The International ACM Symposium on High-Performance Parallel and Distributed Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/hpdc/"},
+// 会议 B类
+{d:"系统",l:"B",t:"会议",n:1,ab:"SoCC",f:"ACM Symposium on Cloud Computing",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/cloud/"},
+{d:"系统",l:"B",t:"会议",n:2,ab:"SPAA",f:"ACM Symposium on Parallelism in Algorithms and Architectures",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/spaa/"},
+{d:"系统",l:"B",t:"会议",n:3,ab:"PODC",f:"ACM Symposium on Principles of Distributed Computing",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/podc/"},
+{d:"系统",l:"B",t:"会议",n:4,ab:"FPGA",f:"ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/fpga/"},
+{d:"系统",l:"B",t:"会议",n:5,ab:"CGO",f:"The International Symposium on Code Generation and Optimization",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/cgo/"},
+{d:"系统",l:"B",t:"会议",n:6,ab:"DATE",f:"Design, Automation & Test in Europe",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/date/"},
+{d:"系统",l:"B",t:"会议",n:7,ab:"HOT CHIPS",f:"Hot Chips: A Symposium on High Performance Chips",p:"IEEE",u:"https://dblp.org/db/conf/hotchips/index.html"},
+{d:"系统",l:"B",t:"会议",n:8,ab:"CLUSTER",f:"IEEE International Conference on Cluster Computing",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/cluster/"},
+{d:"系统",l:"B",t:"会议",n:9,ab:"ICCD",f:"International Conference on Computer Design",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iccd/"},
+{d:"系统",l:"B",t:"会议",n:10,ab:"ICCAD",f:"International Conference on Computer-Aided Design",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/iccad/"},
+{d:"系统",l:"B",t:"会议",n:11,ab:"ICDCS",f:"IEEE International Conference on Distributed Computing Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icdcs/"},
+{d:"系统",l:"B",t:"会议",n:12,ab:"CODES+ISSS",f:"International Conference on Hardware/Software Co-design and System Synthesis",p:"IEEE/ACM",u:"https://dblp.uni-trier.de/db/conf/codesisss/index.html"},
+{d:"系统",l:"B",t:"会议",n:13,ab:"HiPEAC",f:"International Conference on High Performance and Embedded Architectures and Compilers",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/hipeac/"},
+{d:"系统",l:"B",t:"会议",n:14,ab:"SIG-METRICS",f:"International Conference on Measurement and Modeling of Computer Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sigmetrics/"},
+{d:"系统",l:"B",t:"会议",n:15,ab:"PACT",f:"International Conference on Parallel Architectures and Compilation Techniques",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/IEEEpact/"},
+{d:"系统",l:"B",t:"会议",n:16,ab:"ICPP",f:"International Conference on Parallel Processing",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/icpp/"},
+{d:"系统",l:"B",t:"会议",n:17,ab:"ICS",f:"International Conference on Supercomputing",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ics/"},
+{d:"系统",l:"B",t:"会议",n:18,ab:"VEE",f:"International Conference on Virtual Execution Environments",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/vee/"},
+{d:"系统",l:"B",t:"会议",n:19,ab:"IPDPS",f:"IEEE International Parallel & Distributed Processing Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ipps/"},
+{d:"系统",l:"B",t:"会议",n:20,ab:"Performance",f:"International Symposium on Computer Performance, Modeling, Measurements and Evaluation",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/performance/"},
+{d:"系统",l:"B",t:"会议",n:21,ab:"ITC",f:"International Test Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/itc/"},
+{d:"系统",l:"B",t:"会议",n:22,ab:"LISA",f:"Large Installation System Administration Conference",p:"USENIX",u:"http://dblp.uni-trier.de/db/conf/lisa/"},
+{d:"系统",l:"B",t:"会议",n:23,ab:"MSST",f:"Mass Storage Systems and Technologies",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/mss/"},
+{d:"系统",l:"B",t:"会议",n:24,ab:"RTAS",f:"IEEE Real-Time and Embedded Technology and Applications Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/rtas/"},
+{d:"系统",l:"B",t:"会议",n:25,ab:"Euro-Par",f:"European Conference on Parallel and Distributed Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/europar/"},
+{d:"系统",l:"B",t:"会议",n:26,ab:"ISCAS",f:"IEEE International Symposium on Circuits and Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iscas/"},
+// 会议 C类
+{d:"系统",l:"C",t:"会议",n:1,ab:"CF",f:"ACM International Conference on Computing Frontiers",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/cf"},
+{d:"系统",l:"C",t:"会议",n:2,ab:"SYSTOR",f:"ACM International Systems and Storage Conference",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/systor/index.html"},
+{d:"系统",l:"C",t:"会议",n:3,ab:"NOCS",f:"ACM/IEEE International Symposium on Networks-on-Chip",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/nocs"},
+{d:"系统",l:"C",t:"会议",n:4,ab:"ASAP",f:"IEEE International Conference on Application-Specific Systems, Architectures, and Processors",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/asap"},
+{d:"系统",l:"C",t:"会议",n:5,ab:"ASP-DAC",f:"Asia and South Pacific Design Automation Conference",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/aspdac"},
+{d:"系统",l:"C",t:"会议",n:6,ab:"ETS",f:"IEEE European Test Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ets/"},
+{d:"系统",l:"C",t:"会议",n:7,ab:"FPL",f:"International Conference on Field-Programmable Logic and Applications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/fpl/"},
+{d:"系统",l:"C",t:"会议",n:8,ab:"FCCM",f:"IEEE Symposium on Field-Programmable Custom Computing Machines",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/fccm/"},
+{d:"系统",l:"C",t:"会议",n:9,ab:"GLSVLSI",f:"Great Lakes Symposium on VLSI",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/glvlsi/"},
+{d:"系统",l:"C",t:"会议",n:10,ab:"ATS",f:"IEEE Asian Test Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ats/"},
+{d:"系统",l:"C",t:"会议",n:11,ab:"HPCC",f:"IEEE International Conference on High Performance Computing and Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/hpcc/"},
+{d:"系统",l:"C",t:"会议",n:12,ab:"HiPC",f:"IEEE International Conference on High Performance Computing, Data and Analytics",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/hipc/index.html"},
+{d:"系统",l:"C",t:"会议",n:13,ab:"MASCOTS",f:"International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/mascots/"},
+{d:"系统",l:"C",t:"会议",n:14,ab:"ISPA",f:"IEEE International Symposium on Parallel and Distributed Processing with Applications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ispa/"},
+{d:"系统",l:"C",t:"会议",n:15,ab:"CCGRID",f:"IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/ccgrid/"},
+{d:"系统",l:"C",t:"会议",n:16,ab:"NPC",f:"IFIP International Conference on Network and Parallel Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/npc/"},
+{d:"系统",l:"C",t:"会议",n:17,ab:"ICA3PP",f:"International Conference on Algorithms and Architectures for Parallel Processing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ica3pp/"},
+{d:"系统",l:"C",t:"会议",n:18,ab:"CASES",f:"International Conference on Compilers, Architectures, and Synthesis for Embedded Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/cases/index.html"},
+{d:"系统",l:"C",t:"会议",n:19,ab:"FPT",f:"International Conference on Field-Programmable Technology",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/fpt/"},
+{d:"系统",l:"C",t:"会议",n:20,ab:"ICPADS",f:"International Conference on Parallel and Distributed Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icpads/"},
+{d:"系统",l:"C",t:"会议",n:21,ab:"ISLPED",f:"International Symposium on Low Power Electronics and Design",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/islped/"},
+{d:"系统",l:"C",t:"会议",n:22,ab:"ISPD",f:"International Symposium on Physical Design",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ispd/"},
+{d:"系统",l:"C",t:"会议",n:23,ab:"HOTI",f:"IEEE Symposium on High-Performance Interconnects",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/hoti/"},
+{d:"系统",l:"C",t:"会议",n:24,ab:"VTS",f:"IEEE VLSI Test Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/vts/"},
+{d:"系统",l:"C",t:"会议",n:25,ab:"ITC-Asia",f:"International Test Conference in Asia",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/itc-asia/"},
+{d:"系统",l:"C",t:"会议",n:26,ab:"SEC",f:"ACM/IEEE Symposium on Edge Computing",p:"IEEE/ACM",u:"https://dblp.uni-trier.de/db/conf/ieeesec/index.html"},
+{d:"系统",l:"C",t:"会议",n:27,ab:"NAS",f:"International Conference on Networking, Architecture and Storage",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/nas/index.html"},
+{d:"系统",l:"C",t:"会议",n:28,ab:"HotStorage",f:"HotStorage",p:"USENIX Association",u:"https://dblp.uni-trier.de/db/conf/hotstorage/index.html"},
+{d:"系统",l:"C",t:"会议",n:29,ab:"APPT",f:"International Symposium on Advanced Parallel Processing Technology",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/appt/index.html"},
+{d:"系统",l:"C",t:"会议",n:30,ab:"JCC",f:"International Conference on JointCloud Computing",p:"CCF & IEEE",u:""},
+
+// ═══════════════════════════════════════════════════════
+// 网络 — 计算机网络
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"网络",l:"A",t:"期刊",n:1,ab:"JSAC",f:"IEEE Journal on Selected Areas in Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/jsac/"},
+{d:"网络",l:"A",t:"期刊",n:2,ab:"TMC",f:"IEEE Transactions on Mobile Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tmc/"},
+{d:"网络",l:"A",t:"期刊",n:3,ab:"TON",f:"IEEE Transactions on Networking",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/ton/"},
+// 期刊 B类
+{d:"网络",l:"B",t:"期刊",n:1,ab:"TOIT",f:"ACM Transactions on Internet Technology",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/toit/"},
+{d:"网络",l:"B",t:"期刊",n:2,ab:"TOMM",f:"ACM Transactions on Multimedia Computing, Communications and Applications",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tomccap/"},
+{d:"网络",l:"B",t:"期刊",n:3,ab:"TOSN",f:"ACM Transactions on Sensor Networks",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tosn/"},
+{d:"网络",l:"B",t:"期刊",n:4,ab:"CN",f:"Computer Networks",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cn/"},
+{d:"网络",l:"B",t:"期刊",n:5,ab:"TCOM",f:"IEEE Transactions on Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tcom/"},
+{d:"网络",l:"B",t:"期刊",n:6,ab:"TWC",f:"IEEE Transactions on Wireless Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/twc/"},
+// 期刊 C类
+{d:"网络",l:"C",t:"期刊",n:1,ab:"",f:"Ad Hoc Networks",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/adhoc/"},
+{d:"网络",l:"C",t:"期刊",n:2,ab:"CC",f:"Computer Communications",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/comcom/"},
+{d:"网络",l:"C",t:"期刊",n:3,ab:"TNSM",f:"IEEE Transactions on Network and Service Management",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tnsm/"},
+{d:"网络",l:"C",t:"期刊",n:4,ab:"",f:"IET Communications",p:"IET",u:"http://dblp.uni-trier.de/db/journals/iet-com/"},
+{d:"网络",l:"C",t:"期刊",n:5,ab:"JNCA",f:"Journal of Network and Computer Applications",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jnca/"},
+{d:"网络",l:"C",t:"期刊",n:6,ab:"MONET",f:"Mobile Networks and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/monet/"},
+{d:"网络",l:"C",t:"期刊",n:7,ab:"",f:"Networks",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/networks/"},
+{d:"网络",l:"C",t:"期刊",n:8,ab:"PPNA",f:"Peer-to-Peer Networking and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ppna/"},
+{d:"网络",l:"C",t:"期刊",n:9,ab:"WCMC",f:"Wireless Communications and Mobile Computing",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/wicomm/"},
+{d:"网络",l:"C",t:"期刊",n:10,ab:"",f:"Wireless Networks",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/winet/"},
+{d:"网络",l:"C",t:"期刊",n:11,ab:"IOT",f:"IEEE Internet of Things Journal",p:"IEEE",u:"https://dblp.org/db/journals/iotj/index.html"},
+{d:"网络",l:"C",t:"期刊",n:12,ab:"TIOT",f:"ACM Transactions on Internet of Things",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/tiot/index.html"},
+// 会议 A类
+{d:"网络",l:"A",t:"会议",n:1,ab:"SIGCOMM",f:"ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sigcomm/index.html"},
+{d:"网络",l:"A",t:"会议",n:2,ab:"MobiCom",f:"ACM International Conference on Mobile Computing and Networking",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/mobicom/"},
+{d:"网络",l:"A",t:"会议",n:3,ab:"INFOCOM",f:"IEEE International Conference on Computer Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/infocom/"},
+{d:"网络",l:"A",t:"会议",n:4,ab:"NSDI",f:"Symposium on Network System Design and Implementation",p:"USENIX",u:"http://dblp.uni-trier.de/db/conf/nsdi/"},
+// 会议 B类
+{d:"网络",l:"B",t:"会议",n:1,ab:"SenSys",f:"ACM Conference on Embedded Networked Sensor Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sensys/"},
+{d:"网络",l:"B",t:"会议",n:2,ab:"CoNEXT",f:"ACM International Conference on Emerging Networking Experiments and Technologies",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/conext/"},
+{d:"网络",l:"B",t:"会议",n:3,ab:"SECON",f:"IEEE International Conference on Sensing, Communication, and Networking",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/secon/"},
+{d:"网络",l:"B",t:"会议",n:4,ab:"IPSN",f:"International Conference on Information Processing in Sensor Networks",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/ipsn/"},
+{d:"网络",l:"B",t:"会议",n:5,ab:"MobiSys",f:"ACM International Conference on Mobile Systems, Applications, and Services",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/mobisys/"},
+{d:"网络",l:"B",t:"会议",n:6,ab:"ICNP",f:"IEEE International Conference on Network Protocols",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icnp/"},
+{d:"网络",l:"B",t:"会议",n:7,ab:"MobiHoc",f:"International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/mobihoc/"},
+{d:"网络",l:"B",t:"会议",n:8,ab:"NOSSDAV",f:"International Workshop on Network and Operating System Support for Digital Audio and Video",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/nossdav/"},
+{d:"网络",l:"B",t:"会议",n:9,ab:"IWQoS",f:"IEEE/ACM International Workshop on Quality of Service",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iwqos/"},
+{d:"网络",l:"B",t:"会议",n:10,ab:"IMC",f:"ACM Internet Measurement Conference",p:"ACM/USENIX",u:"http://dblp.uni-trier.de/db/conf/imc/"},
+// 会议 C类
+{d:"网络",l:"C",t:"会议",n:1,ab:"ANCS",f:"ACM/IEEE Symposium on Architectures for Networking and Communication Systems",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/ancs/"},
+{d:"网络",l:"C",t:"会议",n:2,ab:"APNOMS",f:"Asia-Pacific Network Operations and Management Symposium",p:"IFIP/IEEE",u:"http://dblp.uni-trier.de/db/conf/apnoms/"},
+{d:"网络",l:"C",t:"会议",n:3,ab:"FORTE",f:"International Conference on Formal Techniques for Distributed Objects, Components, and Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/forte/"},
+{d:"网络",l:"C",t:"会议",n:4,ab:"LCN",f:"IEEE Conference on Local Computer Networks",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/lcn/"},
+{d:"网络",l:"C",t:"会议",n:5,ab:"GLOBECOM",f:"IEEE Global Communications Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/globecom/"},
+{d:"网络",l:"C",t:"会议",n:6,ab:"ICC",f:"IEEE International Conference on Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icc/"},
+{d:"网络",l:"C",t:"会议",n:7,ab:"ICCCN",f:"IEEE International Conference on Computer Communications and Networks",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icccn/"},
+{d:"网络",l:"C",t:"会议",n:8,ab:"MASS",f:"IEEE International Conference on Mobile Adhoc and Sensor Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/mass/index.html"},
+{d:"网络",l:"C",t:"会议",n:9,ab:"P2P",f:"IEEE International Conference on Peer-to-Peer Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/p2p/"},
+{d:"网络",l:"C",t:"会议",n:10,ab:"IPCCC",f:"IEEE International Performance Computing and Communications Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ipccc/"},
+{d:"网络",l:"C",t:"会议",n:11,ab:"WoWMoM",f:"IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/wowmom/"},
+{d:"网络",l:"C",t:"会议",n:12,ab:"ISCC",f:"IEEE Symposium on Computers and Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iscc/"},
+{d:"网络",l:"C",t:"会议",n:13,ab:"WCNC",f:"IEEE Wireless Communications and Networking Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/wcnc/"},
+{d:"网络",l:"C",t:"会议",n:14,ab:"Networking",f:"IFIP International Conferences on Networking",p:"IFIP",u:"http://dblp.uni-trier.de/db/conf/networking/index.html"},
+{d:"网络",l:"C",t:"会议",n:15,ab:"IM",f:"IFIP/IEEE International Symposium on Integrated Network Management",p:"IFIP/IEEE",u:"http://dblp.uni-trier.de/db/conf/im/index.html"},
+{d:"网络",l:"C",t:"会议",n:16,ab:"MSN",f:"International Conference on Mobility, Sensing and Networking",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/msn/"},
+{d:"网络",l:"C",t:"会议",n:17,ab:"MSWiM",f:"International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/mswim/"},
+{d:"网络",l:"C",t:"会议",n:18,ab:"WASA",f:"The International Conference on Wireless Artificial Intelligent Computing Systems and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/wasa/"},
+{d:"网络",l:"C",t:"会议",n:19,ab:"HotNets",f:"ACM The Workshop on Hot Topics in Networks",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/hotnets/"},
+{d:"网络",l:"C",t:"会议",n:20,ab:"APNet",f:"Asia-Pacific Workshop on Networking",p:"ACM",u:"https://dblp.org/db/conf/apnet/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 安全 — 网络与信息安全
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"安全",l:"A",t:"期刊",n:1,ab:"TDSC",f:"IEEE Transactions on Dependable and Secure Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tdsc/"},
+{d:"安全",l:"A",t:"期刊",n:2,ab:"TIFS",f:"IEEE Transactions on Information Forensics and Security",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tifs/"},
+{d:"安全",l:"A",t:"期刊",n:3,ab:"",f:"Journal of Cryptology",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/joc/"},
+// 期刊 B类
+{d:"安全",l:"B",t:"期刊",n:1,ab:"TOPS",f:"ACM Transactions on Privacy and Security",p:"ACM",u:"https://dblp.org/db/journals/tissec/index.html"},
+{d:"安全",l:"B",t:"期刊",n:2,ab:"",f:"Computers & Security",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/compsec/"},
+{d:"安全",l:"B",t:"期刊",n:3,ab:"",f:"Designs, Codes and Cryptography",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/dcc/"},
+{d:"安全",l:"B",t:"期刊",n:4,ab:"JCS",f:"Journal of Computer Security",p:"IOS Press",u:"http://dblp.uni-trier.de/db/journals/jcs/"},
+{d:"安全",l:"B",t:"期刊",n:5,ab:"Cybersecurity",f:"Cybersecurity",p:"Springer",u:"https://dblp.uni-trier.de/db/journals/cybersec/index.html"},
+// 期刊 C类
+{d:"安全",l:"C",t:"期刊",n:1,ab:"CLSR",f:"Computer Law & Security Review",p:"Elsevier",u:"https://dblp.org/db/journals/clsr/index.html"},
+{d:"安全",l:"C",t:"期刊",n:2,ab:"",f:"EURASIP Journal on Information Security",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ejisec/"},
+{d:"安全",l:"C",t:"期刊",n:3,ab:"",f:"IET Information Security",p:"IET",u:"http://dblp.uni-trier.de/db/journals/iet-ifs/"},
+{d:"安全",l:"C",t:"期刊",n:4,ab:"IMCS",f:"Information and Computer Security",p:"Emerald",u:"http://dblp.uni-trier.de/db/journals/imcs/"},
+{d:"安全",l:"C",t:"期刊",n:5,ab:"IJICS",f:"International Journal of Information and Computer Security",p:"Inderscience",u:"http://dblp.uni-trier.de/db/journals/ijics/"},
+{d:"安全",l:"C",t:"期刊",n:6,ab:"IJISP",f:"International Journal of Information Security and Privacy",p:"IGI Global",u:"http://dblp.uni-trier.de/db/journals/ijisp/"},
+{d:"安全",l:"C",t:"期刊",n:7,ab:"JISA",f:"Journal of Information Security and Applications",p:"Elsevier",u:"https://dblp.uni-trier.de/db/journals/istr/"},
+{d:"安全",l:"C",t:"期刊",n:8,ab:"SCN",f:"Security and Communication Networks",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/scn/"},
+{d:"安全",l:"C",t:"期刊",n:9,ab:"HCC",f:"High-Confidence Computing",p:"Elsevier",u:"https://www.journals.elsevier.com/high-confidence-computing"},
+// 会议 A类
+{d:"安全",l:"A",t:"会议",n:1,ab:"CCS",f:"ACM Conference on Computer and Communications Security",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ccs/"},
+{d:"安全",l:"A",t:"会议",n:2,ab:"EUROCRYPT",f:"International Conference on the Theory and Applications of Cryptographic Techniques",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/eurocrypt/"},
+{d:"安全",l:"A",t:"会议",n:3,ab:"S&P",f:"IEEE Symposium on Security and Privacy",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/sp/"},
+{d:"安全",l:"A",t:"会议",n:4,ab:"CRYPTO",f:"International Cryptology Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/crypto/"},
+{d:"安全",l:"A",t:"会议",n:5,ab:"USENIX Security",f:"USENIX Security Symposium",p:"USENIX Association",u:"http://dblp.uni-trier.de/db/conf/uss/"},
+{d:"安全",l:"A",t:"会议",n:6,ab:"NDSS",f:"Network and Distributed System Security Symposium",p:"ISOC",u:"http://dblp.uni-trier.de/db/conf/ndss/"},
+// 会议 B类
+{d:"安全",l:"B",t:"会议",n:1,ab:"ACSAC",f:"Annual Computer Security Applications Conference",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/acsac/index.html"},
+{d:"安全",l:"B",t:"会议",n:2,ab:"ASIACRYPT",f:"Annual International Conference on the Theory and Application of Cryptology and Information Security",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/asiacrypt/index.html"},
+{d:"安全",l:"B",t:"会议",n:3,ab:"ESORICS",f:"European Symposium on Research in Computer Security",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/esorics/index.html"},
+{d:"安全",l:"B",t:"会议",n:4,ab:"FSE",f:"Fast Software Encryption",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/fse/index.html"},
+{d:"安全",l:"B",t:"会议",n:5,ab:"CSFW",f:"IEEE Computer Security Foundations Workshop",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/csfw/index.html"},
+{d:"安全",l:"B",t:"会议",n:6,ab:"SRDS",f:"IEEE International Symposium on Reliable Distributed Systems",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/srds/index.html"},
+{d:"安全",l:"B",t:"会议",n:7,ab:"CHES",f:"International Conference on Cryptographic Hardware and Embedded Systems",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/ches/index.html"},
+{d:"安全",l:"B",t:"会议",n:8,ab:"DSN",f:"International Conference on Dependable Systems and Networks",p:"IEEE/IFIP",u:"https://dblp.uni-trier.de/db/conf/dsn/index.html"},
+{d:"安全",l:"B",t:"会议",n:9,ab:"RAID",f:"International Symposium on Recent Advances in Intrusion Detection",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/raid/index.html"},
+{d:"安全",l:"B",t:"会议",n:10,ab:"PKC",f:"International Workshop on Practice and Theory in Public Key Cryptography",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/pkc/index.html"},
+{d:"安全",l:"B",t:"会议",n:11,ab:"TCC",f:"Theory of Cryptography Conference",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/tcc/index.html"},
+// 会议 C类
+{d:"安全",l:"C",t:"会议",n:1,ab:"WiSec",f:"ACM Conference on Security and Privacy in Wireless and Mobile Networks",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/wisec/"},
+{d:"安全",l:"C",t:"会议",n:2,ab:"SACMAT",f:"ACM Symposium on Access Control Models and Technologies",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sacmat/"},
+{d:"安全",l:"C",t:"会议",n:3,ab:"DRM",f:"ACM Workshop on Digital Rights Management",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/drm/"},
+{d:"安全",l:"C",t:"会议",n:4,ab:"IH&MMSec",f:"ACM Workshop on Information Hiding and Multimedia Security",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ih/"},
+{d:"安全",l:"C",t:"会议",n:5,ab:"ACNS",f:"International Conference on Applied Cryptography and Network Security",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/acns/"},
+{d:"安全",l:"C",t:"会议",n:6,ab:"AsiaCCS",f:"ACM Asia Conference on Computer and Communications Security",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ccs/"},
+{d:"安全",l:"C",t:"会议",n:7,ab:"ACISP",f:"Australasia Conference on Information Security and Privacy",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/acisp/"},
+{d:"安全",l:"C",t:"会议",n:8,ab:"CT-RSA",f:"The Cryptographer's Track at RSA Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ctrsa/"},
+{d:"安全",l:"C",t:"会议",n:9,ab:"DIMVA",f:"Conference on Detection of Intrusions and Malware & Vulnerability Assessment",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/dimva/"},
+{d:"安全",l:"C",t:"会议",n:10,ab:"DFRWS",f:"Digital Forensic Research Workshop",p:"Elsevier",u:"http://dblp.uni-trier.de/db/conf/dfrws/"},
+{d:"安全",l:"C",t:"会议",n:11,ab:"FC",f:"Financial Cryptography and Data Security",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/fc/"},
+{d:"安全",l:"C",t:"会议",n:12,ab:"TrustCom",f:"IEEE International Conference on Trust, Security and Privacy in Computing and Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/trustcom/"},
+{d:"安全",l:"C",t:"会议",n:13,ab:"SEC",f:"IFIP International Information Security Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/sec/"},
+{d:"安全",l:"C",t:"会议",n:14,ab:"IFIP WG 11.9",f:"IFIP Working Group 11.9 International Conference on Digital Forensics",p:"Springer",u:"https://dblp.org/db/conf/ifip11-9/index.html"},
+{d:"安全",l:"C",t:"会议",n:15,ab:"ISC",f:"Information Security Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/isw/"},
+{d:"安全",l:"C",t:"会议",n:16,ab:"ICDF2C",f:"International Conference on Digital Forensics & Cyber Crime",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icdf2c/"},
+{d:"安全",l:"C",t:"会议",n:17,ab:"ICICS",f:"International Conference on Information and Communications Security",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icics/"},
+{d:"安全",l:"C",t:"会议",n:18,ab:"SecureComm",f:"International Conference on Security and Privacy in Communication Networks",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/securecomm/"},
+{d:"安全",l:"C",t:"会议",n:19,ab:"NSPW",f:"New Security Paradigms Workshop",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/nspw/"},
+{d:"安全",l:"C",t:"会议",n:20,ab:"PAM",f:"Passive and Active Measurement Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/pam/"},
+{d:"安全",l:"C",t:"会议",n:21,ab:"PETS",f:"Privacy Enhancing Technologies Symposium",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/pet/"},
+{d:"安全",l:"C",t:"会议",n:22,ab:"SAC",f:"Selected Areas in Cryptography",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/sacrypt/"},
+{d:"安全",l:"C",t:"会议",n:23,ab:"SOUPS",f:"Symposium On Usable Privacy and Security",p:"USENIX",u:"http://dblp.uni-trier.de/db/conf/soups/"},
+{d:"安全",l:"C",t:"会议",n:24,ab:"HotSec",f:"USENIX Workshop on Hot Topics in Security",p:"USENIX",u:"http://www.usenix.org/events/"},
+{d:"安全",l:"C",t:"会议",n:25,ab:"EuroS&P",f:"IEEE European Symposium on Security and Privacy",p:"IEEE",u:"https://dblp.org/db/conf/eurosp/index.html"},
+{d:"安全",l:"C",t:"会议",n:26,ab:"Inscrypt",f:"International Conference on Information Security and Cryptology",p:"Springer",u:"https://dblp.org/db/conf/cisc/index.html"},
+{d:"安全",l:"C",t:"会议",n:27,ab:"CODASPY",f:"Conference on Data and Application Security and Privacy",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/codaspy/index.html"},
+{d:"安全",l:"C",t:"会议",n:28,ab:"BlockSys",f:"International Conference on Blockchain, Artificial Intelligence, and Trustworthy Systems",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/blocksys/index.html"},
+{d:"安全",l:"C",t:"会议",n:29,ab:"CSCloud",f:"International Conference on Cyber Security and Cloud Computing",p:"IEEE CSCloud Steering Committee",u:"https://dblp.uni-trier.de/db/conf/cscloud/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 软件 — 软件工程/系统软件/程序设计语言
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"软件",l:"A",t:"期刊",n:1,ab:"TOPLAS",f:"ACM Transactions on Programming Languages and Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/toplas/"},
+{d:"软件",l:"A",t:"期刊",n:2,ab:"TOSEM",f:"ACM Transactions on Software Engineering and Methodology",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tosem/"},
+{d:"软件",l:"A",t:"期刊",n:3,ab:"TSE",f:"IEEE Transactions on Software Engineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tse/"},
+{d:"软件",l:"A",t:"期刊",n:4,ab:"TSC",f:"IEEE Transactions on Services Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tsc/"},
+// 期刊 B类
+{d:"软件",l:"B",t:"期刊",n:1,ab:"ASE",f:"Automated Software Engineering",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ase/"},
+{d:"软件",l:"B",t:"期刊",n:2,ab:"ESE",f:"Empirical Software Engineering",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ese/"},
+{d:"软件",l:"B",t:"期刊",n:3,ab:"IETS",f:"IET Software",p:"IET",u:"https://dblp.uni-trier.de/db/journals/iet-sen/"},
+{d:"软件",l:"B",t:"期刊",n:4,ab:"IST",f:"Information and Software Technology",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/infsof/index.html"},
+{d:"软件",l:"B",t:"期刊",n:5,ab:"JFP",f:"Journal of Functional Programming",p:"Cambridge University Press",u:"http://dblp.uni-trier.de/db/journals/jfp/"},
+{d:"软件",l:"B",t:"期刊",n:6,ab:"",f:"Journal of Software: Evolution and Process",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/smr/"},
+{d:"软件",l:"B",t:"期刊",n:7,ab:"JSS",f:"Journal of Systems and Software",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jss/"},
+{d:"软件",l:"B",t:"期刊",n:8,ab:"RE",f:"Requirements Engineering",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/re/"},
+{d:"软件",l:"B",t:"期刊",n:9,ab:"SCP",f:"Science of Computer Programming",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/scp/"},
+{d:"软件",l:"B",t:"期刊",n:10,ab:"SoSyM",f:"Software and Systems Modeling",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/sosym/"},
+{d:"软件",l:"B",t:"期刊",n:11,ab:"STVR",f:"Software Testing, Verification and Reliability",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/stvr/index.html"},
+{d:"软件",l:"B",t:"期刊",n:12,ab:"SPE",f:"Software: Practice and Experience",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/spe/"},
+// 期刊 C类
+{d:"软件",l:"C",t:"期刊",n:1,ab:"CL",f:"Computer Languages, Systems and Structures",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cl/index.html"},
+{d:"软件",l:"C",t:"期刊",n:2,ab:"IJSEKE",f:"International Journal of Software Engineering and Knowledge Engineering",p:"World Scientific",u:"http://dblp.uni-trier.de/db/journals/ijseke/index.html"},
+{d:"软件",l:"C",t:"期刊",n:3,ab:"STTT",f:"International Journal of Software Tools for Technology Transfer",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/sttt/"},
+{d:"软件",l:"C",t:"期刊",n:4,ab:"JLAMP",f:"Journal of Logical and Algebraic Methods in Programming",p:"Elsevier",u:"https://dblp.uni-trier.de/db/journals/jlap/index.html"},
+{d:"软件",l:"C",t:"期刊",n:5,ab:"JWE",f:"Journal of Web Engineering",p:"Rinton Press",u:"http://dblp.uni-trier.de/db/journals/jwe/"},
+{d:"软件",l:"C",t:"期刊",n:6,ab:"SOCA",f:"Service Oriented Computing and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/soca/"},
+{d:"软件",l:"C",t:"期刊",n:7,ab:"SQJ",f:"Software Quality Journal",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/sqj/"},
+{d:"软件",l:"C",t:"期刊",n:8,ab:"TPLP",f:"Theory and Practice of Logic Programming",p:"Cambridge University Press",u:"http://dblp.uni-trier.de/db/journals/tplp/"},
+{d:"软件",l:"C",t:"期刊",n:9,ab:"PACM PL",f:"Proceedings of the ACM on Programming Languages",p:"ACM",u:"https://dblp.org/db/journals/pacmpl/index.html"},
+// 会议 A类
+{d:"软件",l:"A",t:"会议",n:1,ab:"PLDI",f:"ACM SIGPLAN Conference on Programming Language Design and Implementation",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/pldi/"},
+{d:"软件",l:"A",t:"会议",n:2,ab:"POPL",f:"ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/popl/"},
+{d:"软件",l:"A",t:"会议",n:3,ab:"FSE",f:"ACM International Conference on the Foundations of Software Engineering",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sigsoft/"},
+{d:"软件",l:"A",t:"会议",n:4,ab:"SOSP",f:"ACM Symposium on Operating Systems Principles",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sosp/"},
+{d:"软件",l:"A",t:"会议",n:5,ab:"OOPSLA",f:"Conference on Object-Oriented Programming Systems, Languages, and Applications",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/oopsla/"},
+{d:"软件",l:"A",t:"会议",n:6,ab:"ASE",f:"International Conference on Automated Software Engineering",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/kbse/"},
+{d:"软件",l:"A",t:"会议",n:7,ab:"ICSE",f:"International Conference on Software Engineering",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/icse/"},
+{d:"软件",l:"A",t:"会议",n:8,ab:"ISSTA",f:"International Symposium on Software Testing and Analysis",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/issta/"},
+{d:"软件",l:"A",t:"会议",n:9,ab:"OSDI",f:"USENIX Symposium on Operating Systems Design and Implementation",p:"USENIX",u:"http://dblp.uni-trier.de/db/conf/osdi/"},
+{d:"软件",l:"A",t:"会议",n:10,ab:"FM",f:"International Symposium on Formal Methods",p:"FME",u:"http://dblp.uni-trier.de/db/conf/fm/"},
+// 会议 B类
+{d:"软件",l:"B",t:"会议",n:1,ab:"ECOOP",f:"European Conference on Object-Oriented Programming",p:"AITO",u:"http://dblp.uni-trier.de/db/conf/ecoop/"},
+{d:"软件",l:"B",t:"会议",n:2,ab:"ETAPS",f:"European Joint Conferences on Theory and Practice of Software",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/etaps/"},
+{d:"软件",l:"B",t:"会议",n:3,ab:"ICPC",f:"IEEE International Conference on Program Comprehension",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iwpc/"},
+{d:"软件",l:"B",t:"会议",n:4,ab:"RE",f:"IEEE International Requirements Engineering Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/re/"},
+{d:"软件",l:"B",t:"会议",n:5,ab:"CAiSE",f:"International Conference on Advanced Information Systems Engineering",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/caise/"},
+{d:"软件",l:"B",t:"会议",n:6,ab:"ICFP",f:"ACM SIGPLAN International Conference on Functional Programming",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/icfp/"},
+{d:"软件",l:"B",t:"会议",n:7,ab:"LCTES",f:"ACM SIGPLAN/SIGBED International Conference on Languages, Compilers and Tools for Embedded Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/lctrts/"},
+{d:"软件",l:"B",t:"会议",n:8,ab:"MoDELS",f:"ACM/IEEE International Conference on Model Driven Engineering Languages and Systems",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/models/"},
+{d:"软件",l:"B",t:"会议",n:9,ab:"CP",f:"International Conference on Principles and Practice of Constraint Programming",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/cp/"},
+{d:"软件",l:"B",t:"会议",n:10,ab:"ICSOC",f:"International Conference on Service Oriented Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icsoc/"},
+{d:"软件",l:"B",t:"会议",n:11,ab:"SANER",f:"IEEE International Conference on Software Analysis, Evolution, and Reengineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/wcre/"},
+{d:"软件",l:"B",t:"会议",n:12,ab:"ICSME",f:"International Conference on Software Maintenance and Evolution",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icsm/"},
+{d:"软件",l:"B",t:"会议",n:13,ab:"VMCAI",f:"International Conference on Verification, Model Checking and Abstract Interpretation",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/vmcai/"},
+{d:"软件",l:"B",t:"会议",n:14,ab:"ICWS",f:"IEEE International Conference on Web Services",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icws/"},
+{d:"软件",l:"B",t:"会议",n:15,ab:"Middleware",f:"International Middleware Conference",p:"ACM/IFIP/USENIX",u:"http://dblp.uni-trier.de/db/conf/middleware/"},
+{d:"软件",l:"B",t:"会议",n:16,ab:"SAS",f:"International Static Analysis Symposium",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/sas/"},
+{d:"软件",l:"B",t:"会议",n:17,ab:"ESEM",f:"International Symposium on Empirical Software Engineering and Measurement",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/esem/"},
+{d:"软件",l:"B",t:"会议",n:18,ab:"ISSRE",f:"IEEE International Symposium on Software Reliability Engineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/issre/"},
+{d:"软件",l:"B",t:"会议",n:19,ab:"HotOS",f:"USENIX Workshop on Hot Topics in Operating Systems",p:"USENIX",u:"http://dblp.uni-trier.de/db/conf/hotos/"},
+{d:"软件",l:"B",t:"会议",n:20,ab:"CC",f:"International Conference on Compiler Construction",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/cc/index.html"},
+// 会议 C类
+{d:"软件",l:"C",t:"会议",n:1,ab:"PEPM",f:"ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/pepm/"},
+{d:"软件",l:"C",t:"会议",n:2,ab:"PASTE",f:"ACM SIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/paste/"},
+{d:"软件",l:"C",t:"会议",n:3,ab:"APLAS",f:"Asian Symposium on Programming Languages and Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/aplas/"},
+{d:"软件",l:"C",t:"会议",n:4,ab:"APSEC",f:"Asia-Pacific Software Engineering Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/apsec/"},
+{d:"软件",l:"C",t:"会议",n:5,ab:"EASE",f:"International Conference on Evaluation and Assessment in Software Engineering",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ease/"},
+{d:"软件",l:"C",t:"会议",n:6,ab:"ICECCS",f:"International Conference on Engineering of Complex Computer Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iceccs/"},
+{d:"软件",l:"C",t:"会议",n:7,ab:"ICST",f:"IEEE International Conference on Software Testing, Verification and Validation",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icst/"},
+{d:"软件",l:"C",t:"会议",n:8,ab:"ISPASS",f:"IEEE International Symposium on Performance Analysis of Systems and Software",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ispass/"},
+{d:"软件",l:"C",t:"会议",n:9,ab:"SCAM",f:"IEEE International Working Conference on Source Code Analysis and Manipulation",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/scam/"},
+{d:"软件",l:"C",t:"会议",n:10,ab:"COMPSAC",f:"International Computer Software and Applications Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/compsac/"},
+{d:"软件",l:"C",t:"会议",n:11,ab:"ICFEM",f:"International Conference on Formal Engineering Methods",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icfem/"},
+{d:"软件",l:"C",t:"会议",n:12,ab:"SSE",f:"IEEE International Conference on Software Services Engineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/IEEEscc/"},
+{d:"软件",l:"C",t:"会议",n:13,ab:"ICSSP",f:"International Conference on Software and System Process",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/ispw/index.html"},
+{d:"软件",l:"C",t:"会议",n:14,ab:"SEKE",f:"International Conference on Software Engineering and Knowledge Engineering",p:"KSI",u:"http://dblp.uni-trier.de/db/conf/seke/"},
+{d:"软件",l:"C",t:"会议",n:15,ab:"QRS",f:"International Conference on Software Quality, Reliability and Security",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/qrs/"},
+{d:"软件",l:"C",t:"会议",n:16,ab:"ICSR",f:"International Conference on Software Reuse",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icsr/"},
+{d:"软件",l:"C",t:"会议",n:17,ab:"ICWE",f:"International Conference on Web Engineering",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icwe/"},
+{d:"软件",l:"C",t:"会议",n:18,ab:"SPIN",f:"International Symposium on Model Checking of Software",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/spin/index.html"},
+{d:"软件",l:"C",t:"会议",n:19,ab:"ATVA",f:"International Symposium on Automated Technology for Verification and Analysis",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/atva/"},
+{d:"软件",l:"C",t:"会议",n:20,ab:"LOPSTR",f:"International Symposium on Logic-based Program Synthesis and Transformation",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/lopstr/"},
+{d:"软件",l:"C",t:"会议",n:21,ab:"TASE",f:"Theoretical Aspects of Software Engineering Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/tase/"},
+{d:"软件",l:"C",t:"会议",n:22,ab:"MSR",f:"Mining Software Repositories",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/msr/"},
+{d:"软件",l:"C",t:"会议",n:23,ab:"REFSQ",f:"Requirements Engineering: Foundation for Software Quality",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/refsq/"},
+{d:"软件",l:"C",t:"会议",n:24,ab:"WICSA",f:"Working IEEE/IFIP Conference on Software Architecture",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/wicsa/"},
+{d:"软件",l:"C",t:"会议",n:25,ab:"Internetware",f:"Asia-Pacific Symposium on Internetware",p:"ACM",u:"https://dblp.org/db/conf/internetware/index.html"},
+{d:"软件",l:"C",t:"会议",n:26,ab:"RV",f:"International Conference on Runtime Verification",p:"Springer",u:"https://dblp.org/db/conf/rv/index.html"},
+{d:"软件",l:"C",t:"会议",n:27,ab:"MEMOCODE",f:"International Conference on Formal Methods and Models for Co-Design",p:"IEEE/ACM",u:"https://dblp.uni-trier.de/db/conf/memocode/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 数据 — 数据库/数据挖掘/内容检索
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"数据",l:"A",t:"期刊",n:1,ab:"TODS",f:"ACM Transactions on Database Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tods/"},
+{d:"数据",l:"A",t:"期刊",n:2,ab:"TOIS",f:"ACM Transactions on Information Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tois/"},
+{d:"数据",l:"A",t:"期刊",n:3,ab:"TKDE",f:"IEEE Transactions on Knowledge and Data Engineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tkde/"},
+{d:"数据",l:"A",t:"期刊",n:4,ab:"VLDBJ",f:"The VLDB Journal",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/vldb/"},
+// 期刊 B类
+{d:"数据",l:"B",t:"期刊",n:1,ab:"TKDD",f:"ACM Transactions on Knowledge Discovery from Data",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tkdd/"},
+{d:"数据",l:"B",t:"期刊",n:2,ab:"TWEB",f:"ACM Transactions on the Web",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tweb/"},
+{d:"数据",l:"B",t:"期刊",n:3,ab:"AEI",f:"Advanced Engineering Informatics",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/aei/"},
+{d:"数据",l:"B",t:"期刊",n:4,ab:"DKE",f:"Data & Knowledge Engineering",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/dke/"},
+{d:"数据",l:"B",t:"期刊",n:5,ab:"DMKD",f:"Data Mining and Knowledge Discovery",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/datamine/"},
+{d:"数据",l:"B",t:"期刊",n:6,ab:"EJIS",f:"European Journal of Information Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ejis/"},
+{d:"数据",l:"B",t:"期刊",n:7,ab:"",f:"GeoInformatica",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/geoinformatica/"},
+{d:"数据",l:"B",t:"期刊",n:8,ab:"IPM",f:"Information Processing and Management",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ipm/"},
+{d:"数据",l:"B",t:"期刊",n:9,ab:"",f:"Information Sciences",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/isci/"},
+{d:"数据",l:"B",t:"期刊",n:10,ab:"IS",f:"Information Systems",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/is/"},
+{d:"数据",l:"B",t:"期刊",n:11,ab:"JASIST",f:"Journal of the Association for Information Science and Technology",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/jasis/"},
+{d:"数据",l:"B",t:"期刊",n:12,ab:"JWS",f:"Journal of Web Semantics",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ws/"},
+{d:"数据",l:"B",t:"期刊",n:13,ab:"KAIS",f:"Knowledge and Information Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/kais/"},
+{d:"数据",l:"B",t:"期刊",n:14,ab:"DSE",f:"Data Science and Engineering",p:"CCF/Springer Nature",u:"https://dblp.org/db/journals/dase/index.html"},
+// 期刊 C类
+{d:"数据",l:"C",t:"期刊",n:1,ab:"DPD",f:"Distributed and Parallel Databases",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/dpd/"},
+{d:"数据",l:"C",t:"期刊",n:2,ab:"I&M",f:"Information & Management",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/iam/"},
+{d:"数据",l:"C",t:"期刊",n:3,ab:"IPL",f:"Information Processing Letters",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ipl/"},
+{d:"数据",l:"C",t:"期刊",n:4,ab:"",f:"Discover Computing（原 Information Retrieval Journal）",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ir/"},
+{d:"数据",l:"C",t:"期刊",n:5,ab:"IJCIS",f:"International Journal of Cooperative Information Systems",p:"World Scientific",u:"http://dblp.uni-trier.de/db/journals/ijcis/"},
+{d:"数据",l:"C",t:"期刊",n:6,ab:"IJGIS",f:"International Journal of Geographical Information Science",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/gis/"},
+{d:"数据",l:"C",t:"期刊",n:7,ab:"IJIS",f:"International Journal of Intelligent Systems",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/ijis/"},
+{d:"数据",l:"C",t:"期刊",n:8,ab:"IJKM",f:"International Journal of Knowledge Management",p:"IGI",u:"http://dblp.uni-trier.de/db/journals/ijkm/"},
+{d:"数据",l:"C",t:"期刊",n:9,ab:"IJSWIS",f:"International Journal on Semantic Web and Information Systems",p:"IGI",u:"http://dblp.uni-trier.de/db/journals/ijswis/"},
+{d:"数据",l:"C",t:"期刊",n:10,ab:"JCIS",f:"Journal of Computer Information Systems",p:"IACIS",u:"http://dblp.uni-trier.de/db/journals/jcis/"},
+{d:"数据",l:"C",t:"期刊",n:11,ab:"JDM",f:"Journal of Database Management",p:"IGI-Global",u:"http://dblp.uni-trier.de/db/journals/jdm/"},
+{d:"数据",l:"C",t:"期刊",n:12,ab:"JGITM",f:"Journal of Global Information Technology Management",p:"Ivy League Publishing",u:"https://dblp.org/db/journals/jgim/index.html"},
+{d:"数据",l:"C",t:"期刊",n:13,ab:"JIIS",f:"Journal of Intelligent Information Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/jiis/"},
+{d:"数据",l:"C",t:"期刊",n:14,ab:"JSIS",f:"The Journal of Strategic Information Systems",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jsis/"},
+{d:"数据",l:"C",t:"期刊",n:15,ab:"TIST",f:"ACM Transactions on Intelligent Systems and Technology",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/tist/index.html"},
+{d:"数据",l:"C",t:"期刊",n:16,ab:"TORS",f:"ACM Transactions on Recommender Systems",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/tors/index.html"},
+// 会议 A类
+{d:"数据",l:"A",t:"会议",n:1,ab:"SIGMOD",f:"ACM SIGMOD Conference",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sigmod/"},
+{d:"数据",l:"A",t:"会议",n:2,ab:"SIGKDD",f:"ACM SIGKDD Conference on Knowledge Discovery and Data Mining",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/kdd/"},
+{d:"数据",l:"A",t:"会议",n:3,ab:"ICDE",f:"IEEE International Conference on Data Engineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icde/"},
+{d:"数据",l:"A",t:"会议",n:4,ab:"SIGIR",f:"International ACM SIGIR Conference on Research and Development in Information Retrieval",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sigir/"},
+{d:"数据",l:"A",t:"会议",n:5,ab:"VLDB",f:"International Conference on Very Large Data Bases",p:"Morgan Kaufmann/ACM",u:"http://dblp.uni-trier.de/db/conf/vldb/"},
+// 会议 B类
+{d:"数据",l:"B",t:"会议",n:1,ab:"CIKM",f:"ACM International Conference on Information and Knowledge Management",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/cikm/"},
+{d:"数据",l:"B",t:"会议",n:2,ab:"WSDM",f:"ACM International Conference on Web Search and Data Mining",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/wsdm/"},
+{d:"数据",l:"B",t:"会议",n:3,ab:"PODS",f:"ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/pods/"},
+{d:"数据",l:"B",t:"会议",n:4,ab:"DASFAA",f:"International Conference on Database Systems for Advanced Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/dasfaa/"},
+{d:"数据",l:"B",t:"会议",n:5,ab:"ECML-PKDD",f:"European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ecml/ http://dblp.uni-trier.de/db/conf/pkdd/"},
+{d:"数据",l:"B",t:"会议",n:6,ab:"ISWC",f:"IEEE International Semantic Web Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/semweb/"},
+{d:"数据",l:"B",t:"会议",n:7,ab:"ICDM",f:"IEEE International Conference on Data Mining",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icdm/"},
+{d:"数据",l:"B",t:"会议",n:8,ab:"ICDT",f:"International Conference on Database Theory",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icdt/"},
+{d:"数据",l:"B",t:"会议",n:9,ab:"EDBT",f:"International Conference on Extending Database Technology",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/edbt/"},
+{d:"数据",l:"B",t:"会议",n:10,ab:"CIDR",f:"Conference on Innovative Data Systems Research",p:"Online Proceeding",u:"http://dblp.uni-trier.de/db/conf/cidr/"},
+{d:"数据",l:"B",t:"会议",n:11,ab:"SDM",f:"SIAM International Conference on Data Mining",p:"SIAM",u:"http://dblp.uni-trier.de/db/conf/sdm/"},
+{d:"数据",l:"B",t:"会议",n:12,ab:"RecSys",f:"ACM Conference on Recommender Systems",p:"ACM",u:"https://dblp.org/db/conf/recsys/index.html"},
+{d:"数据",l:"B",t:"会议",n:13,ab:"WISE",f:"Web Information Systems Engineering Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/wise/"},
+// 会议 C类
+{d:"数据",l:"C",t:"会议",n:1,ab:"APWeb",f:"Asia Pacific Web Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/apweb/"},
+{d:"数据",l:"C",t:"会议",n:2,ab:"DEXA",f:"International Conference on Database and Expert System Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/dexa/"},
+{d:"数据",l:"C",t:"会议",n:3,ab:"ECIR",f:"European Conference on Information Retrieval",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ecir/"},
+{d:"数据",l:"C",t:"会议",n:4,ab:"ESWC",f:"Extended Semantic Web Conference",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/esws/"},
+{d:"数据",l:"C",t:"会议",n:5,ab:"WebDB",f:"International Workshop on Web and Databases",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/webdb/"},
+{d:"数据",l:"C",t:"会议",n:6,ab:"ER",f:"International Conference on Conceptual Modeling",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/er/"},
+{d:"数据",l:"C",t:"会议",n:7,ab:"MDM",f:"International Conference on Mobile Data Management",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/mdm/"},
+{d:"数据",l:"C",t:"会议",n:8,ab:"SSDBM",f:"International Conference on Scientific and Statistical Database Management",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ssdbm/"},
+{d:"数据",l:"C",t:"会议",n:9,ab:"WAIM",f:"International Conference on Web Age Information Management",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/waim/"},
+{d:"数据",l:"C",t:"会议",n:10,ab:"SSTD",f:"International Symposium on Spatial and Temporal Databases",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/ssd/index.html"},
+{d:"数据",l:"C",t:"会议",n:11,ab:"PAKDD",f:"Pacific-Asia Conference on Knowledge Discovery and Data Mining",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/pakdd/"},
+{d:"数据",l:"C",t:"会议",n:12,ab:"ADMA",f:"International Conference on Advanced Data Mining and Applications",p:"Springer",u:"https://dblp.org/db/conf/adma/index.html"},
+{d:"数据",l:"C",t:"会议",n:13,ab:"WISA",f:"Web Information Systems and Applications",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/IEEEwisa/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 理论 — 计算机科学理论
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"理论",l:"A",t:"期刊",n:1,ab:"TIT",f:"IEEE Transactions on Information Theory",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tit/"},
+{d:"理论",l:"A",t:"期刊",n:2,ab:"IANDC",f:"Information and Computation",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/iandc/"},
+{d:"理论",l:"A",t:"期刊",n:3,ab:"SICOMP",f:"SIAM Journal on Computing",p:"SIAM",u:"http://dblp.uni-trier.de/db/journals/siamcomp/"},
+// 期刊 B类
+{d:"理论",l:"B",t:"期刊",n:1,ab:"TALG",f:"ACM Transactions on Algorithms",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/talg/"},
+{d:"理论",l:"B",t:"期刊",n:2,ab:"TOCL",f:"ACM Transactions on Computational Logic",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tocl/"},
+{d:"理论",l:"B",t:"期刊",n:3,ab:"TOMS",f:"ACM Transactions on Mathematical Software",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/toms/"},
+{d:"理论",l:"B",t:"期刊",n:4,ab:"",f:"Algorithmica",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/algorithmica/"},
+{d:"理论",l:"B",t:"期刊",n:5,ab:"",f:"Computational Complexity",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/cc/"},
+{d:"理论",l:"B",t:"期刊",n:6,ab:"",f:"Formal Aspects of Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/fac/"},
+{d:"理论",l:"B",t:"期刊",n:7,ab:"",f:"Formal Methods in System Design",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/fmsd/"},
+{d:"理论",l:"B",t:"期刊",n:8,ab:"",f:"INFORMS Journal on Computing",p:"INFORMS",u:"http://dblp.uni-trier.de/db/journals/informs/"},
+{d:"理论",l:"B",t:"期刊",n:9,ab:"JCSS",f:"Journal of Computer and System Sciences",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jcss/"},
+{d:"理论",l:"B",t:"期刊",n:10,ab:"",f:"Journal of Global Optimization",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/jgo/"},
+{d:"理论",l:"B",t:"期刊",n:11,ab:"",f:"Journal of Symbolic Computation",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jsc/"},
+{d:"理论",l:"B",t:"期刊",n:12,ab:"",f:"Mathematical Structures in Computer Science",p:"Cambridge University Press",u:"http://dblp.uni-trier.de/db/journals/mscs/"},
+{d:"理论",l:"B",t:"期刊",n:13,ab:"",f:"Theoretical Computer Science",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/tcs/"},
+// 期刊 C类
+{d:"理论",l:"C",t:"期刊",n:1,ab:"",f:"Acta Informatica",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/acta/"},
+{d:"理论",l:"C",t:"期刊",n:2,ab:"",f:"Annals of Pure and Applied Logic",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/apal/"},
+{d:"理论",l:"C",t:"期刊",n:3,ab:"",f:"Discrete Applied Mathematics",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/dam/"},
+{d:"理论",l:"C",t:"期刊",n:4,ab:"",f:"Fundamenta Informaticae",p:"IOS Press",u:"http://dblp.uni-trier.de/db/journals/fuin/"},
+{d:"理论",l:"C",t:"期刊",n:5,ab:"",f:"Information Processing Letters",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ipl/"},
+{d:"理论",l:"C",t:"期刊",n:6,ab:"",f:"Journal of Complexity",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jc/"},
+{d:"理论",l:"C",t:"期刊",n:7,ab:"",f:"Journal of Logic and Computation",p:"Oxford University Press",u:"http://dblp.uni-trier.de/db/journals/logcom/"},
+{d:"理论",l:"C",t:"期刊",n:8,ab:"",f:"The Journal of Symbolic Logic",p:"Association for Symbolic Logic",u:"http://dblp.uni-trier.de/db/journals/jsyml/"},
+{d:"理论",l:"C",t:"期刊",n:9,ab:"",f:"Logical Methods in Computer Science",p:"LMCS",u:"http://dblp.uni-trier.de/db/journals/lmcs/"},
+{d:"理论",l:"C",t:"期刊",n:10,ab:"",f:"SIAM Journal on Discrete Mathematics",p:"SIAM",u:"http://dblp.uni-trier.de/db/journals/siamdm/"},
+{d:"理论",l:"C",t:"期刊",n:11,ab:"",f:"Theory of Computing Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/mst/"},
+{d:"理论",l:"C",t:"期刊",n:12,ab:"",f:"ACM Transactions in Quantum Computing",p:"ACM",u:"https://dblp.org/db/journals/tqc/index.html"},
+// 会议 A类
+{d:"理论",l:"A",t:"会议",n:1,ab:"STOC",f:"ACM Symposium on the Theory of Computing",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/stoc/"},
+{d:"理论",l:"A",t:"会议",n:2,ab:"SODA",f:"ACM-SIAM Symposium on Discrete Algorithms",p:"SIAM",u:"http://dblp.uni-trier.de/db/conf/soda/"},
+{d:"理论",l:"A",t:"会议",n:3,ab:"CAV",f:"International Conference on Computer Aided Verification",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/cav/"},
+{d:"理论",l:"A",t:"会议",n:4,ab:"FOCS",f:"IEEE Annual Symposium on Foundations of Computer Science",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/focs/"},
+{d:"理论",l:"A",t:"会议",n:5,ab:"LICS",f:"ACM/IEEE Symposium on Logic in Computer Science",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/lics/"},
+// 会议 B类
+{d:"理论",l:"B",t:"会议",n:1,ab:"SoCG",f:"International Symposium on Computational Geometry",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/compgeom/index.html"},
+{d:"理论",l:"B",t:"会议",n:2,ab:"ESA",f:"European Symposium on Algorithms",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/esa/"},
+{d:"理论",l:"B",t:"会议",n:3,ab:"CCC",f:"Conference on Computational Complexity",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/coco/"},
+{d:"理论",l:"B",t:"会议",n:4,ab:"ICALP",f:"International Colloquium on Automata, Languages and Programming",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icalp/"},
+{d:"理论",l:"B",t:"会议",n:5,ab:"CADE",f:"Conference on Automated Deduction",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/cade/"},
+{d:"理论",l:"B",t:"会议",n:6,ab:"CONCUR",f:"International Conference on Concurrency Theory",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/concur/"},
+{d:"理论",l:"B",t:"会议",n:7,ab:"HSCC",f:"International Conference on Hybrid Systems: Computation and Control",p:"Springer/ACM",u:"http://dblp.uni-trier.de/db/conf/hybrid/"},
+{d:"理论",l:"B",t:"会议",n:8,ab:"SAT",f:"International Conference on Theory and Applications of Satisfiability Testing",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/sat/"},
+{d:"理论",l:"B",t:"会议",n:9,ab:"COCOON",f:"International Computing and Combinatorics Conference",p:"Springer",u:"https://dblp.org/db/conf/cocoon/index.html"},
+{d:"理论",l:"B",t:"会议",n:10,ab:"FMCAD",f:"Formal Methods in Computer-Aided Design",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/fmcad/"},
+// 会议 C类
+{d:"理论",l:"C",t:"会议",n:1,ab:"CSL",f:"Computer Science Logic",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/csl/"},
+{d:"理论",l:"C",t:"会议",n:2,ab:"FSTTCS",f:"Foundations of Software Technology and Theoretical Computer Science",p:"Indian Association for Research in Computing Science",u:"http://dblp.uni-trier.de/db/conf/fsttcs/"},
+{d:"理论",l:"C",t:"会议",n:3,ab:"DSAA",f:"IEEE International Conference on Data Science and Advanced Analytics",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/dsaa/"},
+{d:"理论",l:"C",t:"会议",n:4,ab:"ICTAC",f:"International Colloquium on Theoretical Aspects of Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ictac/"},
+{d:"理论",l:"C",t:"会议",n:5,ab:"IPCO",f:"International Conference on Integer Programming and Combinatorial Optimization",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ipco/"},
+{d:"理论",l:"C",t:"会议",n:6,ab:"FSCD",f:"International Conference on Formal Structures for Computation and Deduction",p:"Dagstuhl Leibniz LIPIcs",u:"http://dblp.uni-trier.de/db/conf/rta/"},
+{d:"理论",l:"C",t:"会议",n:7,ab:"ISAAC",f:"International Symposium on Algorithms and Computation",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/isaac/"},
+{d:"理论",l:"C",t:"会议",n:8,ab:"MFCS",f:"International Conference on Mathematical Foundations of Computer Science",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/mfcs/"},
+{d:"理论",l:"C",t:"会议",n:9,ab:"STACS",f:"Symposium on Theoretical Aspects of Computer Science",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/stacs/"},
+{d:"理论",l:"C",t:"会议",n:10,ab:"SETTA",f:"International Symposium on Software Engineering: Theories, Tools, and Applications",p:"Springer",u:"https://dblp.org/db/conf/setta/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 媒体 — 计算机图形学与多媒体
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"媒体",l:"A",t:"期刊",n:1,ab:"TOG",f:"ACM Transactions on Graphics",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tog/"},
+{d:"媒体",l:"A",t:"期刊",n:2,ab:"TIP",f:"IEEE Transactions on Image Processing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tip/"},
+{d:"媒体",l:"A",t:"期刊",n:3,ab:"TVCG",f:"IEEE Transactions on Visualization and Computer Graphics",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tvcg/"},
+{d:"媒体",l:"A",t:"期刊",n:4,ab:"TMM",f:"IEEE Transactions on Multimedia",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tmm/"},
+// 期刊 B类
+{d:"媒体",l:"B",t:"期刊",n:1,ab:"TOMM",f:"ACM Transactions on Multimedia Computing, Communications and Applications",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tomccap/"},
+{d:"媒体",l:"B",t:"期刊",n:2,ab:"CAGD",f:"Computer Aided Geometric Design",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cagd/"},
+{d:"媒体",l:"B",t:"期刊",n:3,ab:"CGF",f:"Computer Graphics Forum",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/cgf/"},
+{d:"媒体",l:"B",t:"期刊",n:4,ab:"CAD",f:"Computer-Aided Design",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cad/"},
+{d:"媒体",l:"B",t:"期刊",n:5,ab:"TCSVT",f:"IEEE Transactions on Circuits and Systems for Video Technology",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tcsv/"},
+{d:"媒体",l:"B",t:"期刊",n:6,ab:"JASA",f:"The Journal of the Acoustical Society of America",p:"AIP",u:"http://scitation.aip.org/content/asa/journal/jasa"},
+{d:"媒体",l:"B",t:"期刊",n:7,ab:"SIIMS",f:"SIAM Journal on Imaging Sciences",p:"SIAM",u:"http://dblp.uni-trier.de/db/journals/siamis/"},
+{d:"媒体",l:"B",t:"期刊",n:8,ab:"",f:"Speech Communication",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/speech/"},
+{d:"媒体",l:"B",t:"期刊",n:9,ab:"CVMJ",f:"Computational Visual Media",p:"清华大学出版社/IEEE",u:"https://dblp.org/db/journals/cvm/index.html"},
+// 期刊 C类
+{d:"媒体",l:"C",t:"期刊",n:1,ab:"CGTA",f:"Computational Geometry: Theory and Applications",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/comgeo/"},
+{d:"媒体",l:"C",t:"期刊",n:2,ab:"CAVW",f:"Computer Animation & Virtual Worlds",p:"Wiley",u:"https://dblp.org/db/journals/jvca/index.html"},
+{d:"媒体",l:"C",t:"期刊",n:3,ab:"C&G",f:"Computers & Graphics",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cg/"},
+{d:"媒体",l:"C",t:"期刊",n:4,ab:"DCG",f:"Discrete & Computational Geometry",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/dcg/"},
+{d:"媒体",l:"C",t:"期刊",n:5,ab:"SPL",f:"IEEE Signal Processing Letters",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/spl/"},
+{d:"媒体",l:"C",t:"期刊",n:6,ab:"IET-IPR",f:"IET Image Processing",p:"IET",u:"http://dblp.uni-trier.de/db/journals/iet-ipr/"},
+{d:"媒体",l:"C",t:"期刊",n:7,ab:"JVCIR",f:"Journal of Visual Communication and Image Representation",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/jvcir/"},
+{d:"媒体",l:"C",t:"期刊",n:8,ab:"MS",f:"Multimedia Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/mms/"},
+{d:"媒体",l:"C",t:"期刊",n:9,ab:"MTA",f:"Multimedia Tools and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/mta/"},
+{d:"媒体",l:"C",t:"期刊",n:10,ab:"SIGPRO",f:"Signal Processing",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/sigpro/"},
+{d:"媒体",l:"C",t:"期刊",n:11,ab:"IMAGE",f:"Signal Processing: Image Communication",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/spic/"},
+{d:"媒体",l:"C",t:"期刊",n:12,ab:"TVC",f:"The Visual Computer",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/vc/"},
+{d:"媒体",l:"C",t:"期刊",n:13,ab:"VI",f:"Visual Informatics",p:"浙江大学出版社",u:"https://dblp.uni-trier.de/db/journals/vi/index.html"},
+{d:"媒体",l:"C",t:"期刊",n:14,ab:"VRIH",f:"Virtual Reality & Intelligent Hardware",p:"中国科技出版社/北京航空航天大学",u:"https://dblp.uni-trier.de/db/journals/vrih/index.html"},
+{d:"媒体",l:"C",t:"期刊",n:15,ab:"GMOD",f:"Graphical Models",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cvgip/"},
+// 会议 A类
+{d:"媒体",l:"A",t:"会议",n:1,ab:"ACM MM",f:"ACM International Conference on Multimedia",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/mm/"},
+{d:"媒体",l:"A",t:"会议",n:2,ab:"SIGGRAPH",f:"ACM Special Interest Group on Computer Graphics",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/siggraph/index.html"},
+{d:"媒体",l:"A",t:"会议",n:3,ab:"VR",f:"IEEE Conference on Virtual Reality and 3D User Interfaces",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/vr/"},
+{d:"媒体",l:"A",t:"会议",n:4,ab:"IEEE VIS",f:"IEEE Visualization Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/visualization/index.html"},
+// 会议 B类
+{d:"媒体",l:"B",t:"会议",n:1,ab:"ICMR",f:"ACM SIGMM International Conference on Multimedia Retrieval",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/mir/"},
+{d:"媒体",l:"B",t:"会议",n:2,ab:"I3D",f:"ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/si3d/"},
+{d:"媒体",l:"B",t:"会议",n:3,ab:"SCA",f:"ACM SIGGRAPH/Eurographics Symposium on Computer Animation",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/sca/index.html"},
+{d:"媒体",l:"B",t:"会议",n:4,ab:"DCC",f:"Data Compression Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/dcc/"},
+{d:"媒体",l:"B",t:"会议",n:5,ab:"Eurographics",f:"Annual Conference of the European Association for Computer Graphics",p:"Wiley/Blackwell",u:"http://dblp.uni-trier.de/db/conf/eurographics/"},
+{d:"媒体",l:"B",t:"会议",n:6,ab:"EuroVis",f:"Eurographics Conference on Visualization",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/vissym/"},
+{d:"媒体",l:"B",t:"会议",n:7,ab:"SGP",f:"Eurographics Symposium on Geometry Processing",p:"Wiley/Blackwell",u:"http://dblp.uni-trier.de/db/conf/sgp/"},
+{d:"媒体",l:"B",t:"会议",n:8,ab:"EGSR",f:"Eurographics Symposium on Rendering",p:"Wiley/Blackwell",u:"http://dblp.uni-trier.de/db/conf/rt/"},
+{d:"媒体",l:"B",t:"会议",n:9,ab:"ICASSP",f:"IEEE International Conference on Acoustics, Speech and Signal Processing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icassp/"},
+{d:"媒体",l:"B",t:"会议",n:10,ab:"ICME",f:"IEEE International Conference on Multimedia & Expo",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icmcs/"},
+{d:"媒体",l:"B",t:"会议",n:11,ab:"ISMAR",f:"International Symposium on Mixed and Augmented Reality",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/conf/ismar/"},
+{d:"媒体",l:"B",t:"会议",n:12,ab:"PG",f:"Pacific Conference on Computer Graphics and Applications",p:"Wiley/Blackwell",u:"http://dblp.uni-trier.de/db/conf/pg/index.html"},
+{d:"媒体",l:"B",t:"会议",n:13,ab:"SPM",f:"Symposium on Solid and Physical Modeling",p:"SMA/Elsevier",u:"http://dblp.uni-trier.de/db/conf/sma/"},
+{d:"媒体",l:"B",t:"会议",n:14,ab:"INTER-SPEECH",f:"Conference of the International Speech Communication Association",p:"ISCA",u:"http://dblp.uni-trier.de/db/conf/interspeech/index.html"},
+// 会议 C类
+{d:"媒体",l:"C",t:"会议",n:1,ab:"VRST",f:"ACM Symposium on Virtual Reality Software and Technology",p:"ACM",u:"http://dblp2.uni-trier.de/db/conf/vrst/"},
+{d:"媒体",l:"C",t:"会议",n:2,ab:"CASAXR",f:"International Conference on Computer Animation, Social Agents, and Extended Reality",p:"Wiley",u:"http://dblp.uni-trier.de/db/conf/ca/"},
+{d:"媒体",l:"C",t:"会议",n:3,ab:"CGI",f:"Computer Graphics International",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/cgi/"},
+{d:"媒体",l:"C",t:"会议",n:4,ab:"GMP",f:"Geometric Modeling and Processing",p:"Elsevier",u:"http://dblp.uni-trier.de/db/conf/gmp/"},
+{d:"媒体",l:"C",t:"会议",n:5,ab:"PacificVis",f:"IEEE Pacific Visualization Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/apvis/"},
+{d:"媒体",l:"C",t:"会议",n:6,ab:"3DV",f:"International Conference on 3D Vision",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/3dim/"},
+{d:"媒体",l:"C",t:"会议",n:7,ab:"CAD/Graphics",f:"International Conference on Computer-Aided Design and Computer Graphics Processing",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/cadgraphics/"},
+{d:"媒体",l:"C",t:"会议",n:8,ab:"ICIP",f:"IEEE International Conference on Image Processing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icip/"},
+{d:"媒体",l:"C",t:"会议",n:9,ab:"MMM",f:"International Conference on Multimedia Modeling",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/mmm/index.html"},
+{d:"媒体",l:"C",t:"会议",n:10,ab:"MMAsia",f:"ACM Multimedia Asia",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/mmasia/index.html"},
+{d:"媒体",l:"C",t:"会议",n:11,ab:"SMI",f:"Shape Modeling International",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/smi/"},
+{d:"媒体",l:"C",t:"会议",n:12,ab:"CVM",f:"Computational Visual Media",p:"Tsinghua University",u:"https://dblp.org/db/conf/cvm/index.html"},
+{d:"媒体",l:"C",t:"会议",n:13,ab:"PRCV",f:"Chinese Conference on Pattern Recognition and Computer Vision",p:"Springer",u:"https://dblp.org/db/conf/prcv/index.html"},
+{d:"媒体",l:"C",t:"会议",n:14,ab:"ICIG",f:"International Conference on Image and Graphics",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/icig/index.html"},
+{d:"媒体",l:"C",t:"会议",n:15,ab:"NCMMSC",f:"National Conference on Man-Machine Speech Communication",p:"CCF/中国中文信息学会",u:"https://dblp.uni-trier.de/search?q=NCMMSC"},
+{d:"媒体",l:"C",t:"会议",n:16,ab:"ASRU",f:"Automatic Speech Recognition and Understanding Workshop",p:"IEEE SLTC",u:"https://dblp.uni-trier.de/db/conf/asru/index.html"},
+{d:"媒体",l:"C",t:"会议",n:17,ab:"SLT",f:"Spoken Language Technology",p:"IEEE SLTC",u:"https://dblp.uni-trier.de/db/conf/slt/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 智能 — 人工智能
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"智能",l:"A",t:"期刊",n:1,ab:"AI",f:"Artificial Intelligence",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ai/"},
+{d:"智能",l:"A",t:"期刊",n:2,ab:"TPAMI",f:"IEEE Transactions on Pattern Analysis and Machine Intelligence",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/pami/"},
+{d:"智能",l:"A",t:"期刊",n:3,ab:"IJCV",f:"International Journal of Computer Vision",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ijcv/"},
+{d:"智能",l:"A",t:"期刊",n:4,ab:"JMLR",f:"Journal of Machine Learning Research",p:"MIT Press",u:"http://dblp.uni-trier.de/db/journals/jmlr/"},
+// 期刊 B类
+{d:"智能",l:"B",t:"期刊",n:1,ab:"TAP",f:"ACM Transactions on Applied Perception",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tap/"},
+{d:"智能",l:"B",t:"期刊",n:2,ab:"AAMAS",f:"Autonomous Agents and Multi-Agent Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/aamas/"},
+{d:"智能",l:"B",t:"期刊",n:3,ab:"",f:"Computational Linguistics",p:"MIT Press",u:"http://dblp.uni-trier.de/db/journals/coling/"},
+{d:"智能",l:"B",t:"期刊",n:4,ab:"CVIU",f:"Computer Vision and Image Understanding",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/cviu/"},
+{d:"智能",l:"B",t:"期刊",n:5,ab:"DKE",f:"Data & Knowledge Engineering",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/dke/index.html"},
+{d:"智能",l:"B",t:"期刊",n:6,ab:"",f:"Evolutionary Computation",p:"MIT Press",u:"http://dblp.uni-trier.de/db/journals/ec/"},
+{d:"智能",l:"B",t:"期刊",n:7,ab:"TAC",f:"IEEE Transactions on Affective Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/taffco/"},
+{d:"智能",l:"B",t:"期刊",n:8,ab:"TASLP",f:"IEEE Transactions on Audio, Speech and Language Processing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/taslp/"},
+{d:"智能",l:"B",t:"期刊",n:9,ab:"",f:"IEEE Transactions on Cybernetics",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tcyb/"},
+{d:"智能",l:"B",t:"期刊",n:10,ab:"TEC",f:"IEEE Transactions on Evolutionary Computation",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tec/"},
+{d:"智能",l:"B",t:"期刊",n:11,ab:"TFS",f:"IEEE Transactions on Fuzzy Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tfs/"},
+{d:"智能",l:"B",t:"期刊",n:12,ab:"TNNLS",f:"IEEE Transactions on Neural Networks and Learning Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tnn/"},
+{d:"智能",l:"B",t:"期刊",n:13,ab:"IJAR",f:"International Journal of Approximate Reasoning",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ijar/"},
+{d:"智能",l:"B",t:"期刊",n:14,ab:"JAIR",f:"Journal of Artificial Intelligence Research",p:"AAAI",u:"http://dblp.uni-trier.de/db/journals/jair/index.html"},
+{d:"智能",l:"B",t:"期刊",n:15,ab:"",f:"Journal of Automated Reasoning",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/jar/"},
+{d:"智能",l:"B",t:"期刊",n:16,ab:"JSLHR",f:"Journal of Speech, Language, and Hearing Research",p:"American Speech-Language Hearing Association",u:"http://jslhr.pubs.asha.org/"},
+{d:"智能",l:"B",t:"期刊",n:17,ab:"",f:"Machine Learning",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ml/"},
+{d:"智能",l:"B",t:"期刊",n:18,ab:"",f:"Neural Computation",p:"MIT Press",u:"http://dblp.uni-trier.de/db/journals/neco/"},
+{d:"智能",l:"B",t:"期刊",n:19,ab:"",f:"Neural Networks",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/nn/"},
+{d:"智能",l:"B",t:"期刊",n:20,ab:"PR",f:"Pattern Recognition",p:"Elsevier",u:"http://dblp.uni-trier.de/db/conf/par/"},
+{d:"智能",l:"B",t:"期刊",n:21,ab:"TACL",f:"Transactions of the Association for Computational Linguistics",p:"The Association for Computational Linguistics",u:"https://dblp.org/db/journals/tacl/index.html"},
+// 期刊 C类
+{d:"智能",l:"C",t:"期刊",n:1,ab:"TALLIP",f:"ACM Transactions on Asian and Low-Resource Language Information Processing",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/talip/"},
+{d:"智能",l:"C",t:"期刊",n:2,ab:"",f:"Applied Intelligence",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/apin/"},
+{d:"智能",l:"C",t:"期刊",n:3,ab:"AIM",f:"Artificial Intelligence in Medicine",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/artmed/"},
+{d:"智能",l:"C",t:"期刊",n:4,ab:"",f:"Artificial Life",p:"MIT Press",u:"http://dblp.uni-trier.de/db/journals/alife/"},
+{d:"智能",l:"C",t:"期刊",n:5,ab:"",f:"Computational Intelligence",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/ci/"},
+{d:"智能",l:"C",t:"期刊",n:6,ab:"",f:"Computer Speech & Language",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/csl/"},
+{d:"智能",l:"C",t:"期刊",n:7,ab:"",f:"Connection Science",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/connection/"},
+{d:"智能",l:"C",t:"期刊",n:8,ab:"DSS",f:"Decision Support Systems",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/dss/"},
+{d:"智能",l:"C",t:"期刊",n:9,ab:"EAAI",f:"Engineering Applications of Artificial Intelligence",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/eaai/"},
+{d:"智能",l:"C",t:"期刊",n:10,ab:"",f:"Expert Systems",p:"Blackwell/Wiley",u:"http://dblp.uni-trier.de/db/journals/es/"},
+{d:"智能",l:"C",t:"期刊",n:11,ab:"ESWA",f:"Expert Systems with Applications",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/eswa/"},
+{d:"智能",l:"C",t:"期刊",n:12,ab:"",f:"Fuzzy Sets and Systems",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/fss/"},
+{d:"智能",l:"C",t:"期刊",n:13,ab:"TG",f:"IEEE Transactions on Games",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tciaig/"},
+{d:"智能",l:"C",t:"期刊",n:14,ab:"IET-CVI",f:"IET Computer Vision",p:"IET",u:"https://dblp.org/db/journals/iet-cvi/index.html"},
+{d:"智能",l:"C",t:"期刊",n:15,ab:"",f:"IET Signal Processing",p:"IET",u:"https://dblp.org/db/journals/iet-spr/index.html"},
+{d:"智能",l:"C",t:"期刊",n:16,ab:"IVC",f:"Image and Vision Computing",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ivc/"},
+{d:"智能",l:"C",t:"期刊",n:17,ab:"IDA",f:"Intelligent Data Analysis",p:"IOS Press",u:"http://dblp.uni-trier.de/db/journals/ida/"},
+{d:"智能",l:"C",t:"期刊",n:18,ab:"IJCIA",f:"International Journal of Computational Intelligence and Applications",p:"World Scientific",u:"http://dblp.uni-trier.de/db/journals/ijcia/"},
+{d:"智能",l:"C",t:"期刊",n:19,ab:"IJIS",f:"International Journal of Intelligent Systems",p:"Wiley",u:"http://dblp.uni-trier.de/db/journals/ijis/"},
+{d:"智能",l:"C",t:"期刊",n:20,ab:"IJNS",f:"International Journal of Neural Systems",p:"World Scientific",u:"http://dblp.uni-trier.de/db/journals/ijns/"},
+{d:"智能",l:"C",t:"期刊",n:21,ab:"IJPRAI",f:"International Journal of Pattern Recognition and Artificial Intelligence",p:"World Scientific",u:"http://dblp.uni-trier.de/db/journals/ijprai/"},
+{d:"智能",l:"C",t:"期刊",n:22,ab:"IJUFKS",f:"International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems",p:"World Scientific",u:"https://dblp.uni-trier.de/db/journals/ijufks/"},
+{d:"智能",l:"C",t:"期刊",n:23,ab:"IJDAR",f:"International Journal on Document Analysis and Recognition",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/ijdar/"},
+{d:"智能",l:"C",t:"期刊",n:24,ab:"JETAI",f:"Journal of Experimental and Theoretical Artificial Intelligence",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/jetai/"},
+{d:"智能",l:"C",t:"期刊",n:25,ab:"KBS",f:"Knowledge-Based Systems",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/kbs/"},
+{d:"智能",l:"C",t:"期刊",n:26,ab:"",f:"Machine Translation",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/mt/"},
+{d:"智能",l:"C",t:"期刊",n:27,ab:"",f:"Machine Vision and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/mva/"},
+{d:"智能",l:"C",t:"期刊",n:28,ab:"",f:"Natural Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/nc/"},
+{d:"智能",l:"C",t:"期刊",n:29,ab:"NLE",f:"Natural Language Engineering",p:"Cambridge University Press",u:"http://dblp.uni-trier.de/db/journals/nle/"},
+{d:"智能",l:"C",t:"期刊",n:30,ab:"NCA",f:"Neural Computing and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/nca/"},
+{d:"智能",l:"C",t:"期刊",n:31,ab:"NPL",f:"Neural Processing Letters",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/npl/"},
+{d:"智能",l:"C",t:"期刊",n:32,ab:"",f:"Neurocomputing",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ijon/"},
+{d:"智能",l:"C",t:"期刊",n:33,ab:"PAA",f:"Pattern Analysis and Applications",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/paa/"},
+{d:"智能",l:"C",t:"期刊",n:34,ab:"PRL",f:"Pattern Recognition Letters",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/prl/"},
+{d:"智能",l:"C",t:"期刊",n:35,ab:"",f:"Soft Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/soco/"},
+{d:"智能",l:"C",t:"期刊",n:36,ab:"WI",f:"Web Intelligence",p:"IOS Press",u:"http://dblp.uni-trier.de/db/journals/wias/"},
+{d:"智能",l:"C",t:"期刊",n:37,ab:"TIIS",f:"ACM Transactions on Interactive Intelligent Systems",p:"ACM",u:"https://dblp.org/db/journals/tiis/index.html"},
+{d:"智能",l:"C",t:"期刊",n:38,ab:"TELO",f:"ACM Transactions on Evolutionary Learning and Optimization",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/telo/index.html"},
+{d:"智能",l:"C",t:"期刊",n:39,ab:"JATS",f:"ACM Journal on Autonomous Transportation Systems",p:"ACM",u:""},
+// 会议 A类
+{d:"智能",l:"A",t:"会议",n:1,ab:"AAAI",f:"AAAI Conference on Artificial Intelligence",p:"AAAI",u:"http://dblp.uni-trier.de/db/conf/aaai/"},
+{d:"智能",l:"A",t:"会议",n:2,ab:"NeurIPS",f:"Conference on Neural Information Processing Systems",p:"MIT Press",u:"http://dblp.uni-trier.de/db/conf/nips/"},
+{d:"智能",l:"A",t:"会议",n:3,ab:"ACL",f:"Annual Meeting of the Association for Computational Linguistics",p:"ACL",u:"http://dblp.uni-trier.de/db/conf/acl/"},
+{d:"智能",l:"A",t:"会议",n:4,ab:"CVPR",f:"IEEE/CVF Computer Vision and Pattern Recognition Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/cvpr/"},
+{d:"智能",l:"A",t:"会议",n:5,ab:"ICCV",f:"International Conference on Computer Vision",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iccv/"},
+{d:"智能",l:"A",t:"会议",n:6,ab:"ICML",f:"International Conference on Machine Learning",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/icml/"},
+{d:"智能",l:"A",t:"会议",n:7,ab:"ICLR",f:"International Conference on Learning Representations",p:"OpenReview",u:"https://dblp.uni-trier.de/db/conf/iclr/index.html"},
+// 会议 B类
+{d:"智能",l:"B",t:"会议",n:1,ab:"COLT",f:"Annual Conference on Computational Learning Theory",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/colt/"},
+{d:"智能",l:"B",t:"会议",n:2,ab:"EMNLP",f:"Conference on Empirical Methods in Natural Language Processing",p:"ACL",u:"http://dblp.uni-trier.de/db/conf/emnlp/"},
+{d:"智能",l:"B",t:"会议",n:3,ab:"ECAI",f:"European Conference on Artificial Intelligence",p:"IOS Press",u:"http://dblp.uni-trier.de/db/conf/ecai/"},
+{d:"智能",l:"B",t:"会议",n:4,ab:"ECCV",f:"European Conference on Computer Vision",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/eccv/"},
+{d:"智能",l:"B",t:"会议",n:5,ab:"ICRA",f:"IEEE International Conference on Robotics and Automation",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icra/"},
+{d:"智能",l:"B",t:"会议",n:6,ab:"ICAPS",f:"International Conference on Automated Planning and Scheduling",p:"AAAI",u:"https://dblp.uni-trier.de/db/conf/icaps/index.html"},
+{d:"智能",l:"B",t:"会议",n:7,ab:"ICCBR",f:"International Conference on Case-Based Reasoning",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/iccbr/"},
+{d:"智能",l:"B",t:"会议",n:8,ab:"COLING",f:"International Conference on Computational Linguistics",p:"International Committee on Computational Linguistics",u:"http://dblp.uni-trier.de/db/conf/coling/"},
+{d:"智能",l:"B",t:"会议",n:9,ab:"KR",f:"International Conference on Principles of Knowledge Representation and Reasoning",p:"Morgan Kaufmann",u:"http://dblp.uni-trier.de/db/conf/kr/"},
+{d:"智能",l:"B",t:"会议",n:10,ab:"UAI",f:"Conference on Uncertainty in Artificial Intelligence",p:"AUAI",u:"http://dblp.uni-trier.de/db/conf/uai/"},
+{d:"智能",l:"B",t:"会议",n:11,ab:"AAMAS",f:"International Joint Conference on Autonomous Agents and Multi-agent Systems",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/ifaamas/index.html"},
+{d:"智能",l:"B",t:"会议",n:12,ab:"PPSN",f:"Parallel Problem Solving from Nature",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ppsn/"},
+{d:"智能",l:"B",t:"会议",n:13,ab:"NAACL",f:"North American Chapter of the Association for Computational Linguistics",p:"Association for Computational Linguistics",u:"http://dblp.uni-trier.de/db/conf/naacl/"},
+{d:"智能",l:"B",t:"会议",n:14,ab:"IJCAI",f:"International Joint Conference on Artificial Intelligence",p:"Morgan Kaufmann",u:"http://dblp.uni-trier.de/db/conf/ijcai/"},
+// 会议 C类
+{d:"智能",l:"C",t:"会议",n:1,ab:"AISTATS",f:"International Conference on Artificial Intelligence and Statistics",p:"JMLR",u:"http://dblp.uni-trier.de/db/conf/aistats/"},
+{d:"智能",l:"C",t:"会议",n:2,ab:"ACCV",f:"Asian Conference on Computer Vision",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/accv/"},
+{d:"智能",l:"C",t:"会议",n:3,ab:"ACML",f:"Asian Conference on Machine Learning",p:"JMLR",u:"http://dblp.uni-trier.de/db/conf/acml/"},
+{d:"智能",l:"C",t:"会议",n:4,ab:"BMVC",f:"British Machine Vision Conference",p:"British Machine Vision Association",u:"http://dblp.uni-trier.de/db/conf/bmvc/"},
+{d:"智能",l:"C",t:"会议",n:5,ab:"NLPCC",f:"CCF International Conference on Natural Language Processing and Chinese Computing",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/nlpcc/"},
+{d:"智能",l:"C",t:"会议",n:6,ab:"CoNLL",f:"Conference on Computational Natural Language Learning",p:"Association for Computational Linguistics",u:"http://dblp.uni-trier.de/db/conf/conll"},
+{d:"智能",l:"C",t:"会议",n:7,ab:"GECCO",f:"Genetic and Evolutionary Computation Conference",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/gecco/"},
+{d:"智能",l:"C",t:"会议",n:8,ab:"ICTAI",f:"IEEE International Conference on Tools with Artificial Intelligence",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ictai/"},
+{d:"智能",l:"C",t:"会议",n:9,ab:"IROS",f:"IEEE/RSJ International Conference on Intelligent Robots and Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/iros/"},
+{d:"智能",l:"C",t:"会议",n:10,ab:"ALT",f:"International Conference on Algorithmic Learning Theory",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/alt/"},
+{d:"智能",l:"C",t:"会议",n:11,ab:"ICANN",f:"International Conference on Artificial Neural Networks",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/icann/"},
+{d:"智能",l:"C",t:"会议",n:12,ab:"FG",f:"IEEE International Conference on Automatic Face and Gesture Recognition",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/fgr/"},
+{d:"智能",l:"C",t:"会议",n:13,ab:"ICDAR",f:"International Conference on Document Analysis and Recognition",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icdar/"},
+{d:"智能",l:"C",t:"会议",n:14,ab:"ILP",f:"International Conference on Inductive Logic Programming",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ilp/"},
+{d:"智能",l:"C",t:"会议",n:15,ab:"KSEM",f:"International Conference on Knowledge Science, Engineering and Management",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ksem/"},
+{d:"智能",l:"C",t:"会议",n:16,ab:"ICONIP",f:"International Conference on Neural Information Processing",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/iconip/"},
+{d:"智能",l:"C",t:"会议",n:17,ab:"ICPR",f:"International Conference on Pattern Recognition",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icpr/"},
+{d:"智能",l:"C",t:"会议",n:18,ab:"IJCB",f:"International Joint Conference on Biometrics",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/icb/"},
+{d:"智能",l:"C",t:"会议",n:19,ab:"IJCNN",f:"International Joint Conference on Neural Networks",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/ijcnn/"},
+{d:"智能",l:"C",t:"会议",n:20,ab:"PRICAI",f:"Pacific Rim International Conference on Artificial Intelligence",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/pricai/"},
+{d:"智能",l:"C",t:"会议",n:21,ab:"IEEE CEC",f:"Congress on Evolutionary Computation",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/cec/index.html"},
+{d:"智能",l:"C",t:"会议",n:22,ab:"DAI",f:"International Conference on Distributed Artificial Intelligence",p:"ACM/Springer",u:"https://dblp.uni-trier.de/db/conf/dai2/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 人机 — 人机交互与普适计算
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"人机",l:"A",t:"期刊",n:1,ab:"TOCHI",f:"ACM Transactions on Computer-Human Interaction",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/tochi/"},
+{d:"人机",l:"A",t:"期刊",n:2,ab:"IJHCS",f:"International Journal of Human-Computer Studies",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/ijmms/"},
+// 期刊 B类
+{d:"人机",l:"B",t:"期刊",n:1,ab:"CSCW",f:"Computer Supported Cooperative Work",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/cscw/"},
+{d:"人机",l:"B",t:"期刊",n:2,ab:"HCI",f:"Human-Computer Interaction",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/hhci/"},
+{d:"人机",l:"B",t:"期刊",n:3,ab:"",f:"IEEE Transactions on Human-Machine Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/thms/"},
+{d:"人机",l:"B",t:"期刊",n:4,ab:"IWC",f:"Interacting with Computers",p:"Oxford University Press",u:"http://dblp.uni-trier.de/db/journals/iwc/"},
+{d:"人机",l:"B",t:"期刊",n:5,ab:"IJHCI",f:"International Journal of Human-Computer Interaction",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/ijhci/"},
+{d:"人机",l:"B",t:"期刊",n:6,ab:"UMUAI",f:"User Modeling and User-Adapted Interaction",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/umuai/"},
+{d:"人机",l:"B",t:"期刊",n:7,ab:"TSMC",f:"IEEE Transactions on Systems, Man, and Cybernetics: Systems",p:"IEEE",u:"https://dblp.org/db/journals/tsmc/tsmc12.html"},
+{d:"人机",l:"B",t:"期刊",n:8,ab:"CCF TPCI",f:"CCF Transactions on Pervasive Computing and Interaction",p:"CCF/Springer",u:"https://dblp.uni-trier.de/db/journals/ccftpci/index.html"},
+// 期刊 C类
+{d:"人机",l:"C",t:"期刊",n:1,ab:"BIT",f:"Behaviour & Information Technology",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/behaviourIT/"},
+{d:"人机",l:"C",t:"期刊",n:2,ab:"PUC",f:"Personal and Ubiquitous Computing",p:"Springer",u:"http://dblp.uni-trier.de/db/journals/puc/"},
+{d:"人机",l:"C",t:"期刊",n:3,ab:"PMC",f:"Pervasive and Mobile Computing",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/percom/"},
+{d:"人机",l:"C",t:"期刊",n:4,ab:"PACMHCI",f:"Proceedings of the ACM on Human-Computer Interaction",p:"ACM",u:"https://dblp.org/db/journals/pacmhci/index.html"},
+{d:"人机",l:"C",t:"期刊",n:5,ab:"THRI",f:"ACM Transactions on Human-Robot Interaction",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/thri/index.html"},
+// 会议 A类
+{d:"人机",l:"A",t:"会议",n:1,ab:"CSCW",f:"ACM Conference On Computer-Supported Cooperative Work And Social Computing",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/cscw"},
+{d:"人机",l:"A",t:"会议",n:2,ab:"CHI",f:"ACM Conference on Human Factors in Computing Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/chi"},
+{d:"人机",l:"A",t:"会议",n:3,ab:"UbiComp",f:"ACM International Joint Conference on Pervasive and Ubiquitous Computing",p:"ACM",u:"https://dblp.uni-trier.de/db/conf/huc/"},
+{d:"人机",l:"A",t:"会议",n:4,ab:"UIST",f:"ACM Symposium on User Interface Software and Technology",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/uist/"},
+// 会议 B类
+{d:"人机",l:"B",t:"会议",n:1,ab:"GROUP",f:"ACM International Conference on Supporting Group Work",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/group/"},
+{d:"人机",l:"B",t:"会议",n:2,ab:"IUI",f:"ACM International Conference on Intelligent User Interfaces",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/iui/"},
+{d:"人机",l:"B",t:"会议",n:3,ab:"ISS",f:"ACM International Conference on Interactive Surfaces and Spaces",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/tabletop/"},
+{d:"人机",l:"B",t:"会议",n:4,ab:"ECSCW",f:"European Conference on Computer Supported Cooperative Work",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/ecscw/"},
+{d:"人机",l:"B",t:"会议",n:5,ab:"PERCOM",f:"IEEE International Conference on Pervasive Computing and Communications",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/percom/"},
+{d:"人机",l:"B",t:"会议",n:6,ab:"MobileHCI",f:"ACM International Conference on Mobile Human-Computer Interaction",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/mhci/"},
+{d:"人机",l:"B",t:"会议",n:7,ab:"ICWSM",f:"The International AAAI Conference on Web and Social Media",p:"AAAI",u:"https://dblp.org/db/conf/icwsm/index.html"},
+// 会议 C类
+{d:"人机",l:"C",t:"会议",n:1,ab:"DIS",f:"ACM SIGCHI Conference on Designing Interactive Systems",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/ACMdis"},
+{d:"人机",l:"C",t:"会议",n:2,ab:"ICMI",f:"ACM International Conference on Multimodal Interaction",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/icmi/"},
+{d:"人机",l:"C",t:"会议",n:3,ab:"ASSETS",f:"International ACM SIGACCESS Conference on Computers and Accessibility",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/assets"},
+{d:"人机",l:"C",t:"会议",n:4,ab:"GI",f:"Graphics Interface",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/graphicsinterface/"},
+{d:"人机",l:"C",t:"会议",n:5,ab:"UIC",f:"IEEE International Conference on Ubiquitous Intelligence and Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/uic/"},
+{d:"人机",l:"C",t:"会议",n:6,ab:"",f:"IEEE World Haptics Conference",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/haptics/"},
+{d:"人机",l:"C",t:"会议",n:7,ab:"INTERACT",f:"International Conference on Human-Computer Interaction of International Federation for Information Processing",p:"IFIP",u:"http://dblp.uni-trier.de/db/conf/interact/"},
+{d:"人机",l:"C",t:"会议",n:8,ab:"IDC",f:"ACM Interaction Design and Children",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/acmidc/"},
+{d:"人机",l:"C",t:"会议",n:9,ab:"CollaborateCom",f:"International Conference on Collaborative Computing: Networking, Applications and Worksharing",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/colcom/"},
+{d:"人机",l:"C",t:"会议",n:10,ab:"CSCWD",f:"International Conference on Computer Supported Cooperative Work in Design",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/cscwd/"},
+{d:"人机",l:"C",t:"会议",n:11,ab:"CoopIS",f:"International Conference on Cooperative Information Systems",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/coopis/"},
+{d:"人机",l:"C",t:"会议",n:12,ab:"MobiQuitous",f:"International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/mobiquitous/"},
+{d:"人机",l:"C",t:"会议",n:13,ab:"AVI",f:"International Working Conference on Advanced Visual Interfaces",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/avi/"},
+{d:"人机",l:"C",t:"会议",n:14,ab:"GPC",f:"Conference on Green, Pervasive and Cloud Computing",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/gpc/index.html"},
+{d:"人机",l:"C",t:"会议",n:15,ab:"ICXR",f:"CCF International Conference on Extended Reality",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/icxr/index.html"},
+
+// ═══════════════════════════════════════════════════════
+// 交叉 — 交叉/综合/新兴
+// ═══════════════════════════════════════════════════════
+// 期刊 A类
+{d:"交叉",l:"A",t:"期刊",n:1,ab:"JACM",f:"Journal of the ACM",p:"ACM",u:"http://dblp.uni-trier.de/db/journals/jacm/"},
+{d:"交叉",l:"A",t:"期刊",n:2,ab:"Proc. IEEE",f:"Proceedings of the IEEE",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/pieee/"},
+{d:"交叉",l:"A",t:"期刊",n:3,ab:"SCIS",f:"Science China Information Sciences",p:"Science in China Press/Springer",u:"http://dblp.uni-trier.de/db/journals/chinaf/"},
+{d:"交叉",l:"A",t:"期刊",n:4,ab:"",f:"Bioinformatics",p:"Oxford University Press",u:"http://dblp.uni-trier.de/db/journals/bioinformatics/"},
+// 期刊 B类
+{d:"交叉",l:"B",t:"期刊",n:1,ab:"",f:"Briefings in Bioinformatics",p:"Oxford University Press",u:"http://dblp.uni-trier.de/db/journals/bib/"},
+{d:"交叉",l:"B",t:"期刊",n:2,ab:"",f:"Cognition",p:"Elsevier",u:"http://www.journals.elsevier.com/cognition/"},
+{d:"交叉",l:"B",t:"期刊",n:3,ab:"TASAE",f:"IEEE Transactions on Automation Science and Engineering",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tase/"},
+{d:"交叉",l:"B",t:"期刊",n:4,ab:"TGARS",f:"IEEE Transactions on Geoscience and Remote Sensing",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tgrs/"},
+{d:"交叉",l:"B",t:"期刊",n:5,ab:"TITS",f:"IEEE Transactions on Intelligent Transportation Systems",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tits/"},
+{d:"交叉",l:"B",t:"期刊",n:6,ab:"TMI",f:"IEEE Transactions on Medical Imaging",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/tmi/"},
+{d:"交叉",l:"B",t:"期刊",n:7,ab:"TR",f:"IEEE Transactions on Robotics",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/trob/"},
+{d:"交叉",l:"B",t:"期刊",n:8,ab:"TCBB",f:"IEEE/ACM Transactions on Computational Biology and Bioinformatics",p:"IEEE/ACM",u:"http://dblp.uni-trier.de/db/journals/tcbb/"},
+{d:"交叉",l:"B",t:"期刊",n:9,ab:"JCST",f:"Journal of Computer Science and Technology",p:"SCIENCE PRESS/Springer",u:"http://dblp.uni-trier.de/db/journals/jcst/"},
+{d:"交叉",l:"B",t:"期刊",n:10,ab:"JAMIA",f:"Journal of the American Medical Informatics Association",p:"BMJ Journals",u:"http://dblp.uni-trier.de/db/journals/jamia/"},
+{d:"交叉",l:"B",t:"期刊",n:11,ab:"",f:"PLOS Computational Biology",p:"Public Library of Science",u:"http://dblp.uni-trier.de/db/journals/ploscb/"},
+{d:"交叉",l:"B",t:"期刊",n:12,ab:"",f:"The Computer Journal",p:"Oxford University Press",u:"http://dblp.uni-trier.de/db/journals/cj/"},
+{d:"交叉",l:"B",t:"期刊",n:13,ab:"",f:"World Wide Web",p:"Springer",u:"https://dblp.org/db/journals/www/index.html"},
+{d:"交叉",l:"B",t:"期刊",n:14,ab:"FCS",f:"Frontiers of Computer Science",p:"Higher Education Press",u:"http://dblp.uni-trier.de/db/journals/fcsc/"},
+{d:"交叉",l:"B",t:"期刊",n:15,ab:"BCRA",f:"Blockchain: Research and Applications",p:"浙江大学出版社/Elsevier",u:"https://dblp.uni-trier.de/search?q=BCRA"},
+// 期刊 C类
+{d:"交叉",l:"C",t:"期刊",n:1,ab:"",f:"BMC Bioinformatics",p:"BioMed Central",u:"http://dblp.uni-trier.de/db/journals/bmcbi/"},
+{d:"交叉",l:"C",t:"期刊",n:2,ab:"",f:"Cybernetics and Systems",p:"Taylor & Francis",u:"http://dblp.uni-trier.de/db/journals/cas/"},
+{d:"交叉",l:"C",t:"期刊",n:3,ab:"",f:"IEEE Geoscience and Remote Sensing Letters",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/lgrs/"},
+{d:"交叉",l:"C",t:"期刊",n:4,ab:"JBHI",f:"IEEE Journal of Biomedical and Health Informatics",p:"IEEE",u:"http://dblp.uni-trier.de/db/journals/titb/"},
+{d:"交叉",l:"C",t:"期刊",n:5,ab:"TBD",f:"IEEE Transactions on Big Data",p:"IEEE",u:"https://dblp.uni-trier.de/db/journals/tbd/"},
+{d:"交叉",l:"C",t:"期刊",n:6,ab:"",f:"IET Intelligent Transport Systems",p:"IET",u:"http://digital-library.theiet.org/content/journals/iet-its"},
+{d:"交叉",l:"C",t:"期刊",n:7,ab:"JBI",f:"Journal of Biomedical Informatics",p:"Elsevier",u:"https://dblp.uni-trier.de/db/journals/jbi/"},
+{d:"交叉",l:"C",t:"期刊",n:8,ab:"",f:"Medical Image Analysis",p:"Elsevier",u:"http://dblp.uni-trier.de/db/journals/mia/"},
+{d:"交叉",l:"C",t:"期刊",n:9,ab:"TII",f:"IEEE Transactions on Industrial Informatics",p:"IEEE",u:"https://dblp.org/db/journals/tii/index.html"},
+{d:"交叉",l:"C",t:"期刊",n:10,ab:"TCPS",f:"ACM Transactions on Cyber-Physical Systems",p:"ACM",u:"https://dblp.org/db/journals/tcps/index.html"},
+{d:"交叉",l:"C",t:"期刊",n:11,ab:"TOCE",f:"ACM Transactions on Computing Education",p:"ACM",u:"https://dblp.org/db/journals/jeric/index.html"},
+{d:"交叉",l:"C",t:"期刊",n:12,ab:"EITEE",f:"Engineering Information Technology & Electronic Engineering（原 Frontiers of Information Technology & Electronic Engineering）",p:"浙江大学出版社",u:"https://www.academax.com/EITEE/home"},
+{d:"交叉",l:"C",t:"期刊",n:13,ab:"TCSS",f:"IEEE Transactions on Computational Social Systems",p:"IEEE",u:"https://dblp.org/db/journals/tcss/index.html"},
+{d:"交叉",l:"C",t:"期刊",n:14,ab:"",f:"IEEE Transactions on Reliability",p:"IEEE",u:"https://dblp.org/db/journals/tr/index.html"},
+{d:"交叉",l:"C",t:"期刊",n:15,ab:"HEALTH",f:"ACM Transactions on Computing for Healthcare",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/health/index.html"},
+{d:"交叉",l:"C",t:"期刊",n:16,ab:"ACM DLT",f:"ACM Distributed Ledger Technologies: Research and Practice",p:"ACM",u:"https://dblp.uni-trier.de/db/journals/distributedledger/index.html"},
+// 会议 A类
+{d:"交叉",l:"A",t:"会议",n:1,ab:"WWW",f:"The Web Conference",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/www/"},
+{d:"交叉",l:"A",t:"会议",n:2,ab:"RTSS",f:"IEEE Real-Time Systems Symposium",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/rtss/"},
+// 会议 B类
+{d:"交叉",l:"B",t:"会议",n:1,ab:"CogSci",f:"Annual Meeting of the Cognitive Science Society",p:"Psychology Press",u:"https://dblp.uni-trier.de/db/conf/cogsci/"},
+{d:"交叉",l:"B",t:"会议",n:2,ab:"BIBM",f:"IEEE International Conference on Bioinformatics and Biomedicine",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/bibm/"},
+{d:"交叉",l:"B",t:"会议",n:3,ab:"EMSOFT",f:"International Conference on Embedded Software",p:"IEEE/ACM/IFIP",u:"http://dblp.uni-trier.de/db/conf/emsoft/"},
+{d:"交叉",l:"B",t:"会议",n:4,ab:"ISMB",f:"International Conference on Intelligent Systems for Molecular Biology",p:"Oxford Journals",u:"https://dblp.org/db/conf/ismb/index.html"},
+{d:"交叉",l:"B",t:"会议",n:5,ab:"RECOMB",f:"Annual International Conference on Research in Computational Molecular Biology",p:"Springer",u:"http://dblp.uni-trier.de/db/conf/recomb/"},
+{d:"交叉",l:"B",t:"会议",n:6,ab:"MICCAI",f:"International Conference on Medical Image Computing and Computer-Assisted Intervention",p:"Springer",u:"https://dblp.org/db/conf/miccai/index.html"},
+{d:"交叉",l:"B",t:"会议",n:7,ab:"WINE",f:"Conference on Web and Internet Economics",p:"Springer",u:"https://dblp.org/db/conf/wine/index.html"},
+// 会议 C类
+{d:"交叉",l:"C",t:"会议",n:1,ab:"AMIA",f:"American Medical Informatics Association Annual Symposium",p:"AMIA",u:"http://dblp.uni-trier.de/db/conf/amia/"},
+{d:"交叉",l:"C",t:"会议",n:2,ab:"APBC",f:"Asia Pacific Bioinformatics Conference",p:"BioMed Central",u:"http://dblp.uni-trier.de/db/conf/apbc/"},
+{d:"交叉",l:"C",t:"会议",n:3,ab:"IEEE BigData",f:"IEEE International Conference on Big Data",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/bigdataconf/"},
+{d:"交叉",l:"C",t:"会议",n:4,ab:"IEEE CLOUD",f:"IEEE International Conference on Cloud Computing",p:"IEEE",u:"http://dblp.uni-trier.de/db/conf/IEEEcloud/"},
+{d:"交叉",l:"C",t:"会议",n:5,ab:"SMC",f:"IEEE International Conference on Systems, Man, and Cybernetics",p:"IEEE",u:"https://dblp.uni-trier.de/db/conf/smc/"},
+{d:"交叉",l:"C",t:"会议",n:6,ab:"COSIT",f:"International Conference on Spatial Information Theory",p:"ACM",u:"http://dblp.uni-trier.de/db/conf/cosit/"},
+{d:"交叉",l:"C",t:"会议",n:7,ab:"ISBRA",f:"International Symposium on Bioinformatics Research and Applications",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/isbra/"},
+{d:"交叉",l:"C",t:"会议",n:8,ab:"SAGT",f:"International Symposium on Algorithmic Game Theory",p:"Springer",u:"https://dblp.org/db/conf/sagt/index.html"},
+{d:"交叉",l:"C",t:"会议",n:9,ab:"SIGSPATIAL",f:"ACM Special Interest Group on Spatial Information",p:"ACM",u:"https://dblp.org/db/journals/sigspatial/index.html"},
+{d:"交叉",l:"C",t:"会议",n:10,ab:"ICIC",f:"International Conference on Intelligent Computing",p:"Springer-Nature",u:"https://dblp.org/db/conf/icic/index.html"},
+{d:"交叉",l:"C",t:"会议",n:11,ab:"ICSS",f:"International Conference on Service Science",p:"CCF/Springer",u:"https://dblp.uni-trier.de/db/conf/service/index.html"},
+{d:"交叉",l:"C",t:"会议",n:12,ab:"AFT",f:"Advances in Financial Technologies",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/aft/index.html"},
+{d:"交叉",l:"C",t:"会议",n:13,ab:"IJTCS-FAW",f:"International Joint Conference on Theoretical Computer Science - Frontier of Algorithmic Wisdom",p:"Springer",u:"https://dblp.uni-trier.de/db/conf/faw/index.html"}
+];
+
+const DIR_NAMES={"系统":"计算机体系结构/并行与分布计算/存储系统","网络":"计算机网络","安全":"网络与信息安全","软件":"软件工程/系统软件/程序设计语言","数据":"数据库/数据检索/内容检索","理论":"计算机科学理论","媒体":"计算机图形学与多媒体","智能":"人工智能","人机":"人机交互与普适计算","交叉":"交叉/综合/新兴"};
+let curDir="all",curLevel="all",curType="all",query="";
+function render(){
+  const rows=D.filter(r=>(curDir==="all"||r.d===curDir)&&(curLevel==="all"||r.l===curLevel)&&(curType==="all"||r.t===curType)&&(!query||r.ab.toLowerCase().includes(query)||r.f.toLowerCase().includes(query)||r.p.toLowerCase().includes(query)));
+  const tb=document.getElementById("tb");
+  if(!rows.length){tb.innerHTML='<tr><td colspan="8" class="empty-msg">没有匹配的结果</td></tr>';}
+  else{tb.innerHTML=rows.map(r=>`<tr><td class="c-dir">${r.d||r.d}</td><td><span class="tag tag-${r.l.toLowerCase()}">${r.l}</span></td><td><span class="tag-t">${r.t}</span></td><td class="c-no">${r.n}</td><td class="c-abbr">${r.ab||"—"}</td><td class="c-full">${r.f}</td><td class="c-pub">${r.p}</td><td class="c-url">${r.u?'<a href="'+r.u+'" target="_blank" rel="noopener">Link</a>':"—"}</td></tr>`).join("");}
+  document.getElementById("st").textContent=`共 ${rows.length} 条记录`;
+  document.getElementById("title").textContent=curDir==="all"?"全部方向":DIR_NAMES[curDir];
+}
+document.querySelectorAll(".nav-btn").forEach(btn=>{btn.addEventListener("click",()=>{document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");curDir=btn.dataset.dir;render();});});
+document.querySelectorAll("#lf .fb").forEach(btn=>{btn.addEventListener("click",()=>{document.querySelectorAll("#lf .fb").forEach(b=>b.classList.remove("on"));btn.classList.add("on");curLevel=btn.dataset.v;render();});});
+document.querySelectorAll("#tf .fb").forEach(btn=>{btn.addEventListener("click",()=>{document.querySelectorAll("#tf .fb").forEach(b=>b.classList.remove("on"));btn.classList.add("on");curType=btn.dataset.v;render();});});
+document.getElementById("si").addEventListener("input",e=>{query=e.target.value.toLowerCase().trim();render();});
+document.getElementById("cnt-all").textContent=D.length;
+render();
+</script>
+</body>
+</html>
+
