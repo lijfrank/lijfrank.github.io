@@ -83,48 +83,36 @@ SCIENCE CHINA Information Sciences (``SCIS``), 2025 [CAAI-A]
 
 - <a href="https://escholarship.org/uc/item/0dk8x579" class="no-underline">InferEM: Inferring the speaker's intention for empathetic dialogue generation</a>  
 Guoqing Lv†, **Jiang Li**†, Xiaoping Wang, Zhigang Zeng  
-The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), 26-29 July 2023, Sydney, Australia [CAAI-B]  
+The 45th Annual Meeting of the Cognitive Science Society (``CogSci 2023``), Sydney, NSW, Australia, July 26-29, 2023. [CAAI-B]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:NtCmTCuxid4C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:NtCmTCuxid4C) [![](https://img.shields.io/github/languages/code-size/lijfrank/InferEM?style=social)](https://github.com/lijfrank/InferEM)
 
 - <a href="https://doi.org/10.1109/CAC59555.2023.10451247" class="no-underline">A spatio-temporal scale based affective neural network for emotion detection in conversation</a>  
 **Jiang Li**, Xiaoping Wang, Shanglin Lei, Zhigang Zeng  
-2023 China Automation Congress (``CAC 2023``), 17-19 November 2023, Chongqing, China  
+2023 China Automation Congress (``CAC 2023``), Chongqing, China, November 17-19, 2023  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:Kqc1aDSOPooC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:Kqc1aDSOPooC)
 
 - <a href="https://doi.org/10.1145/3746027.3755163" class="no-underline">HAFUNet: A hierarchical attention fusion network for monocular depth estimation integrating event and frame data</a>  
 Siyuan Zhang, Xiaoping Wang, **Jiang Li**, Weibin Feng, Xin Zhan, Hongzhi Huang  
-The 33rd ACM International Conference on Multimedia (``ACMMM 2025``), 27-31 October 2025, Dublin, Ireland [CAAI-A]  
+The 33rd ACM International Conference on Multimedia (``ACMMM 2025``), Dublin, Ireland, October 27-31, 2025 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:RfUwGJFMQ-0C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:RfUwGJFMQ-0C) [![](https://img.shields.io/github/languages/code-size/SiYZhangwh/HAFUNet?style=social)](https://github.com/SiYZhangwh/HAFUNet)
 
 - <a href="https://doi.org/10.1109/ICTAI59109.2023.00133" class="no-underline">Watch the speakers: A hybrid continuous attribution network for emotion recognition in conversation with emotion disentanglement</a>  
 Shanglin Lei, Xiaoping Wang, Guanting Dong, **Jiang Li**, Zhigang Zeng  
-The 35th IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2023``), 6-8 November 2023, Atlanta, USA [CAAI-C]  
+The 35th IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2023``), Atlanta, USA, November 6-8, 2023 [CAAI-C]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:GYcXSSpN504C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:GYcXSSpN504C) <!-- [![](https://img.shields.io/github/languages/code-size/lijfrank/HCAN?style=social)](https://github.com/lijfrank/HCAN) -->
 
 - <a href="" class="no-underline">AtelierEval: Agentic evaluation of humans & LLMs as text-to-image prompters</a>  
 Hanjun Luo, Zhimu Huang, Sylvia Chung, Yiran Wang, Yingbin Jin, Jialin Li, **Jiang Li**, Xinfeng Li, Hanan Salam  
-Forty-Third International Conference on Machine Learning (``ICML 2026``), 6-11 July 2026, Seoul, South Korea [CAAI-A]  
+Forty-Third International Conference on Machine Learning (``ICML 2026``), Seoul, South Korea, July 6-11, 2026 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:4n0clTBhZ78C']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:4n0clTBhZ78C) [![](https://img.shields.io/github/languages/code-size/Astarojth/AtelierEval?style=social)](https://github.com/Astarojth/AtelierEval)
 
 - <a href="https://doi.org/10.1007/978-981-92-1599-7_21" class="no-underline">VeMamba: Voxel-based multi-scale state space model network for event stream recognition</a>  
 Xin Zhan, Xiaoping Wang, **Jiang Li**, Weibin Feng, Depeng Li, Hongzhi Huang  
-The 4th International Conference on Neuromorphic Computing (``ICNC 2025``), 12-14 December, 2025, Chengdu, China
+The 4th International Conference on Neuromorphic Computing (``ICNC 2025``), Chengdu, China, December 12-14, 2025
 
 - <a href="https://doi.org/10.1007/978-981-92-1599-7_34" class="no-underline">SNN-based lightweight denoising method for event cameras</a>  
 Hongzhi Huang, Xiaoping Wang, Weibin Feng, Xin Zhan, **Jiang Li**  
-The 4th International Conference on Neuromorphic Computing (``ICNC 2025``), 12-14 December, 2025, Chengdu, China
-
-<!-- - <a class="no-underline">A novel text classification approach based on meta-path similarities and graph neural networks</a>  
-H. Wang, **Jiang Li**, Q. Zhou, L. Ge  
-The 33rd International Conference on Software Engineering and Knowledge Engineering (``SEKE 2021``), 1-10 July 2021, Pittsburgh, Pennsylvania, USA
-
-- <a class="no-underline">Discovering the lonely among the students with weighted graph neural networks</a>  
-Q. Zhou, **Jiang Li**, Y. Tang, H. Wang  
-The 32nd IEEE International Conference on Tools with Artificial Intelligence (``ICTAI 2020``), 9–11 November 2020, Virtual Conference
-
-- <a class="no-underline">Identifying loners from their project collaboration records - a graph-based approach</a>  
-Q. Zhou, **Jiang Li**, Y. Tang, L. Ge  
-The 13th International Conference on Knowledge Science, Engineering and Management (``KSEM 2020``), 28–30 August 2020, Hangzhou, China -->
+The 4th International Conference on Neuromorphic Computing (``ICNC 2025``), Chengdu, China, December 12-14, 2025
 
 ## Other Paper
 - <a href="" class="no-underline">Hypergraph missing modality learning for conversational affect detection</a>  

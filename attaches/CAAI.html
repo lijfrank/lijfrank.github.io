@@ -45,7 +45,6 @@
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            /* border-bottom: 1px solid #e9ecef; */
         }
         .stat-item {
             text-align: center;
@@ -65,13 +64,11 @@
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            /* border-bottom: 1px solid #e9ecef; */
         }
         .other-links a {
-            text-decoration: none; /* 去掉下划线 */
-            color: inherit;        /* 继承父级 <p> 标签的颜色 (#4e5969) */
+            text-decoration: none;
+            color: inherit;
         }
-        /* 可选：鼠标悬停时稍微变深一点，增加交互感 */
         .other-links a:hover {
             color: #1d2129; 
         }
@@ -87,7 +84,6 @@
             font-size: 12px;
             border-bottom: 1px solid #e9ecef;
             justify-items: center;
-            /* align-items: center; */
         }
         .content {
             padding: 30px;
@@ -97,41 +93,32 @@
             border-collapse: collapse;
             margin-bottom: 30px;
             font-size: 14px;
-            /* border-bottom: 2px solid #f0f0f0; */
         }
-
         .filter-table th {
             border: none;
-            border-bottom: 2px solid #f0f0f0; /* 让 th 的底部基准线连贯 */
+            border-bottom: 2px solid #f0f0f0;
             text-align: center;
             color: #1e3c72;
-            /* font-weight: bold; */
             width: 40px;
             padding: 12px 0;
         }
-
         .filter-table td {
             border: none;
-            border-bottom: 2px solid transparent; /* 利用底部边框做指示器 */
-            /* padding: 10px 15px; */
+            border-bottom: 2px solid transparent;
             text-align: center;
             cursor: pointer;
             color: #666;
             transition: all 0.2s ease;
             font-size: 14px;
         }
-
         .filter-table td.active {
-            border-bottom: 2px solid #2563eb; /* 选中时显示蓝色粗线 */
+            border-bottom: 2px solid #2563eb;
             color: #2563eb;
             font-weight: bold;
         }
-
         .filter-table td:hover:not(.active) {
-            color: #2563eb; /* 悬停时文字变色 */
+            color: #2563eb;
         }
-
-        /* 搜索框 */
         .search-box {
             margin-bottom: 20px;
         }
@@ -156,8 +143,6 @@
             color: #1e3c72;
             font-size: 18px;
         }
-
-        /* 数据表格 */
         .table-container {
             overflow-x: auto;
             border-radius: 8px;
@@ -204,21 +189,18 @@
             color: #155724;
             padding: 2px 8px;
             border-radius: 4px;
-            /* font-weight: bold; */
         }
         .level-B {
             background: #fff3cd;
             color: #856404;
             padding: 2px 8px;
             border-radius: 4px;
-            /* font-weight: bold; */
         }
         .level-C {
             background: #f8d7da;
             color: #721c24;
             padding: 2px 8px;
             border-radius: 4px;
-            /* font-weight: bold; */
         }
         .footer {
             text-align: center;
@@ -227,6 +209,27 @@
             font-size: 12px;
             border-top: 1px solid #e9ecef;
         }
+
+        /* ═══════════ 逐行淡入动画 ═══════════ */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .data-table tbody tr {
+            animation: fadeUp 0.25s ease forwards;
+            opacity: 0;
+        }
+        .data-table tbody tr:nth-child(1)  { animation-delay: 0.02s; }
+        .data-table tbody tr:nth-child(2)  { animation-delay: 0.04s; }
+        .data-table tbody tr:nth-child(3)  { animation-delay: 0.06s; }
+        .data-table tbody tr:nth-child(4)  { animation-delay: 0.08s; }
+        .data-table tbody tr:nth-child(5)  { animation-delay: 0.10s; }
+        .data-table tbody tr:nth-child(6)  { animation-delay: 0.12s; }
+        .data-table tbody tr:nth-child(7)  { animation-delay: 0.14s; }
+        .data-table tbody tr:nth-child(8)  { animation-delay: 0.16s; }
+        .data-table tbody tr:nth-child(9)  { animation-delay: 0.18s; }
+        .data-table tbody tr:nth-child(10) { animation-delay: 0.20s; }
+        .data-table tbody tr:nth-child(n+11) { animation-delay: 0.22s; }
     </style>
 </head>
 <body>
@@ -278,11 +281,10 @@
       <div>
           <p style="margin-bottom: 5px;">机器系统：智能机器人与系统</p>
           <p style="margin-bottom: 5px;">芯片系统：智能芯片与计算系统</p>
-          <p">伦理安全：人工智能伦理、安全与治理</p>
+          <p>伦理安全：人工智能伦理、安全与治理</p>
       </div>
     </div>
     <div class="content">
-        <!-- ========== 表格形式筛选器（横向展开，不隐藏） ========== -->
         <table class="filter-table">
             <tr>
                 <th>方向</th>
@@ -314,7 +316,6 @@
             </tr>
         </table>
 
-        <!-- 搜索框 -->
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="🔍 搜索：支持简称、全称、出版社模糊搜索...">
         </div>
@@ -323,7 +324,6 @@
             当前筛选结果：<strong id="resultCount">0</strong> 条
         </div>
 
-        <!-- 数据表格 -->
         <div class="table-container">
             <table class="data-table">
                 <thead>
@@ -339,7 +339,6 @@
                     </tr>
                 </thead>
                 <tbody id="dataBody">
-                    <!-- 数据由JS填充 -->
                 </tbody>
             </table>
         </div>
@@ -351,21 +350,14 @@
 </div>
 
 <script>
-// 完整数据（示例，包含系统方向B类期刊，可扩展全部600+条）
 const allData = [
     // ==================== 会议部分 ====================
-    
-    // 人工智能基础与综合 - 会议 - A类
     {direction: '基础综合', level: 'A', type: '会议', no: '1', abbr: 'AAAI', full: 'AAAI Conference on Artificial Intelligence', publisher: 'AAAI', url: 'https://dblp.uni-trier.de/db/conf/aaai/'},
     {direction: '基础综合', level: 'A', type: '会议', no: '2', abbr: 'CICAI', full: 'CAAI International Conference on Artificial Intelligence', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/cicai/'},
     {direction: '基础综合', level: 'A', type: '会议', no: '3', abbr: 'UAI', full: 'Conference on Uncertainty in Artificial Intelligence', publisher: 'AUAI', url: 'https://dblp.uni-trier.de/db/conf/uai/'},
     {direction: '基础综合', level: 'A', type: '会议', no: '4', abbr: 'IJCAI', full: 'International Joint Conference on Artificial Intelligence', publisher: 'Morgan Kaufmann', url: 'https://dblp.uni-trier.de/db/conf/ijcai/'},
-    
-    // 人工智能基础与综合 - 会议 - B类
     {direction: '基础综合', level: 'B', type: '会议', no: '1', abbr: 'ECAI', full: 'European Conference on Artificial Intelligence', publisher: 'IOS Press', url: 'http://dblp.uni-trier.de/db/conf/ecai/'},
     {direction: '基础综合', level: 'B', type: '会议', no: '2', abbr: 'AISTATS', full: 'International Conference on Artificial Intelligence and Statistics', publisher: 'PMLR', url: 'https://dblp.uni-trier.de/db/conf/aistats/'},
-    
-    // 人工智能基础与综合 - 会议 - C类
     {direction: '基础综合', level: 'C', type: '会议', no: '1', abbr: 'ICTAI', full: 'IEEE International Conference on Tools with Artificial Intelligence', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/ictai/'},
     {direction: '基础综合', level: 'C', type: '会议', no: '2', abbr: 'ICANN', full: 'International Conference on Artificial Neural Networks', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/icann/'},
     {direction: '基础综合', level: 'C', type: '会议', no: '3', abbr: 'PRICAI', full: 'Pacific Rim International Conference on Artificial Intelligence', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/pricai/'},
@@ -376,45 +368,27 @@ const allData = [
     {direction: '基础综合', level: 'C', type: '会议', no: '8', abbr: 'ICDSP', full: 'International Conference on Digital Signal Processing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icdsp/'},
     {direction: '基础综合', level: 'C', type: '会议', no: '9', abbr: 'ICISCI', full: 'IEEE International Conference on Intelligent Systems and Computational Intelligence', publisher: 'IEEE', url: 'https://www.ieee-is.org/'},
     {direction: '基础综合', level: 'C', type: '会议', no: '10', abbr: 'WCCI', full: 'IEEE World Congress on Computational Intelligence', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/wcci/'},
-    
-    // 人工智能交叉与应用 - 会议 - B类
     {direction: '交叉应用', level: 'B', type: '会议', no: '1', abbr: 'EMBC', full: 'Annual International Conference of the IEEE Engineering in Medicine and Biology Society', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/embc/'},
     {direction: '交叉应用', level: 'B', type: '会议', no: '2', abbr: 'AIED', full: 'International Conference on Artificial Intelligence in Education', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/aied/'},
     {direction: '交叉应用', level: 'B', type: '会议', no: '3', abbr: 'BIBM', full: 'IEEE International Conference on Bioinformatics and Biomedicine', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/bibm/'},
     {direction: '交叉应用', level: 'B', type: '会议', no: '4', abbr: 'PPSN', full: 'Parallel Problem Solving from Nature', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/ppsn/'},
-    
-    // 人工智能交叉与应用 - 会议 - C类
     {direction: '交叉应用', level: 'C', type: '会议', no: '1', abbr: 'SMC', full: 'IEEE Conference on Systems, Man and Cybernetics', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/smc/'},
     {direction: '交叉应用', level: 'C', type: '会议', no: '2', abbr: 'IGARSS', full: 'IEEE International Geoscience and Remote Sensing Symposium', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/igarss/'},
     {direction: '交叉应用', level: 'C', type: '会议', no: '3', abbr: 'ER', full: 'International Conference on Conceptual Modeling', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/er/'},
-    
-    // 脑认知与类脑智能 - 会议 - B类
     {direction: '类脑智能', level: 'B', type: '会议', no: '1', abbr: 'CogSci', full: 'Annual Meeting of the Cognitive Science Society', publisher: 'CSS', url: 'https://dblp.uni-trier.de/db/conf/cogsci/'},
-    
-    // 机器学习 - 会议 - A类
     {direction: '机器学习', level: 'A', type: '会议', no: '1', abbr: 'COLT', full: 'Conference on Learning Theory', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/colt/'},
     {direction: '机器学习', level: 'A', type: '会议', no: '2', abbr: 'ICLR', full: 'International Conference on Learning Representations', publisher: 'ICLR', url: 'https://dblp.uni-trier.de/db/conf/iclr/'},
     {direction: '机器学习', level: 'A', type: '会议', no: '3', abbr: 'ICML', full: 'International Conference on Machine Learning', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/icml/'},
     {direction: '机器学习', level: 'A', type: '会议', no: '4', abbr: 'NeurIPS', full: 'Neural Information Processing Systems', publisher: 'MIT Press', url: 'https://dblp.uni-trier.de/db/conf/nips/'},
-    
-    // 机器学习 - 会议 - B类
     {direction: '机器学习', level: 'B', type: '会议', no: '1', abbr: 'ECML', full: 'European Conference on Machine Learning', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/ecml/'},
-    
-    // 机器学习 - 会议 - C类
     {direction: '机器学习', level: 'C', type: '会议', no: '1', abbr: 'ALT', full: 'Algorithmic Learning Theory', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/alt/'},
     {direction: '机器学习', level: 'C', type: '会议', no: '2', abbr: 'ACML', full: 'Asian Conference on Machine Learning', publisher: 'JMLR', url: 'https://dblp.uni-trier.de/db/conf/acml/'},
-    
-    // 模式识别与计算机视觉 - 会议 - A类
     {direction: '模式视觉', level: 'A', type: '会议', no: '1', abbr: 'ECCV', full: 'European Conference on Computer Vision', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/eccv/'},
     {direction: '模式视觉', level: 'A', type: '会议', no: '2', abbr: 'CVPR', full: 'IEEE/CVF Computer Vision and Pattern Recognition Conference', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/cvpr/'},
     {direction: '模式视觉', level: 'A', type: '会议', no: '3', abbr: 'ICCV', full: 'IEEE/CVF International Conference on Computer Vision', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/iccv/'},
-    
-    // 模式识别与计算机视觉 - 会议 - B类
     {direction: '模式视觉', level: 'B', type: '会议', no: '1', abbr: 'ICPR', full: 'International Conference on Pattern Recognition', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icpr/'},
     {direction: '模式视觉', level: 'B', type: '会议', no: '2', abbr: 'ICDAR', full: 'International Conference on Document Analysis and Recognition', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icdar/'},
     {direction: '模式视觉', level: 'B', type: '会议', no: '3', abbr: 'WACV', full: 'IEEE/CVF Winter Conference on Applications of Computer Vision', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/wacv/'},
-    
-    // 模式识别与计算机视觉 - 会议 - C类
     {direction: '模式视觉', level: 'C', type: '会议', no: '1', abbr: 'ACIVS', full: 'Advanced Concepts for Intelligent Vision Systems', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/acivs/'},
     {direction: '模式视觉', level: 'C', type: '会议', no: '2', abbr: 'ACCV', full: 'Asian Conference on Computer Vision', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/accv/'},
     {direction: '模式视觉', level: 'C', type: '会议', no: '3', abbr: 'ACPR', full: 'Asian Conference on Pattern Recognition', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/acpr/'},
@@ -434,32 +408,22 @@ const allData = [
     {direction: '模式视觉', level: 'C', type: '会议', no: '17', abbr: 'DAS', full: 'International Workshop on Document Analysis Systems', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/das/'},
     {direction: '模式视觉', level: 'C', type: '会议', no: '18', abbr: 'IJCB', full: 'International Joint Conference on Biometrics', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icb/'},
     {direction: '模式视觉', level: 'C', type: '会议', no: '19', abbr: 'S+SSPR', full: 'Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition and Structural and Syntactic Pattern Recognition', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/sspr/'},
-    
-    // 语言与语音处理 - 会议 - A类
     {direction: '语言语音', level: 'A', type: '会议', no: '1', abbr: 'ACL', full: 'Annual Meeting of the Association for Computational Linguistics', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/acl/'},
     {direction: '语言语音', level: 'A', type: '会议', no: '2', abbr: 'EMNLP', full: 'Conference on Empirical Methods in Natural Language Processing', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/emnlp/'},
-    
-    // 语言与语音处理 - 会议 - B类
     {direction: '语言语音', level: 'B', type: '会议', no: '1', abbr: 'COLING', full: 'International Conference on Computational Linguistics', publisher: 'ICCL', url: 'https://dblp.uni-trier.de/db/conf/coling/'},
     {direction: '语言语音', level: 'B', type: '会议', no: '2', abbr: 'NAACL', full: 'North American Chapter of the Association for Computational Linguistics', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/naacl/'},
     {direction: '语言语音', level: 'B', type: '会议', no: '3', abbr: 'INTERSPEECH', full: 'Conference of the International Speech Communication Association', publisher: 'ISCA', url: 'https://dblp.uni-trier.de/db/conf/interspeech/'},
     {direction: '语言语音', level: 'B', type: '会议', no: '4', abbr: 'ICASSP', full: 'IEEE International Conference on Acoustics, Speech and Signal Processing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icassp/'},
-    
-    // 语言与语音处理 - 会议 - C类
     {direction: '语言语音', level: 'C', type: '会议', no: '1', abbr: 'NLPCC', full: 'CCF International Conference on Natural Language Processing and Chinese Computing', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/nlpcc/'},
     {direction: '语言语音', level: 'C', type: '会议', no: '2', abbr: 'CoNLL', full: 'Conference on Computational Natural Language Learning', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/conll/'},
     {direction: '语言语音', level: 'C', type: '会议', no: '3', abbr: 'EACL', full: 'Conference of the European Chapter of the Association for Computational Linguistics', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/eacl/'},
     {direction: '语言语音', level: 'C', type: '会议', no: '4', abbr: 'AACL/IJCNLP', full: 'Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics / International Joint Conference on Natural Language Processing', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/conf/acl/'},
-    
-    // 知识工程与数据挖掘 - 会议 - A类
     {direction: '知识数据', level: 'A', type: '会议', no: '1', abbr: 'SIGKDD', full: 'ACM SIGKDD Conference on Knowledge Discovery and Data Mining', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/kdd/'},
     {direction: '知识数据', level: 'A', type: '会议', no: '2', abbr: 'SIGMOD', full: 'ACM SIGMOD Conference', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/sigmod/'},
     {direction: '知识数据', level: 'A', type: '会议', no: '3', abbr: 'ICDE', full: 'IEEE International Conference on Data Engineering', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icde/'},
     {direction: '知识数据', level: 'A', type: '会议', no: '4', abbr: 'SIGIR', full: 'International ACM SIGIR Conference on Research and Development in Information Retrieval', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/sigir/'},
     {direction: '知识数据', level: 'A', type: '会议', no: '5', abbr: 'VLDB', full: 'International Conference on Very Large Data Bases', publisher: 'Morgan Kaufmann', url: 'https://dblp.uni-trier.de/db/conf/vldb/'},
     {direction: '知识数据', level: 'A', type: '会议', no: '6', abbr: 'WWW', full: 'ACM Web Conference (International Conference on World Wide Web)', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/www/'},
-    
-    // 知识工程与数据挖掘 - 会议 - B类
     {direction: '知识数据', level: 'B', type: '会议', no: '1', abbr: 'RecSys', full: 'ACM Conference on Recommender Systems', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/recsys/'},
     {direction: '知识数据', level: 'B', type: '会议', no: '2', abbr: 'CIKM', full: 'ACM International Conference on Information and Knowledge Management', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/cikm/'},
     {direction: '知识数据', level: 'B', type: '会议', no: '3', abbr: 'WSDM', full: 'ACM International Conference on Web Search and Data Mining', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/wsdm/'},
@@ -475,8 +439,6 @@ const allData = [
     {direction: '知识数据', level: 'B', type: '会议', no: '13', abbr: 'ICDM', full: 'IEEE International Conference on Data Mining', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icdm/'},
     {direction: '知识数据', level: 'B', type: '会议', no: '14', abbr: 'ECML PKDD', full: 'European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/ecml/'},
     {direction: '知识数据', level: 'B', type: '会议', no: '15', abbr: 'ICWSM', full: 'The International AAAI Conference on Web and Social Media', publisher: 'AAAI', url: 'https://dblp.uni-trier.de/db/conf/icwsm/'},
-    
-    // 知识工程与数据挖掘 - 会议 - C类
     {direction: '知识数据', level: 'C', type: '会议', no: '1', abbr: 'APWeb', full: 'Asia Pacific Web Conference', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/apweb/'},
     {direction: '知识数据', level: 'C', type: '会议', no: '2', abbr: 'ECIR', full: 'European Conference on Information Retrieval', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/ecir/'},
     {direction: '知识数据', level: 'C', type: '会议', no: '3', abbr: 'ESWC', full: 'Extended Semantic Web Conference', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/esws/'},
@@ -492,15 +454,11 @@ const allData = [
     {direction: '知识数据', level: 'C', type: '会议', no: '13', abbr: 'WISE', full: 'Web Information Systems Engineering', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/wise/'},
     {direction: '知识数据', level: 'C', type: '会议', no: '14', abbr: 'DEXA', full: 'International Conference on Database and Expert System Applications', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/dexa/'},
     {direction: '知识数据', level: 'C', type: '会议', no: '15', abbr: 'SIGIR-AP', full: 'ACM SIGIR Conference on Research and Development in Information Retrieval in the Asia Pacific Region', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/sigir-ap/'},
-    
-    // 跨媒体智能与人机交互 - 会议 - A类
     {direction: '媒体人机', level: 'A', type: '会议', no: '1', abbr: 'CHI', full: 'ACM Conference on Human Factors in Computing Systems', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/chi/'},
     {direction: '媒体人机', level: 'A', type: '会议', no: '2', abbr: 'ACM MM', full: 'ACM International Conference on Multimedia', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/mm/'},
     {direction: '媒体人机', level: 'A', type: '会议', no: '3', abbr: 'VR', full: 'IEEE Conference on Virtual Reality and 3D User Interfaces', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/vr/'},
     {direction: '媒体人机', level: 'A', type: '会议', no: '4', abbr: 'SIGGRAPH', full: 'ACM Special Interest Group on Computer Graphics', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/siggraph/'},
     {direction: '媒体人机', level: 'A', type: '会议', no: '5', abbr: 'IEEE VIS', full: 'IEEE Visualization Conference', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/visualization/'},
-    
-    // 跨媒体智能与人机交互 - 会议 - B类
     {direction: '媒体人机', level: 'B', type: '会议', no: '1', abbr: 'IUI', full: 'ACM International Conference on Intelligent User Interfaces', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/iui/'},
     {direction: '媒体人机', level: 'B', type: '会议', no: '2', abbr: 'ITS', full: 'ACM International Conference on Interactive Tabletops and Surfaces', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/tabletop/'},
     {direction: '媒体人机', level: 'B', type: '会议', no: '3', abbr: 'ICME', full: 'IEEE International Conference on Multimedia & Expo', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icmcs/'},
@@ -515,8 +473,6 @@ const allData = [
     {direction: '媒体人机', level: 'B', type: '会议', no: '12', abbr: 'EGSR', full: 'Eurographics Symposium on Rendering', publisher: 'Wiley/Blackwell', url: 'https://dblp.uni-trier.de/db/conf/rt/'},
     {direction: '媒体人机', level: 'B', type: '会议', no: '13', abbr: 'PG', full: 'Pacific Conference on Computer Graphics and Applications', publisher: 'Wiley/Blackwell', url: 'https://dblp.uni-trier.de/db/conf/pg/'},
     {direction: '媒体人机', level: 'B', type: '会议', no: '14', abbr: 'SPM', full: 'Symposium on Solid and Physical Modeling', publisher: 'SMA/Elsevier', url: 'https://dblp.uni-trier.de/db/conf/sma/'},
-    
-    // 跨媒体智能与人机交互 - 会议 - C类
     {direction: '媒体人机', level: 'C', type: '会议', no: '1', abbr: 'IDC', full: 'ACM Interaction Design and Children', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/acmidc/'},
     {direction: '媒体人机', level: 'C', type: '会议', no: '2', abbr: 'ICMI', full: 'ACM International Conference on Multimodal Interaction', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/icmi/'},
     {direction: '媒体人机', level: 'C', type: '会议', no: '3', abbr: 'MM Asia', full: 'ACM Multimedia Asia', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/conf/mmasia/'},
@@ -539,39 +495,23 @@ const allData = [
     {direction: '媒体人机', level: 'C', type: '会议', no: '20', abbr: 'SMI', full: 'Shape Modeling International', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/smi/'},
     {direction: '媒体人机', level: 'C', type: '会议', no: '21', abbr: 'UIC', full: 'IEEE International Conference on Ubiquitous Intelligence and Computing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/uic/'},
     {direction: '媒体人机', level: 'C', type: '会议', no: '22', abbr: 'MobiQuitous', full: 'International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/mobiquitous/'},
-    
-    // 智能机器人与系统 - 会议 - A类
     {direction: '机器系统', level: 'A', type: '会议', no: '1', abbr: 'RSS', full: 'Robotics: Science and Systems', publisher: 'RSS', url: 'https://dblp.uni-trier.de/db/conf/rss/'},
     {direction: '机器系统', level: 'A', type: '会议', no: '2', abbr: 'ICRA', full: 'The International Conference on Robotics and Automation', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/icra/'},
-    
-    // 智能机器人与系统 - 会议 - B类
     {direction: '机器系统', level: 'B', type: '会议', no: '1', abbr: 'IROS', full: 'IEEE/RSJ International Conference on Intelligent Robots and Systems', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/iros/'},
     {direction: '机器系统', level: 'B', type: '会议', no: '2', abbr: 'AAMAS', full: 'International Conference on Autonomous Agents and Multiagent Systems', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/conf/atal/'},
-    
-    // 智能机器人与系统 - 会议 - C类
     {direction: '机器系统', level: 'C', type: '会议', no: '1', abbr: 'CoRL', full: 'Conference on Robot Learning', publisher: 'PMLR', url: 'https://dblp.uni-trier.de/db/conf/corl/'},
     {direction: '机器系统', level: 'C', type: '会议', no: '2', abbr: 'CYBER', full: 'IEEE International Conference on CYBER Technology in Automation, Control and Intelligent Systems', publisher: 'IEEE', url: 'https://ieee-cyber.org'},
-    
-    // 智能芯片与计算系统 - 会议 - A类
     {direction: '芯片系统', level: 'A', type: '会议', no: '1', abbr: 'ISCA', full: 'ACM/IEEE International Symposium on Computer Architecture', publisher: 'ACM/IEEE', url: 'https://dblp.uni-trier.de/db/conf/isca/'},
     {direction: '芯片系统', level: 'A', type: '会议', no: '2', abbr: 'MICRO', full: 'IEEE/ACM International Symposium on Microarchitecture', publisher: 'IEEE/ACM', url: 'https://dblp.uni-trier.de/db/conf/micro/'},
-    
-    // 智能芯片与计算系统 - 会议 - B类
     {direction: '芯片系统', level: 'B', type: '会议', no: '1', abbr: 'HOT CHIPS', full: 'Hot Chips: A Symposium on High Performance Chips', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/hotchips/'},
     {direction: '芯片系统', level: 'B', type: '会议', no: '2', abbr: 'ISSCC', full: 'IEEE International Solid-State Circuits Conference', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/isscc/'},
     {direction: '芯片系统', level: 'B', type: '会议', no: '3', abbr: 'VLSIC', full: 'Symposium on VLSI Technology and Circuits', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/vlsic/'},
-    
-    // 智能芯片与计算系统 - 会议 - C类
     {direction: '芯片系统', level: 'C', type: '会议', no: '1', abbr: 'A-SSCC', full: 'Asian Solid-State Circuits Conference', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/asscc/'},
     {direction: '芯片系统', level: 'C', type: '会议', no: '2', abbr: 'HPCA', full: 'IEEE International Symposium on High-Performance Computer Architecture', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/conf/hpca/'},
-    
-    // 人工智能伦理、安全与治理 - 会议 - C类
     {direction: '伦理安全', level: 'C', type: '会议', no: '1', abbr: 'AIES', full: 'AAAI/ACM Conference on AI, Ethics, and Society', publisher: 'AAAI/ACM', url: 'https://dblp.uni-trier.de/db/conf/aies/'},
     {direction: '伦理安全', level: 'C', type: '会议', no: '2', abbr: 'AIESD', full: 'International Conference on AI Ethics and Sustainable Development', publisher: 'AI-FOR-SDGS', url: 'https://www.ai-for-sdgs.academy/ai-ethics-and-sustainable-development'},
-    
+
     // ==================== 期刊部分 ====================
-    
-    // 人工智能基础与综合 - 期刊 - A类
     {direction: '基础综合', level: 'A', type: '期刊', no: '1', abbr: 'AIJ', full: 'Artificial Intelligence', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/ai/'},
     {direction: '基础综合', level: 'A', type: '期刊', no: '2', abbr: 'Engineering', full: 'Engineering', publisher: 'Elsevier', url: 'https://www.sciencedirect.com/journal/engineering'},
     {direction: '基础综合', level: 'A', type: '期刊', no: '3', abbr: 'NSR', full: 'National Science Review', publisher: 'OUP', url: 'https://academic.oup.com/nsr/'},
@@ -585,8 +525,6 @@ const allData = [
     {direction: '基础综合', level: 'A', type: '期刊', no: '11', abbr: '', full: 'IEEE Transactions on Cybernetics', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tcyb/'},
     {direction: '基础综合', level: 'A', type: '期刊', no: '12', abbr: 'TOIS', full: 'ACM Transactions on Information Systems', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tois/'},
     {direction: '基础综合', level: 'A', type: '期刊', no: '13', abbr: 'SCIS', full: 'Science China Information Sciences', publisher: 'Springer', url: 'https://www.springer.com/journal/11432/'},
-    
-    // 人工智能基础与综合 - 期刊 - B类
     {direction: '基础综合', level: 'B', type: '期刊', no: '1', abbr: 'CSUR', full: 'ACM Computing Surveys', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/csur/'},
     {direction: '基础综合', level: 'B', type: '期刊', no: '2', abbr: '', full: 'Artificial Intelligence Review', publisher: 'Springer', url: 'https://link.springer.com/journal/10462'},
     {direction: '基础综合', level: 'B', type: '期刊', no: '3', abbr: 'CAAI AIR', full: 'CAAI Artificial Intelligence Research', publisher: 'Tsinghua University Press', url: 'https://www.sciopen.com/journal/2097-194X'},
@@ -615,8 +553,6 @@ const allData = [
     {direction: '基础综合', level: 'B', type: '期刊', no: '26', abbr: 'TSP', full: 'IEEE Transactions on Signal Processing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tsp/'},
     {direction: '基础综合', level: 'B', type: '期刊', no: '27', abbr: '', full: 'Signal Processing', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/sigpro/'},
     {direction: '基础综合', level: 'B', type: '期刊', no: '28', abbr: 'DSS', full: 'Decision Support Systems', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/dss/'},
-    
-    // 人工智能基础与综合 - 期刊 - C类
     {direction: '基础综合', level: 'C', type: '期刊', no: '1', abbr: '', full: 'Advanced Intelligent Systems', publisher: 'Wiley', url: 'https://dblp.uni-trier.de/db/journals/aisy/'},
     {direction: '基础综合', level: 'C', type: '期刊', no: '2', abbr: '', full: 'Applied Soft Computing', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/asc/'},
     {direction: '基础综合', level: 'C', type: '期刊', no: '3', abbr: '', full: 'Archives of Computational Methods in Engineering', publisher: 'Springer', url: 'https://www.springer.com/journal/11831'},
@@ -647,14 +583,10 @@ const allData = [
     {direction: '基础综合', level: 'C', type: '期刊', no: '28', abbr: 'JACM', full: 'Journal of the ACM', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/jacm/'},
     {direction: '基础综合', level: 'C', type: '期刊', no: '29', abbr: '', full: 'IEEE Intelligent Systems', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/expert/'},
     {direction: '基础综合', level: 'C', type: '期刊', no: '30', abbr: 'SPL', full: 'IEEE Signal Processing Letters', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/spl/'},
-    
-    // 人工智能交叉与应用 - 期刊 - A类
     {direction: '交叉应用', level: 'A', type: '期刊', no: '1', abbr: 'TGRS', full: 'IEEE Transactions on Geoscience and Remote Sensing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tgrs/'},
     {direction: '交叉应用', level: 'A', type: '期刊', no: '2', abbr: 'TMI', full: 'IEEE Transactions on Medical Imaging', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tmi/'},
     {direction: '交叉应用', level: 'A', type: '期刊', no: '3', abbr: '', full: 'Nature Human Behaviour', publisher: 'Springer Nature', url: 'https://www.nature.com/nathumbehav/'},
     {direction: '交叉应用', level: 'A', type: '期刊', no: '4', abbr: 'RSE', full: 'Remote Sensing of Environment', publisher: 'Elsevier', url: 'https://www2.cloud.editorialmanager.com/rse/'},
-    
-    // 人工智能交叉与应用 - 期刊 - B类
     {direction: '交叉应用', level: 'B', type: '期刊', no: '1', abbr: 'TII', full: 'IEEE Transactions on Industrial Informatics', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tii/'},
     {direction: '交叉应用', level: 'B', type: '期刊', no: '2', abbr: 'TITS', full: 'IEEE Transactions on Intelligent Transportation Systems', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tits/'},
     {direction: '交叉应用', level: 'B', type: '期刊', no: '3', abbr: 'GRSL', full: 'IEEE Geoscience and Remote Sensing Letters', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/lgrs/'},
@@ -665,8 +597,6 @@ const allData = [
     {direction: '交叉应用', level: 'B', type: '期刊', no: '8', abbr: '', full: 'Bioinformatics', publisher: 'OUP', url: 'https://dblp.uni-trier.de/db/journals/bioinformatics/'},
     {direction: '交叉应用', level: 'B', type: '期刊', no: '9', abbr: '', full: 'Remote Sensing', publisher: 'Mdpi', url: 'https://dblp.uni-trier.de/db/journals/remotesensing/'},
     {direction: '交叉应用', level: 'B', type: '期刊', no: '10', abbr: '', full: 'GeoInformatica', publisher: 'Springer', url: 'https://dblp.unitrier.de/db/journals/geoinformatica/'},
-    
-    // 人工智能交叉与应用 - 期刊 - C类
     {direction: '交叉应用', level: 'C', type: '期刊', no: '1', abbr: '', full: 'Applied Intelligence', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/apin/'},
     {direction: '交叉应用', level: 'C', type: '期刊', no: '2', abbr: '', full: 'Artificial Intelligence in Medicine', publisher: 'Elsevier', url: 'http://www.journals.elsevier.com/artificial-intelligence-in-medicine/'},
     {direction: '交叉应用', level: 'C', type: '期刊', no: '3', abbr: '', full: 'Biocybernetics and Biomedical Engineering', publisher: 'Elsevier', url: 'https://www.sciencedirect.com/journal/biocybernetics-and-biomedical-engineering'},
@@ -687,49 +617,31 @@ const allData = [
     {direction: '交叉应用', level: 'C', type: '期刊', no: '18', abbr: '', full: 'Connection Science', publisher: 'Taylor & Francis', url: 'https://dblp.uni-trier.de/db/journals/connection/'},
     {direction: '交叉应用', level: 'C', type: '期刊', no: '19', abbr: '', full: 'Integrated Computer-Aided Engineering', publisher: 'IOS Press', url: 'https://dblp.uni-trier.de/db/journals/icae/'},
     {direction: '交叉应用', level: 'C', type: '期刊', no: '20', abbr: 'JORS', full: 'Journal of the Operational Research Society', publisher: 'Taylor & Francis', url: 'https://dblp.uni-trier.de/db/journals/jors/'},
-    
-    // 脑认知与类脑智能 - 期刊 - A类
     {direction: '类脑智能', level: 'A', type: '期刊', no: '1', abbr: '', full: 'Nature Neuroscience', publisher: 'Springer Nature', url: 'https://www.nature.com/neuro/'},
     {direction: '类脑智能', level: 'A', type: '期刊', no: '2', abbr: '', full: 'Nature Reviews Neuroscience', publisher: 'Springer Nature', url: 'https://www.nature.com/nrn/'},
     {direction: '类脑智能', level: 'A', type: '期刊', no: '3', abbr: 'TiCS', full: 'Trends in Cognitive Sciences', publisher: 'Elsevier', url: 'https://www.cell.com/trends/cognitive-sciences/'},
-    
-    // 脑认知与类脑智能 - 期刊 - B类
     {direction: '类脑智能', level: 'B', type: '期刊', no: '1', abbr: '', full: 'Annual Review of Neuroscience', publisher: 'Annual Reviews', url: 'https://www.annualreviews.org/journal/neuro/'},
     {direction: '类脑智能', level: 'B', type: '期刊', no: '2', abbr: '', full: 'Brain, Behavior, and Immunity', publisher: 'Elsevier', url: 'https://www.sciencedirect.com/journal/brain-behavior-and-immunity/'},
     {direction: '类脑智能', level: 'B', type: '期刊', no: '3', abbr: 'TNSRE', full: 'IEEE Transactions on Neural Systems and Rehabilitation Engineering', publisher: 'IEEE', url: 'https://www.embs.org/tnsre/'},
     {direction: '类脑智能', level: 'B', type: '期刊', no: '4', abbr: 'BBS', full: 'Behavioral and Brain Sciences', publisher: 'CUP', url: 'https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/'},
-    
-    // 脑认知与类脑智能 - 期刊 - C类
     {direction: '类脑智能', level: 'C', type: '期刊', no: '1', abbr: 'BIT', full: 'Behaviour & Information Technology', publisher: 'Taylor & Francis', url: 'https://dblp.uni-trier.de/db/journals/behaviourIT/'},
     {direction: '类脑智能', level: 'C', type: '期刊', no: '2', abbr: '', full: 'Cognitive Computation', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/cogcom/'},
     {direction: '类脑智能', level: 'C', type: '期刊', no: '3', abbr: 'TCDS', full: 'IEEE Transactions on Cognitive and Developmental Systems', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tamd/'},
     {direction: '类脑智能', level: 'C', type: '期刊', no: '4', abbr: '', full: 'Journal of Neural Engineering', publisher: 'IOP', url: 'https://iopscience.iop.org/journal/1741-2552'},
     {direction: '类脑智能', level: 'C', type: '期刊', no: '5', abbr: '', full: 'MINDS AND MACHINES', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/mima/'},
-    
-    // 机器学习 - 期刊 - A类
     {direction: '机器学习', level: 'A', type: '期刊', no: '1', abbr: 'JMLR', full: 'Journal of Machine Learning Research', publisher: 'MIT Press', url: 'https://dblp.uni-trier.de/db/journals/jmlr/'},
-    
-    // 机器学习 - 期刊 - B类
     {direction: '机器学习', level: 'B', type: '期刊', no: '1', abbr: 'MLJ', full: 'Machine Learning', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/ml/'},
-    
-    // 机器学习 - 期刊 - C类
     {direction: '机器学习', level: 'C', type: '期刊', no: '1', abbr: 'IJMLC', full: 'International Journal of Machine Learning and Cybernetics', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/mlc/'},
     {direction: '机器学习', level: 'C', type: '期刊', no: '2', abbr: 'MLST', full: 'Machine Learning: Science and Technology', publisher: 'IOP', url: 'https://dblp.uni-trier.de/db/journals/mlst/'},
     {direction: '机器学习', level: 'C', type: '期刊', no: '3', abbr: 'TMLR', full: 'Transactions on Machine Learning Research', publisher: 'JMLR', url: 'https://dblp.uni-trier.de/db/journals/tmlr/'},
-    
-    // 模式识别与计算机视觉 - 期刊 - A类
     {direction: '模式视觉', level: 'A', type: '期刊', no: '1', abbr: 'TIP', full: 'IEEE Transactions on Image Processing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tip/'},
     {direction: '模式视觉', level: 'A', type: '期刊', no: '2', abbr: 'IJCV', full: 'International Journal of Computer Vision', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/ijcv/'},
     {direction: '模式视觉', level: 'A', type: '期刊', no: '3', abbr: 'TPAMI', full: 'IEEE Transactions on Pattern Analysis and Machine Intelligence', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/pami/'},
-    
-    // 模式识别与计算机视觉 - 期刊 - B类
     {direction: '模式视觉', level: 'B', type: '期刊', no: '1', abbr: 'CVIU', full: 'Computer Vision and Image Understanding', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/cviu/'},
     {direction: '模式视觉', level: 'B', type: '期刊', no: '2', abbr: 'TCI', full: 'IEEE Transactions on Computational Imaging', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tci/'},
     {direction: '模式视觉', level: 'B', type: '期刊', no: '3', abbr: 'PRL', full: 'Pattern Recognition Letters', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/prl/'},
     {direction: '模式视觉', level: 'B', type: '期刊', no: '4', abbr: 'PRJ', full: 'Pattern Recognition', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/pr/'},
     {direction: '模式视觉', level: 'B', type: '期刊', no: '5', abbr: 'TCSVT', full: 'IEEE Transactions on Circuits and Systems for Video Technology', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tcsv/'},
-    
-    // 模式识别与计算机视觉 - 期刊 - C类
     {direction: '模式视觉', level: 'C', type: '期刊', no: '1', abbr: 'JIVP', full: 'EURASIP Journal on Image and Video Processing', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/ejivp/'},
     {direction: '模式视觉', level: 'C', type: '期刊', no: '2', abbr: 'IET-BMT', full: 'IET Biometrics', publisher: 'IET', url: 'https://dblp.uni-trier.de/db/journals/iet-bmt/'},
     {direction: '模式视觉', level: 'C', type: '期刊', no: '3', abbr: 'IET-CVI', full: 'IET Computer Vision', publisher: 'IET', url: 'https://dblp.uni-trier.de/db/journals/iet-cvi/'},
@@ -749,27 +661,17 @@ const allData = [
     {direction: '模式视觉', level: 'C', type: '期刊', no: '17', abbr: 'SPIC', full: 'Signal Processing: Image Communication', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/spic/'},
     {direction: '模式视觉', level: 'C', type: '期刊', no: '18', abbr: 'TVC', full: 'The Visual Computer', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/vc/'},
     {direction: '模式视觉', level: 'C', type: '期刊', no: '19', abbr: '', full: 'Visual Intelligence', publisher: 'Springer', url: 'https://link.springer.com/journal/44267'},
-    
-    // 语言与语音处理 - 期刊 - A类
     {direction: '语言语音', level: 'A', type: '期刊', no: '1', abbr: 'TASLP', full: 'IEEE/ACM Transactions on Audio, Speech and Language Processing', publisher: 'IEEE/ACM', url: 'https://dblp.uni-trier.de/db/journals/taslp/'},
-    
-    // 语言与语音处理 - 期刊 - B类
     {direction: '语言语音', level: 'B', type: '期刊', no: '1', abbr: 'CL', full: 'Computational Linguistics', publisher: 'MIT Press', url: 'https://dblp.uni-trier.de/db/journals/coling/'},
     {direction: '语言语音', level: 'B', type: '期刊', no: '2', abbr: '', full: 'Speech Communication', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/speech/'},
     {direction: '语言语音', level: 'B', type: '期刊', no: '3', abbr: 'TACL', full: 'Transactions of the Association for Computational Linguistics', publisher: 'ACL', url: 'https://dblp.uni-trier.de/db/journals/tacl/'},
-    
-    // 语言与语音处理 - 期刊 - C类
     {direction: '语言语音', level: 'C', type: '期刊', no: '1', abbr: 'TALLIP', full: 'ACM Transactions on Asian and Low-Resource Language Information Processing', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/talip/'},
     {direction: '语言语音', level: 'C', type: '期刊', no: '2', abbr: '', full: 'Machine Translation', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/mt/'},
     {direction: '语言语音', level: 'C', type: '期刊', no: '3', abbr: 'NLE', full: 'Natural Language Engineering', publisher: 'Cambridge University Press', url: 'https://dblp.uni-trier.de/db/journals/nle/'},
     {direction: '语言语音', level: 'C', type: '期刊', no: '4', abbr: 'CSL', full: 'Computer Speech & Language', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/csl/'},
-    
-    // 知识工程与数据挖掘 - 期刊 - A类
     {direction: '知识数据', level: 'A', type: '期刊', no: '1', abbr: 'TODS', full: 'ACM Transactions on Database Systems', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tods/'},
     {direction: '知识数据', level: 'A', type: '期刊', no: '2', abbr: 'TKDE', full: 'IEEE Transactions on Knowledge and Data Engineering', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tkde/'},
     {direction: '知识数据', level: 'A', type: '期刊', no: '3', abbr: 'VLDBJ', full: 'The VLDB Journal', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/vldb/'},
-    
-    // 知识工程与数据挖掘 - 期刊 - B类
     {direction: '知识数据', level: 'B', type: '期刊', no: '1', abbr: 'TKDD', full: 'ACM Transactions on Knowledge Discovery from Data', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tkdd/'},
     {direction: '知识数据', level: 'B', type: '期刊', no: '2', abbr: 'DKE', full: 'Data & Knowledge Engineering', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/dke/'},
     {direction: '知识数据', level: 'B', type: '期刊', no: '3', abbr: 'DMKD', full: 'Data Mining and Knowledge Discovery', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/datamine/'},
@@ -782,8 +684,6 @@ const allData = [
     {direction: '知识数据', level: 'B', type: '期刊', no: '10', abbr: 'KBS', full: 'Knowledge-Based Systems', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/kbs/'},
     {direction: '知识数据', level: 'B', type: '期刊', no: '11', abbr: '', full: 'Foundations and Trends in Information Retrieval', publisher: 'Now Publishers', url: 'https://dblp.uni-trier.de/db/journals/ftir/'},
     {direction: '知识数据', level: 'B', type: '期刊', no: '12', abbr: 'TWEB', full: 'ACM Transactions on the Web', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tweb/'},
-    
-    // 知识工程与数据挖掘 - 期刊 - C类
     {direction: '知识数据', level: 'C', type: '期刊', no: '1', abbr: '', full: 'Data Intelligence', publisher: 'MIT press', url: 'https://direct.mit.edu/dint'},
     {direction: '知识数据', level: 'C', type: '期刊', no: '2', abbr: 'DSE', full: 'Data Science and Engineering', publisher: 'CCF', url: 'https://dblp.uni-trier.de/db/journals/dase/'},
     {direction: '知识数据', level: 'C', type: '期刊', no: '3', abbr: '', full: 'Expert Systems', publisher: 'Blackwell/Wiley', url: 'https://dblp.uni-trier.de/db/journals/es/'},
@@ -799,16 +699,12 @@ const allData = [
     {direction: '知识数据', level: 'C', type: '期刊', no: '13', abbr: 'TBD', full: 'IEEE Transactions on BIG Data', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tbd/'},
     {direction: '知识数据', level: 'C', type: '期刊', no: '14', abbr: 'JDM', full: 'Journal of Database Management', publisher: 'IGI', url: 'https://dblp.uni-trier.de/db/journals/jdm/'},
     {direction: '知识数据', level: 'C', type: '期刊', no: '15', abbr: 'TCSS', full: 'IEEE Transactions on Computational Social Systems', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tcss/'},
-    
-    // 跨媒体智能与人机交互 - 期刊 - A类
     {direction: '媒体人机', level: 'A', type: '期刊', no: '1', abbr: 'TOCHI', full: 'ACM Transactions on Computer-Human Interaction', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tochi/'},
     {direction: '媒体人机', level: 'A', type: '期刊', no: '2', abbr: 'TOG', full: 'ACM Transactions on Graphics', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tog/'},
     {direction: '媒体人机', level: 'A', type: '期刊', no: '3', abbr: 'IJHCS', full: 'International Journal of Human-Computer Studies', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/ijmms/'},
     {direction: '媒体人机', level: 'A', type: '期刊', no: '4', abbr: 'TAFFC', full: 'IEEE Transactions on Affective Computing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/taffco/'},
     {direction: '媒体人机', level: 'A', type: '期刊', no: '5', abbr: 'TMM', full: 'IEEE Transactions on Multimedia', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tmm/'},
     {direction: '媒体人机', level: 'A', type: '期刊', no: '6', abbr: 'TVCG', full: 'IEEE Transactions on Visualization and Computer Graphics', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tvcg/'},
-    
-    // 跨媒体智能与人机交互 - 期刊 - B类
     {direction: '媒体人机', level: 'B', type: '期刊', no: '1', abbr: 'TOMM', full: 'ACM Transactions on Multimedia Computing, Communications and Applications', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tomccap/'},
     {direction: '媒体人机', level: 'B', type: '期刊', no: '2', abbr: 'CSCW', full: 'Computer Supported Cooperative Work', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/cscw/'},
     {direction: '媒体人机', level: 'B', type: '期刊', no: '3', abbr: 'HCI', full: 'Human-Computer Interaction', publisher: 'Taylor & Francis', url: 'https://dblp.uni-trier.de/db/journals/hhci/'},
@@ -819,8 +715,6 @@ const allData = [
     {direction: '媒体人机', level: 'B', type: '期刊', no: '8', abbr: '', full: 'Computer Aided Geometric Design', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/cagd/'},
     {direction: '媒体人机', level: 'B', type: '期刊', no: '9', abbr: 'CGF', full: 'Computer Graphics Forum', publisher: 'Wiley', url: 'https://dblp.uni-trier.de/db/journals/cgf/'},
     {direction: '媒体人机', level: 'B', type: '期刊', no: '10', abbr: 'CAD', full: 'Computer-Aided Design', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/cad/'},
-    
-    // 跨媒体智能与人机交互 - 期刊 - C类
     {direction: '媒体人机', level: 'C', type: '期刊', no: '1', abbr: 'TiiS', full: 'ACM Transactions on Interactive Intelligent Systems', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tiis/'},
     {direction: '媒体人机', level: 'C', type: '期刊', no: '2', abbr: 'CVM', full: 'Computational Visual Media', publisher: 'Tsinghua University; Springer', url: 'https://dblp.uni-trier.de/db/journals/cvm/'},
     {direction: '媒体人机', level: 'C', type: '期刊', no: '3', abbr: 'CG', full: 'Computers & Graphics', publisher: 'Elsevier', url: 'https://dblp.uni-trier.de/db/journals/cg/'},
@@ -830,20 +724,14 @@ const allData = [
     {direction: '媒体人机', level: 'C', type: '期刊', no: '7', abbr: 'HCI', full: 'Proceedings of the ACM on Human-Computer Interaction', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/pacmhci/'},
     {direction: '媒体人机', level: 'C', type: '期刊', no: '8', abbr: '', full: 'Computer animation & virtual worlds', publisher: 'Wiley', url: 'https://dblp.uni-trier.de/db/journals/jvca/'},
     {direction: '媒体人机', level: 'C', type: '期刊', no: '9', abbr: 'IJMIR', full: 'International Journal of Multimedia Information Retrieval', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/ijmir/'},
-    
-    // 智能机器人与系统 - 期刊 - A类
     {direction: '机器系统', level: 'A', type: '期刊', no: '1', abbr: 'T-RO', full: 'IEEE Transactions on Robotics', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/trob/'},
     {direction: '机器系统', level: 'A', type: '期刊', no: '2', abbr: '', full: 'Science Robotics', publisher: 'AAAS', url: 'https://dblp.uni-trier.de/db/journals/scirobotics/'},
-    
-    // 智能机器人与系统 - 期刊 - B类
     {direction: '机器系统', level: 'B', type: '期刊', no: '1', abbr: '', full: 'Autonomous Agents and Multi-Agent Systems', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/aamas/'},
     {direction: '机器系统', level: 'B', type: '期刊', no: '2', abbr: 'TSMC', full: 'IEEE Transactions on Systems, Man, and Cybernetics-Systems', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tsmc/'},
     {direction: '机器系统', level: 'B', type: '期刊', no: '3', abbr: 'TVT', full: 'IEEE Transactions on Vehicular Technology', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tvt/'},
     {direction: '机器系统', level: 'B', type: '期刊', no: '4', abbr: 'RA-L', full: 'IEEE Robotics and Automation Letters', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/ral/'},
     {direction: '机器系统', level: 'B', type: '期刊', no: '5', abbr: 'IJRR', full: 'International Journal of Robotics Research', publisher: 'Sage Publications Ltd', url: 'https://dblp.uni-trier.de/db/journals/ijrr/'},
     {direction: '机器系统', level: 'B', type: '期刊', no: '6', abbr: '', full: 'Journal of Field Robotics', publisher: 'Wiley', url: 'https://dblp.uni-trier.de/db/journals/jfr/'},
-    
-    // 智能机器人与系统 - 期刊 - C类
     {direction: '机器系统', level: 'C', type: '期刊', no: '1', abbr: 'ITSM', full: 'IEEE Intelligent Transportation Systems Magazine', publisher: 'IEEE', url: 'https://dblp.org/db/journals/itsm/'},
     {direction: '机器系统', level: 'C', type: '期刊', no: '2', abbr: '', full: 'IET Intelligent Transport Systems', publisher: 'IET', url: 'http://scitation.aip.org/IET-ITS'},
     {direction: '机器系统', level: 'C', type: '期刊', no: '3', abbr: 'IJARS', full: 'International Journal of Advanced Robotic Systems', publisher: 'SAGE', url: 'https://journals.sagepub.com/home/arx'},
@@ -852,25 +740,16 @@ const allData = [
     {direction: '机器系统', level: 'C', type: '期刊', no: '6', abbr: 'RIA', full: 'Robotic Intelligence and Automation', publisher: 'Emerald', url: 'https://www.emeraldgrouppublishing.com/journal/ria'},
     {direction: '机器系统', level: 'C', type: '期刊', no: '7', abbr: '', full: 'Robotica', publisher: 'Cambridge University Press', url: 'https://dblp.uni-trier.de/db/journals/robotica/'},
     {direction: '机器系统', level: 'C', type: '期刊', no: '8', abbr: 'SI', full: 'Swarm Intelligence', publisher: 'Springer', url: 'https://dblp.org/db/journals/swarm'},
-    
-    // 智能芯片与计算系统 - 期刊 - A类
     {direction: '芯片系统', level: 'A', type: '期刊', no: '1', abbr: 'JSSC', full: 'IEEE Journal of Solid-State Circuits', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/jssc/'},
     {direction: '芯片系统', level: 'A', type: '期刊', no: '2', abbr: 'TEVC', full: 'IEEE Transactions on Evolutionary Computation', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tec/'},
-    
-    // 人工智能伦理、安全与治理 - 期刊 - A类
     {direction: '伦理安全', level: 'A', type: '期刊', no: '1', abbr: 'TDSC', full: 'IEEE Transactions on Dependable and Secure Computing', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tdsc/'},
     {direction: '伦理安全', level: 'A', type: '期刊', no: '2', abbr: 'TIFS', full: 'IEEE Transactions on Information Forensics and Security', publisher: 'IEEE', url: 'https://dblp.uni-trier.de/db/journals/tifs/'},
-    
-    // 人工智能伦理、安全与治理 - 期刊 - B类
     {direction: '伦理安全', level: 'B', type: '期刊', no: '1', abbr: 'TOPS', full: 'ACM Transactions on Privacy and Security', publisher: 'ACM', url: 'https://dblp.uni-trier.de/db/journals/tissec/'},
     {direction: '伦理安全', level: 'B', type: '期刊', no: '2', abbr: '', full: 'Artificial Intelligence and Law', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/ail/'},
-    
-    // 人工智能伦理、安全与治理 - 期刊 - C类
     {direction: '伦理安全', level: 'C', type: '期刊', no: '1', abbr: '', full: 'AI & Society', publisher: 'Springer', url: 'https://dblp.uni-trier.de/db/journals/ais/'},
 ];
 
-  // 渲染表格
-  function renderTable() {
+function renderTable() {
     const tbody = document.getElementById('dataBody');
     tbody.innerHTML = '';
     
@@ -907,7 +786,17 @@ const allData = [
     applyFilter();
 }
 
-// 筛选功能
+function restartAnimations() {
+    const rows = document.querySelectorAll('#dataBody tr:not(.hidden)');
+    rows.forEach((row, i) => {
+        row.style.animation = 'none';
+        row.offsetHeight; // 强制重绘
+        const delay = Math.min(0.02 * (i + 1), 0.30);
+        row.style.animation = `fadeUp 0.25s ease ${delay}s forwards`;
+        row.style.opacity = '0';
+    });
+}
+
 function applyFilter() {
     const direction = document.querySelector('td[data-filter="direction"].active').dataset.value;
     const level = document.querySelector('td[data-filter="level"].active').dataset.value;
@@ -932,9 +821,9 @@ function applyFilter() {
     });
     
     document.getElementById('resultCount').textContent = count;
+    restartAnimations();
 }
 
-// 绑定筛选点击事件
 document.querySelectorAll('.filter-table td[data-filter]').forEach(cell => {
     cell.addEventListener('click', function() {
         const filter = this.dataset.filter;
@@ -946,10 +835,8 @@ document.querySelectorAll('.filter-table td[data-filter]').forEach(cell => {
     });
 });
 
-// 绑定搜索事件
 document.getElementById('searchInput').addEventListener('input', applyFilter);
 
-// 初始化
 renderTable();
 </script>
 </body>

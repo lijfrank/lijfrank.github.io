@@ -43,8 +43,6 @@ Conference: MM
 
 - List of <a href="https://portal.core.edu.au/conf-ranks/?search=&by=all&source=CORE2023&sort=arank&page=1" class="no-underline">Academic Conferences</a> Recommended by ICORE (CORE)
 
-<!-- - List of <a href="attaches/HUST-AIA.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by HUST-AIA -->
-
 - List of <a href="attaches/TH-CPL.pdf" class="no-underline">Academic Journals and Conferences</a> Recommended by THU-CS
 
 - List of <a href="https://lijfrank.github.io/attaches/CCF.html" class="no-underline">Academic Journals and Conferences</a> Recommended by CCF (Jiang Li)
@@ -58,8 +56,6 @@ Conference: MM
 <!-- - Ranks of <a href="https://ying-zhang.github.io/misc/2022-ccf-list" class="no-underline">Academic Conferences and Journals</a> Recommended by CCF (Ying-Zhang).-->
 
 <!-- - Ranks of <a href="attaches/CCF-J-Chinese.pdf" class="no-underline">High-Quality Academic Journals in Computing</a> Recommended by CCF. -->
-
-<!-- - Ranks of <a href="attaches/CAA-J.pdf" class="no-underline">Academic Journals</a> - <a href="attaches/CAA-C.pdf" class="no-underline">Conferences</a> Recommended by CAA. -->
 
 ## Material
 
