@@ -24,8 +24,9 @@ author:
   name             : "Jiang Li"
   another-name     : "Frank Lee"
   avatar           : "images/ry_profile.jpeg"
-  bio              : "Doctor of Philosophy, Huazhong University of Science and Technology"
-  location         : "Chongqing"
+  # bio              : "Doctor of Philosophy, Huazhong University of Science and Technology"
+  bio              : "Postdoctoral Associate, New York University Abu Dhabi"
+  location         : "Abu Dhabi"
   employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=NesqTz8AAAAJ"
