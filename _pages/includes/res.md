@@ -71,8 +71,10 @@ Conference: MM
 
 - <a href="attaches/Naming.pdf" class="no-underline">Specification for Naming</a> of Scientific Research Base
 
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=23R2z4m_JZVSTgsDmm5jyVtCW6XzV89zcMPy5pwb4KY&cl=080808&t=tt&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080&w=a"></script>
+<br>
 
-<div style="clear: both; text-align: left;">
-<p>Frank Lee</p>
-</div>
+<a href="https://info.flagcounter.com/I6Q2"><img src="https://s01.flagcounter.com/map/I6Q2/size_l/txt_000000/border_CCCCCC/pageviews_1/viewers_0/flags_0/" alt="Flag Counter" border="0"></a>
+
+<br>
+<h2>Frank Lee</h2>
+<!-- <div style="clear: both; text-align: left;"><p>Frank Lee</p></div> -->
