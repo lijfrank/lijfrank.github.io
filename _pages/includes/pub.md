@@ -79,6 +79,10 @@ Chao Yang, Xiaoping Wang, Zhanfei Chen, **Jiang Li**, Nan Qin, Tingwen Huang, Zh
 SCIENCE CHINA Information Sciences (``SCIS``), 2025 [CAAI-A]  
 [![](https://img.shields.io/badge/dynamic/json?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FLijfrank%2Flijfrank.github.io@google-scholar-stats%2Fgs_data.json&query=$['publications']['NesqTz8AAAAJ:qsWQJNntlusC']['num_citations']&labelColor=f6f6f6&color=9cf&style=flat&label=Citations)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NesqTz8AAAAJ&citation_for_view=NesqTz8AAAAJ:qsWQJNntlusC)
 
+- <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
+Weibin Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
+IEEE Transactions on Circuits and Systems for Video Technology (``TCSVT``), 2026 [CAAI-B]
+
 ## Conference Paper
 
 - <a href="https://escholarship.org/uc/item/0dk8x579" class="no-underline">InferEM: Inferring the speaker's intention for empathetic dialogue generation</a>  
@@ -139,10 +143,6 @@ In Submission, 2025
 - <a href="" class="no-underline">SAMDepth: Sparse-adaptive monocular depth estimation combining events and frames</a>  
 Siyuan Zhang, Xiaoping Wang, Weibin Feng, Honggang Yang, Hongzhi Huang, **Jiang Li**  
 In Submission, 2026
-
-- <a href="" class="no-underline">AGFI-Net: Adaptive graph feature interaction network for event-based action recognition</a>  
-Weibin Feng, Xiaoping Wang, Siyuan Zhang, Hongzhi Huang, Xin Zhan, **Jiang Li**  
-In Submission, 2025
 
 - <a href="" class="no-underline">Staged learning for fine-grained emotion classification</a>  
 Denggao Qin, Xiaoping Wang, Zheyi Zhang, **Jiang Li**, Zhigang Zeng  
